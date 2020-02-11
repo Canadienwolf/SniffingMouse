@@ -109,5 +109,6 @@ public class GameMangerScript : MonoBehaviour
         gameStates.timer = 120f;
         playerStatesMov.lockController = false;
         
+
     }
 }
