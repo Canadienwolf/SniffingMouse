@@ -16,6 +16,8 @@ public class PlayerStatesMovements : ScriptableObject
 
     public bool isEating;
 
+    public bool isSmelling;
+
     public bool isGrounded;
 
     //for locking the movements controller

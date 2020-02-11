@@ -40,7 +40,7 @@ public class PickupSystem : MonoBehaviour
     {
 
         
-        if (Input.GetKeyDown(KeyCode.E))
+        if ((Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Pick")) && pickableObject != null)
         {
             _pickedUp = !_pickedUp;
 
@@ -74,16 +74,14 @@ public class PickupSystem : MonoBehaviour
         }
         
         
-        if (Input.GetButton("Fire1") && !_canThrow)
+        if ((Input.GetMouseButton(0) || Input.GetButton("Throw")) && !_canThrow)
         {
             power += Time.deltaTime * 100f;
-            print(power);
-            
         }
 
-        if (Input.GetButtonUp("Fire1"))
+        if ((Input.GetMouseButtonUp(0) || Input.GetButtonUp("Throw")))
         {
-            if (!_canThrow)
+            if (!_canThrow && pickableObject != null)
             {
                 pickableObject.transform.parent = null;
                 pickableObject.GetComponent<Rigidbody>().isKinematic = false;
@@ -96,25 +94,15 @@ public class PickupSystem : MonoBehaviour
             _canThrow = false;
         }
 
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Cancel") || Input.GetMouseButtonDown(1))
         {
-            
             power = 0f;
             print(power);
             _canThrow = true;
-
-
         }
         
         
     }
-    
-    void OnCancel(BaseEventData eventData)
-    {
-        
-    }
-    
-    
 
     private void OnTriggerEnter(Collider Pickable)
     {
