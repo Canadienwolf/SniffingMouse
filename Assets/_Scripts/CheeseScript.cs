@@ -18,6 +18,7 @@ public class CheeseScript : MonoBehaviour
         //detecting the collision with the player !
         if (other.CompareTag("Player"))
         {
+            //checking if is the 1 collision with the player or not !
             if (moreThanOnce == false)
             {
                 istrigger = true;
@@ -32,24 +33,26 @@ public class CheeseScript : MonoBehaviour
             //for detecting which kind of cheese !!
             if (this.gameObject.CompareTag("smallCheese"))
             {
+                //checking ifthe player collided with that type of cheese !
                 if (istrigger == true)
                 {
                     moreThanOnce = true;
                     gameStates.AddScorePoints();
+                    gameStates.score += 2;
                     gameStates.newHighScore();
-                    gameStates.score += 1;
                     istrigger = false;
                 }
                 playerstatesA.isEating = true;
                 Destroy(transform.parent.gameObject, 2.5f);
             }else if (this.gameObject.CompareTag("mediumCheese"))
             {
+                //checking ifthe player collided with that type of cheese !
                 if (istrigger == true)
                 {
                     moreThanOnce = true;
                     gameStates.AddScorePoints();
+                    gameStates.score += 3;
                     gameStates.newHighScore();
-                    gameStates.score += 2;
                     istrigger = false;
                 }
                 playerstatesA.isEating = true;
@@ -57,12 +60,13 @@ public class CheeseScript : MonoBehaviour
             }
             else if (this.gameObject.CompareTag("largeCheese"))
             {
+                //checking ifthe player collided with that type of cheese !
                 if (istrigger == true)
                 {
                     moreThanOnce = true;
                     gameStates.AddScorePoints();
+                    gameStates.score += 5;
                     gameStates.newHighScore();
-                    gameStates.score += 4;
                     istrigger = false;
                 }
                
@@ -75,6 +79,7 @@ public class CheeseScript : MonoBehaviour
 
     private void OnDestroy()
     {
+        //Updating the necessary variables after destroying the cheese !
         playerstatesA.lockController = false;
         playerstatesA.isEating = false;
         moreThanOnce = false;

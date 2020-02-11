@@ -23,7 +23,6 @@ public class VacuumScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
         //initialisation of the variables at the begining !
         x = Random.Range(-velocidadMax, velocidadMax);
         z = Random.Range(-velocidadMax, velocidadMax);
