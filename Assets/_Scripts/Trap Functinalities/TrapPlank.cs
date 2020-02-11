@@ -14,7 +14,6 @@ public class TrapPlank : MonoBehaviour
     private GameObject trap;
     private Quaternion rotation1 = Quaternion.Euler(0, 0, 0);
     private Quaternion rotation2 = Quaternion.Euler(-85, 0, 0);
-
     private bool falling;
     
     // Start is called before the first frame update
@@ -45,17 +44,8 @@ public class TrapPlank : MonoBehaviour
         }
     }
 
-    
     private void OnTriggerExit(Collider other)
     {
         falling = false;
     }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        
-        
-        
-    }
-    
 }
