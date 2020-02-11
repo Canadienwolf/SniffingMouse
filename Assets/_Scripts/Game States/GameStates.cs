@@ -11,7 +11,7 @@ public class GameStates : ScriptableObject
     //Current score
     public int score=0;
 
-    //The highscore ("needs to be assigned to playerprefs later on")
+    //The highscore used for the game !
     public int highScore=0;
 
 
@@ -21,7 +21,7 @@ public class GameStates : ScriptableObject
         {
             //updating the highscore!
              highScore = score;
-            //storing the new high score!
+            //storing the new high score!// gonna change it to fit each scene by adding the scene index after the palerprefs highscore name !
              PlayerPrefs.SetInt("Highscore", highScore);
         }
     }
@@ -30,6 +30,13 @@ public class GameStates : ScriptableObject
     {
         //incrementing the score by 5 for every cheese , then adding more on the cheese script depending on the type of cheese!
         score += 5;
+
+    }
+
+    public void LoseScorePoints()
+    {
+        //decreasing the score by 3 when we want the player to lose some score points !
+        score -= 3;
 
     }
 
