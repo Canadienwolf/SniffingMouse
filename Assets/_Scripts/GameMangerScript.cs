@@ -28,6 +28,9 @@ public class GameMangerScript : MonoBehaviour
         gameOver.text = " Time Limit Reached ! Game Over !";
         // get in the last highscore
         gameStates.highScore = PlayerPrefs.GetInt("Highscore", 0);
+        //updating the game/player states important variables !
+        gameStates.score = 0;
+        gameStates.timer = 120f;
     }
 
     // Update is called once per frame

@@ -34,6 +34,7 @@ public class StopingPlayerMovments : MonoBehaviour
                     playerStatesB.lockController = false;
                     //updating the cheese counter after deleting one !!
                     cheeseLenght--;
+                
                 }
             
             
