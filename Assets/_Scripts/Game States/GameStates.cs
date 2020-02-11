@@ -19,7 +19,8 @@ public class GameStates : ScriptableObject
     {
         if (score >= highScore)
         {
-            highScore = score;
+            //updating the highscore!
+             highScore = score;
             //storing the new high score!
              PlayerPrefs.SetInt("Highscore", highScore);
         }
@@ -27,8 +28,7 @@ public class GameStates : ScriptableObject
 
     public void AddScorePoints()
     {
-
-        //incrementing the score by 3 for the small cheese , but in the cheese script i add more to the score based on the other kind of chees !
+        //incrementing the score by 5 for every cheese , then adding more on the cheese script depending on the type of cheese!
         score += 5;
 
     }

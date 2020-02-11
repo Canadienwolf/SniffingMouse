@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CheeseScript : MonoBehaviour
 {
-    
+    //game and player states variables !
     public GameStates gameStates;
     public PlayerStatesMovements playerstatesA;
     //checking if the cheese is triggred by the player

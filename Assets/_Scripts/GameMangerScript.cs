@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameMangerScript : MonoBehaviour
 {
+    //game and player states variables!
     public GameStates gameStates;
     public PlayerStatesMovements playerStatesMov;
     //player feedback texts !
@@ -14,6 +15,7 @@ public class GameMangerScript : MonoBehaviour
     public Text highScoreText;
     public Text gameOver;
    // public Text badSmellText;
+   //cheese conter for the cheese available in the scene !
     int cheeseCounter;
     float help=0;
 
@@ -36,7 +38,7 @@ public class GameMangerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Updating Ui feedback for the player !
         scoreText.text = "Score : " + gameStates.score.ToString();
         highScoreText.text = "HighScore : " + gameStates.highScore.ToString();
         timerText.text = "Timer : " + gameStates.timer.ToString("f0");
@@ -53,6 +55,8 @@ public class GameMangerScript : MonoBehaviour
 
         //calling that public local method when the player win !
         WinMethod();
+
+
 
         /////////////////******* will work on the feedback later on *********///////////////
         //detecting the interaction with the bad smell
