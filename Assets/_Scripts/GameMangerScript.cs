@@ -26,6 +26,8 @@ public class GameMangerScript : MonoBehaviour
         gameOver.gameObject.SetActive(false);
         //badSmellText.gameObject.SetActive(false);
         gameOver.text = " Time Limit Reached ! Game Over !";
+        // get in the last highscore
+        gameStates.highScore = PlayerPrefs.GetInt("Highscore", 0);
     }
 
     // Update is called once per frame

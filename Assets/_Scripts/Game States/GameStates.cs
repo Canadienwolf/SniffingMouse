@@ -20,6 +20,8 @@ public class GameStates : ScriptableObject
         if (score >= highScore)
         {
             highScore = score;
+            //storing the new high score!
+             PlayerPrefs.SetInt("Highscore", highScore);
         }
     }
 
