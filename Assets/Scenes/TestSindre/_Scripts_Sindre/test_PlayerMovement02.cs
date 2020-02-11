@@ -51,10 +51,16 @@ public class test_PlayerMovement02 : MonoBehaviour
     {
         if (!psm.lockController)
         {
-            MovePlayer();
+            if(isMoving) MovePlayer();
             //Jump();
             CountJump();
         }
+    }
+
+    private void OnDisable()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     //My methods
@@ -70,8 +76,7 @@ public class test_PlayerMovement02 : MonoBehaviour
         //if (Input.GetKeyUp("space") || Input.GetButtonUp("Jump")) jumpCounter = jumpTime + 1;
         if ((Input.GetKeyDown("space") || Input.GetButtonDown("Jump")) && !psm.lockController) Jump();
         runInput = Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Run") != 0 ? true : false;
-        smellInput = Input.GetKey("f");
-        smellInput = Input.GetButton("Smell");
+        if (Input.GetKey("f") || Input.GetButton("Smell")) smellInput = true; else smellInput = false;
 
         isMoving = vertInput != 0 || horInput != 0 ? true : false;
         isRunning = runInput && isMoving ? true : false;
@@ -79,6 +84,7 @@ public class test_PlayerMovement02 : MonoBehaviour
         psm.isMoving = isMoving;
         psm.isRunning = isRunning;
         psm.isGrounded = gc.isGrounded;
+        psm.isSmelling = smellInput;
         if (gc.isGrounded) secondJump = false;
     }
 
@@ -99,13 +105,20 @@ public class test_PlayerMovement02 : MonoBehaviour
 
     void MovePlayer()
     {
-        if (gc.isGrounded)
+        if (smellInput && gc.isGrounded)
         {
-            GetComponent<Rigidbody>().MovePosition(transform.position + transform.forward * Time.deltaTime * currentSpeed);
+            GetComponent<Rigidbody>().MovePosition(transform.position + transform.forward * Time.deltaTime * smellingSpeed);
         }
         else
         {
-            GetComponent<Rigidbody>().MovePosition(transform.position + transform.forward * Time.deltaTime * currentSpeed * airControl);
+            if (gc.isGrounded)
+            {
+                GetComponent<Rigidbody>().MovePosition(transform.position + transform.forward * Time.deltaTime * currentSpeed);
+            }
+            else
+            {
+                GetComponent<Rigidbody>().MovePosition(transform.position + transform.forward * Time.deltaTime * currentSpeed * airControl);
+            }
         }
     }
 
