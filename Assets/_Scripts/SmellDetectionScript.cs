@@ -6,72 +6,66 @@ using UnityEngine.UI;
 public class SmellDetectionScript : MonoBehaviour
 {
     //variables needed !
-    public Text gameOverText;
-    public static bool help=false;
-    bool istrigred;
     public PlayerStatesMovements playerStatesB;
-    public GameStates gameStates;
-    float step;
-    bool isOutside;
-    float helpTimer;
-    
+    GameObject player;
+    bool affected;
+    float timeLeft;
 
     public float frequency = 16f; // Speed of sine movement !
     public float magnitude = 2f; // Size of sine movement
+    public float effectTime = 5f;
+    public ParticleSystem drunkBobbles;
+
+    private GameObject drunkBobble;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     private void Update()
     {
-     
-       //if the player collides with the bad smell !
-        if (istrigred == true)
+        if (affected)
         {
-           //moving the player to the source of the smeel with drunk behaviour ! ( we have the variables as public now so we can change the values in inspector!
-           GameObject.FindGameObjectWithTag("Player").transform.position = GameObject.FindGameObjectWithTag("Player").transform.position + transform.forward * Mathf.Sin(Time.time * frequency) * magnitude;
-        }
-
-        //testing if the player is not colliding with the bad smell anymore !
-        if (isOutside)
-        {
-            //drunkness movement for the player !
-            GameObject.FindGameObjectWithTag("Player").transform.position = GameObject.FindGameObjectWithTag("Player").transform.position + transform.forward * Mathf.Sin(Time.time * frequency) * magnitude;
-            if (gameStates.timer <= helpTimer)
+            //player.transform.position += new Vector3(Mathf.Sin(Time.time * frequency) * magnitude * player.GetComponent<test_PlayerMovement02>().currentSpeed * 0.1f, 0, 0);
+            float angle = Mathf.Sin(Time.time * frequency) * magnitude * Mathf.Rad2Deg;
+            player.transform.localRotation *= Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(angle, Vector3.up), Time.deltaTime * player.GetComponent<test_PlayerMovement02>().currentSpeed);
+            timeLeft -= Time.deltaTime;
+            if (timeLeft <= 0)
             {
-                //for sttoping the drunkness movments !
-                isOutside = false;
+                affected = false;
             }
         }
+        else
+        {
+            if (drunkBobble != null)
+                Destroy(drunkBobble);
+        }
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            affected = true;
+            timeLeft = effectTime;
+            if (drunkBobble == null)
+            {
+                drunkBobble = Instantiate(drunkBobbles.gameObject, other.transform.position + new Vector3(0, 2, 0), Quaternion.Euler(-90, 0, 0));
+                drunkBobble.transform.parent = other.transform;
+            }
+        }
     }
 
     //for detecting the collisions triggered !
     private void OnTriggerStay(Collider other)
     {
-        
+
         if (other.gameObject.CompareTag("Player"))
         {
-            help = true;
-            istrigred = true;
-            //movTimer = (int)(gameStates.timer - 10f);
-            Debug.Log("he is triggered");
-
+            affected = true;
+            timeLeft = effectTime;
         }
- 
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        //updating the variables after the collision finishes !
-        istrigred = false;
-        help = false;
-        isOutside = true;
-        //for stopping the drunkness afterward !
-        helpTimer = (gameStates.timer) - 5;
 
     }
-    private void OnApplicationQuit()
-    {
-        //updating the variables after quitig the game !
-        help = false;
-        playerStatesB.lockController = false;
-    }
-
 }
