@@ -45,6 +45,7 @@ public class SmellMouseLock : MonoBehaviour
         {
             if (Vector3.Distance(_player.transform.position, _cheeseParent.position) > 1)
                 _player.transform.position = Vector3.MoveTowards(_player.transform.position, _cheeseParent.position, speed * Time.deltaTime * 100);
+            _player.GetComponent<Rigidbody>().useGravity = false;
             Vector3 desiredDir = _cheeseParent.position - _player.transform.position;
             float angle = Mathf.Atan2(desiredDir.x, desiredDir.z) * Mathf.Rad2Deg;
             _player.transform.rotation = Quaternion.Lerp(_player.transform.rotation, Quaternion.AngleAxis(angle, Vector3.up), Time.deltaTime * 10);
@@ -58,6 +59,7 @@ public class SmellMouseLock : MonoBehaviour
                 playerstatesA.lockController = false;
                 buttonCount = 0;
                 mouseCaught = false;
+                _player.GetComponent<Rigidbody>().useGravity = true;
             }
         }
         else

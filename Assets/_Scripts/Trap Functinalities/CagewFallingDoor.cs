@@ -6,6 +6,7 @@ using UnityEngine;
 public class CagewFallingDoor : MonoBehaviour
 {
     public GameObject door;
+    public GameObject cage;
 
     GameObject target;
 
@@ -18,7 +19,7 @@ public class CagewFallingDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (door.transform.localPosition.y < 0.1f && target != null)
+        if (door.transform.localPosition.y < 0.1f && target != null && cage != null)
         {
             Invoke("CatchPlayer", 2);
         }

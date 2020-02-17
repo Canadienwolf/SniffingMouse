@@ -6,6 +6,7 @@ public class SharpOrHeavy : MonoBehaviour
 {
     public enum Type { Sharp, Heavy}
     public Type type;
+    public ParticleSystem hitSmoke;
 
     private void OnCollisionEnter(Collision col)
     {
@@ -14,10 +15,10 @@ public class SharpOrHeavy : MonoBehaviour
             switch (type)
             {
                 case Type.Sharp:
-                    Sharp(col.gameObject);
+                    Sharp(col.gameObject, col.contacts[0].point);
                     break;
                 case Type.Heavy:
-                    Heavy(col.gameObject);
+                    Heavy(col.gameObject, col.contacts[0].point);
                     break;
                 default:
                     break;
@@ -25,19 +26,21 @@ public class SharpOrHeavy : MonoBehaviour
         }
     }
 
-    void Sharp(GameObject go)
+    void Sharp(GameObject go, Vector3 v3)
     {
         if (go.GetComponent<DestructibleObject>().sharp && GetComponent<Rigidbody>().velocity.magnitude >= go.GetComponent<DestructibleObject>().sharpVel)
         {
             Destroy(go);
+            ParticleSystem ps = Instantiate(hitSmoke, v3, Quaternion.identity);
         }
     }
 
-    void Heavy(GameObject go)
+    void Heavy(GameObject go, Vector3 v3)
     {
         if (go.GetComponent<DestructibleObject>().heavy && GetComponent<Rigidbody>().velocity.magnitude >= go.GetComponent<DestructibleObject>().heavyVel)
         {
             Destroy(go);
+            ParticleSystem ps = Instantiate(hitSmoke, v3, Quaternion.identity);
         }
     }
 }
