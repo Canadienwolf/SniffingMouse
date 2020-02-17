@@ -100,7 +100,8 @@ public class VacuumScript : MonoBehaviour
             //updating the player state lock controller !
             playerStatesA.lockController = true;
             // Move our position a step closer to the target.
-            float step = speed * Time.deltaTime; // calculate distance to move
+            float step = speed * Time.deltaTime;
+            // Moving the mouse towards the vacuum !
             player.transform.position = Vector3.MoveTowards(player.transform.position, transform.position, step);
         }
         else
