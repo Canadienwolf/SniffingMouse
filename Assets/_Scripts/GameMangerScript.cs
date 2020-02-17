@@ -14,10 +14,18 @@ public class GameMangerScript : MonoBehaviour
     public Text scoreText;
     public Text highScoreText;
     public Text gameOver;
-   // public Text badSmellText;
-   //cheese conter for the cheese available in the scene !
+    public Text prevScore;
+    // public Text badSmellText;
+    //cheese conter for the cheese available in the scene !
     int cheeseCounter;
     float help=0;
+    int previousScore;
+
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +41,9 @@ public class GameMangerScript : MonoBehaviour
         //updating the game/player states important variables !
         gameStates.score = 0;
         gameStates.timer = 120f;
+        //loading and displaying the previous score on the current level !
+        previousScore = PlayerPrefs.GetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(),0);
+        prevScore.text = "Previous Score : " + previousScore.ToString();
     }
 
     // Update is called once per frame
@@ -68,6 +79,8 @@ public class GameMangerScript : MonoBehaviour
             gameStates.timer = 0;
             //gameover text !
             gameOver.gameObject.SetActive(true);
+            //saving the score in that current level you're in in order to display it later on !
+            PlayerPrefs.SetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(), gameStates.score);
             //interrupt the game 
             Time.timeScale = 0;
             //calling the loss/win menu
@@ -83,6 +96,8 @@ public class GameMangerScript : MonoBehaviour
             //text for congrats to the player !
             gameOver.text = " Congratulations , you won !";
             gameOver.gameObject.SetActive(true);
+            //saving the score in that current level you're in in order to display it later on !
+            PlayerPrefs.SetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(), gameStates.score);
             //interrupt the game 
             Time.timeScale = 0;
             //calling the loss/win menu
@@ -90,9 +105,13 @@ public class GameMangerScript : MonoBehaviour
         }
     }
 
+    
+
     //onApplicationQuit
     private void OnApplicationQuit()
     {
+        //saving the score in that current level you're in in order to display it later on !
+        PlayerPrefs.SetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(), gameStates.score);
         //updating the game/player states important variables !
         gameStates.score = 0;
         gameStates.timer = 120f;

@@ -22,6 +22,8 @@ public class VacuumScript : MonoBehaviour
 
     //playerstates variable !
     public PlayerStatesMovements playerStatesA;
+    //gamestates variable!
+    public GameStates GameStatesA;
 
     //Player gameObject
     GameObject player;
@@ -95,20 +97,14 @@ public class VacuumScript : MonoBehaviour
         transform.localPosition = new Vector3(transform.localPosition.x + x, transform.localPosition.y, transform.localPosition.z + z);
 
         //checking for the distance between the mouse and the vacuum cleaner!
-        if (dist < 12f)
+        if (dist < 8f)
         {
-            //updating the player state lock controller !
-            playerStatesA.lockController = true;
             // Move our position a step closer to the target.
             float step = speed * Time.deltaTime;
             // Moving the mouse towards the vacuum !
             player.transform.position = Vector3.MoveTowards(player.transform.position, transform.position, step);
         }
-        else
-        {
-            //updating the player state lock controller!
-            playerStatesA.lockController = false;
-        }
+      
 
         //just for test !
         Debug.Log("dist :" + dist);
@@ -137,6 +133,8 @@ public class VacuumScript : MonoBehaviour
     //calling the losing event!
     void Die()
     {
+        //saving the score in that current level you're in in order to display it later on !
+        PlayerPrefs.SetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(), GameStatesA.score);
         //loading the loss/win menu !
         SceneManager.LoadScene("menu_ScoreDisplay");
     }
