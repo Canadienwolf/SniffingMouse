@@ -15,6 +15,8 @@ public class PickupSystem : MonoBehaviour
     public GameObject temparent;
     public GameObject pickableObject;
     public Vector3 puloc;
+    public float maxPower = 50f;
+    public float powerAcceleration = 100f;
 
     
     
@@ -76,7 +78,7 @@ public class PickupSystem : MonoBehaviour
         
         if ((Input.GetMouseButton(0) || Input.GetButton("Throw")) && !_canThrow)
         {
-            power += Time.deltaTime * 100f;
+            power = Mathf.MoveTowards(power, maxPower, Time.deltaTime * powerAcceleration);
         }
 
         if ((Input.GetMouseButtonUp(0) || Input.GetButtonUp("Throw")))

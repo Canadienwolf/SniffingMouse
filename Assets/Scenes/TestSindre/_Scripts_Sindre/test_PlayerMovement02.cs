@@ -12,9 +12,10 @@ public class test_PlayerMovement02 : MonoBehaviour
     public float runSpeed = 3;
     public float smellingSpeed = 1;
     public float rotationSpeed = 10;
-    public float initalJumpForce = 4f;
-    public float jumpForce = 3f;
-    public float jumpTime = 0.5f;
+    public float jumpForce = 5f;
+    public float jumpTime = .5f;
+    public float doubleJumpForce = 5f;
+    public float doubleJumpTime = .5f;
     public float gravityMultiplier = 5f;
     [Range(0, 1)]
     public float airControl = 0.5f;
@@ -23,12 +24,13 @@ public class test_PlayerMovement02 : MonoBehaviour
     private bool jumpInput, runInput, smellInput;
     private bool isMoving, isRunning;
     [HideInInspector] public float currentSpeed;
-    private float jumpCounter;
-    public bool secondJump;
+    private bool secondJump;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         psm.lockController = false;
         psm.isEating = false;
 
@@ -52,8 +54,6 @@ public class test_PlayerMovement02 : MonoBehaviour
         if (!psm.lockController)
         {
             if(isMoving) MovePlayer();
-            //Jump();
-            CountJump();
         }
     }
 
@@ -70,11 +70,8 @@ public class test_PlayerMovement02 : MonoBehaviour
     {
         vertInput = Input.GetAxis("Vertical");
         horInput = Input.GetAxis("Horizontal");
-        //if ((Input.GetKeyDown("space") || Input.GetButtonDown("Jump")) && gc.isGrounded) StartJump();
-        //jumpInput = Input.GetKey("space");
-        //jumpInput = Input.GetButton("Jump");
-        //if (Input.GetKeyUp("space") || Input.GetButtonUp("Jump")) jumpCounter = jumpTime + 1;
-        if ((Input.GetKeyDown("space") || Input.GetButtonDown("Jump")) && !psm.lockController) Jump();
+        if (Input.GetButtonDown("Jump") && !psm.lockController && gc.isGrounded) StartCoroutine(Jump(1));
+        if (Input.GetButtonDown("Jump") && !psm.lockController && !gc.isGrounded && !secondJump) StartCoroutine(Jump(2));
         runInput = Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Run") != 0 ? true : false;
         if (Input.GetKey("f") || Input.GetButton("Smell")) smellInput = true; else smellInput = false;
 
@@ -86,6 +83,7 @@ public class test_PlayerMovement02 : MonoBehaviour
         psm.isGrounded = gc.isGrounded;
         psm.isSmelling = smellInput;
         if (gc.isGrounded) secondJump = false;
+        if (!psm.isJumping && !gc.isGrounded && rb.useGravity) rb.AddForce(Vector3.down * gravityMultiplier);
     }
 
     void CurrentSpeed()
@@ -107,17 +105,17 @@ public class test_PlayerMovement02 : MonoBehaviour
     {
         if (smellInput && gc.isGrounded)
         {
-            GetComponent<Rigidbody>().MovePosition(transform.position + transform.forward * Time.deltaTime * smellingSpeed);
+            rb.MovePosition(transform.position + transform.forward * Time.deltaTime * smellingSpeed);
         }
         else
         {
             if (gc.isGrounded)
             {
-                GetComponent<Rigidbody>().MovePosition(transform.position + transform.forward * Time.deltaTime * currentSpeed);
+                rb.MovePosition(transform.position + transform.forward * Time.deltaTime * currentSpeed);
             }
             else
             {
-                GetComponent<Rigidbody>().MovePosition(transform.position + transform.forward * Time.deltaTime * currentSpeed * airControl);
+                rb.MovePosition(transform.position + transform.forward * Time.deltaTime * currentSpeed * airControl);
             }
         }
     }
@@ -131,62 +129,31 @@ public class test_PlayerMovement02 : MonoBehaviour
         }
     }
 
-    void CountJump()
-    {
-        if (psm.isJumping && !gc.isGrounded)
+    IEnumerator Jump(int idx)
+    {  
+        if(idx == 1)
         {
-            jumpCounter += Time.deltaTime;
-            if (jumpCounter >= jumpTime)
-            {
-                psm.isJumping = false;
-                jumpCounter = 0;
-            }
-        }
-        else if (!psm.isJumping && !gc.isGrounded)
-        {
-            GetComponent<Rigidbody>().AddForce(Vector3.down * gravityMultiplier);
-        }
-    }
-
-    void Jump()
-    {
-        if (gc.isGrounded)
-        {
-            GetComponent<Rigidbody>().AddForce(Vector3.up * initalJumpForce, ForceMode.Impulse);
             psm.isJumping = true;
+            rb.useGravity = false;
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            yield return new WaitForSeconds(jumpTime);
+            ResetJump();
         }
-        else if(!gc.isGrounded && !secondJump)
+        else if (idx == 2)
         {
-            GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             psm.isJumping = true;
             secondJump = true;
+            rb.useGravity = false;
+            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+            rb.AddForce(Vector3.up * doubleJumpForce, ForceMode.Impulse);
+            yield return new WaitForSeconds(doubleJumpTime);
+            ResetJump();
         }
     }
-    
+
+    void ResetJump()
+    {
+        rb.useGravity = true;
+        psm.isJumping = false;
+    }
 }
-
-
-/*
-
-    void StartJump()
-    {
-        GetComponent<Rigidbody>().AddForce(Vector3.up * initalJumpForce, ForceMode.Impulse);
-    }
-
-    void Jump()
-    {
-        if (jumpCounter < jumpTime && jumpInput)
-        {
-            GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce);
-            jumpCounter += Time.deltaTime;
-            psm.isJumping = true;
-        }
-        else
-        {
-            GetComponent<Rigidbody>().AddForce(Vector3.down * gravityMultiplier);
-            psm.isJumping = false;
-        }
-
-        if (gc.isGrounded) jumpCounter = 0;
-    }
-*/
