@@ -1,5 +1,41 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9027227179447875065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637175429160793420
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-8618091970385897864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MainMenu.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/MainMenu.bank
+  SubDir: 
+  lastModified: 637175346556704590
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-8355098504741286983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,7 +71,7 @@ MonoBehaviour:
   lastModified: 637175266486799628
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-7508457812803095156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,6 +90,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-6122130609258156806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637175427755615369
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-5975677603136538657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,12 +122,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/FMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637175266486819547
+  lastModified: 637175429160813370
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 798
+    Value: 930
   Exists: 1
+--- !u!114 &-4709819253821134085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MainMenu.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/MainMenu.bank
+  SubDir: 
+  lastModified: 637175427789936245
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-1325842127927409485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,6 +164,42 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-1112229659634667128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MainMenu.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/MainMenu.bank
+  SubDir: 
+  lastModified: 637175427789936245
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-789582675687933338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637175427789976139
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,16 +214,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -5975677603136538657}
-  - {fileID: 2299264616425417820}
-  - {fileID: -8157317794093639509}
+  - {fileID: -1112229659634667128}
+  - {fileID: -9027227179447875065}
   EditorEvents:
   - {fileID: 6525720777377282381}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -8157317794093639509}
+  - {fileID: -9027227179447875065}
   StringsBanks:
   - {fileID: -5975677603136538657}
-  stringsBankWriteTime: 637175266486819547
+  stringsBankWriteTime: 637175429160813370
   cacheVersion: 3
 --- !u!114 &413332151887099630
 MonoBehaviour:
@@ -171,6 +279,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &2127609350318104801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MainMenu.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/MainMenu.bank
+  SubDir: 
+  lastModified: 637175427755565501
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &2299264616425417820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,7 +314,25 @@ MonoBehaviour:
   lastModified: 637175266486762657
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
+--- !u!114 &4422357713600004704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637175275728895097
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &6525720777377282381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +348,7 @@ MonoBehaviour:
   Path: event:/Menu/MainMenu_Background
   guid: 2b5e8b26fd5d00479a6a2777bce3aaab
   Banks:
-  - {fileID: 2299264616425417820}
+  - {fileID: -1112229659634667128}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -212,6 +356,78 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 60000
+--- !u!114 &6772788734419761370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MainMenu.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/MainMenu.bank
+  SubDir: 
+  lastModified: 637175424466281438
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &7006448613035717056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MainMenu.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/MainMenu.bank
+  SubDir: 
+  lastModified: 637175275728875150
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &7039744735738010504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637175424466321333
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &8624428342242671450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637175346556744485
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &9210975087762947532
 MonoBehaviour:
   m_ObjectHideFlags: 0
