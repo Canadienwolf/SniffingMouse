@@ -5,49 +5,50 @@ using UnityEngine;
 
 public class AudioSettings : MonoBehaviour
 {
-    private FMOD.Studio.EventInstance SFXVolumeTestEvent;
+    
+    FMOD.Studio.EventInstance SFXVolumeTestEvent;
 
-    private FMOD.Studio.Bus _Music;
-    private FMOD.Studio.Bus _SFX;
-    private FMOD.Studio.Bus _Master;
-    private float MusicVolume = 0.5f;
-    private float SFXVolume = 0.5f;
-    private float MasterVolume = 1f;
+    public FMOD.Studio.Bus Music;
+    public FMOD.Studio.Bus SFX;
+    public FMOD.Studio.Bus Master;
+    public float MusicVolume = 0.5f;
+    public float SFXVolume = 0.5f;
+    public float MasterVolume = 1f;
 
-    private void Awake()
+    void Awake ()
     {
-        _Music = FMODUnity.RuntimeManager.GetBus("bus:/Master/Music");
-        _SFX = FMODUnity.RuntimeManager.GetBus("bus:/Master/SFX");
-        _Master = FMODUnity.RuntimeManager.GetBus("bus:/Master");
-        SFXVolumeTestEvent = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/SFXVolumeTest");
-    }
-    // Update is called once per frame    
-    void Update()
-    {
-        _Music.setVolume(MusicVolume);
-        _SFX.setVolume(SFXVolume);
-        _Master.setVolume(MasterVolume);
+        Music = FMODUnity.RuntimeManager.GetBus ("bus:/Master/Music");
+        SFX = FMODUnity.RuntimeManager.GetBus ("bus:/Master/SFX");
+        Master = FMODUnity.RuntimeManager.GetBus ("bus:/Master");
+        //SFXVolumeTestEvent = FMODUnity.RuntimeManager.CreateInstance ("event:/SFX/SFXVolumeTest");
     }
 
-    public void MasterVolumeLevel(float newMasterVolume)
+    void Update () 
+    {
+        Music.setVolume (MusicVolume);
+        SFX.setVolume (SFXVolume);
+        Master.setVolume (MasterVolume);
+    }
+
+    public void MasterVolumeLevel (float newMasterVolume)
     {
         MasterVolume = newMasterVolume;
     }
 
-    public void MusicVolumeLevel(float newMusicVolume)
+    public void MusicVolumeLevel (float newMusicVolume)
     {
         MusicVolume = newMusicVolume;
     }
 
-    public void SFXVolumeLevel(float newSFXVolume)
+    public void SFXVolumeLevel (float newSFXVolume)
     {
         SFXVolume = newSFXVolume;
 
         FMOD.Studio.PLAYBACK_STATE PbState;
-        SFXVolumeTestEvent.getPlaybackState(out PbState);
-        if (PbState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+        SFXVolumeTestEvent.getPlaybackState (out PbState);
+        if (PbState != FMOD.Studio.PLAYBACK_STATE.PLAYING) 
         {
-            SFXVolumeTestEvent.start();
+            SFXVolumeTestEvent.start ();
         }
     }
 }
