@@ -20,6 +20,15 @@ public class VacuumScript : MonoBehaviour
     private float tiempo;
     private float angulo;
 
+    //playerstates variable !
+    public PlayerStatesMovements playerStatesA;
+
+    //Player gameObject
+    GameObject player;
+
+    //Distance and speed varibles !
+    float dist, speed = 8f;
+
     // Use this for initialization
     void Start()
     {
@@ -28,11 +37,17 @@ public class VacuumScript : MonoBehaviour
         z = Random.Range(-velocidadMax, velocidadMax);
         angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
         transform.localRotation = Quaternion.Euler(0, angulo, 0);
+
+        //finding the player Gamobject!
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        //calculating the Distance between the mouse and the vacuum cleaner!
+         dist = Vector3.Distance(this.gameObject.transform.position, player.transform.position);
         //timer variable updates!
         tiempo += Time.deltaTime;
 
@@ -78,6 +93,24 @@ public class VacuumScript : MonoBehaviour
 
         //moving the vacuum cleaner using the variables already updated !
         transform.localPosition = new Vector3(transform.localPosition.x + x, transform.localPosition.y, transform.localPosition.z + z);
+
+        //checking for the distance between the mouse and the vacuum cleaner!
+        if (dist < 12f)
+        {
+            //updating the player state lock controller !
+            playerStatesA.lockController = true;
+            // Move our position a step closer to the target.
+            float step = speed * Time.deltaTime; // calculate distance to move
+            player.transform.position = Vector3.MoveTowards(player.transform.position, transform.position, step);
+        }
+        else
+        {
+            //updating the player state lock controller!
+            playerStatesA.lockController = false;
+        }
+
+        //just for test !
+        Debug.Log("dist :" + dist);
     }
 
     //for detecting the collision with the player!
@@ -85,9 +118,32 @@ public class VacuumScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Time.timeScale = 0;
+            //updating the player state lock controller!
+            playerStatesA.lockController = true;
+            //Locking the vacuum cleaner movments by freezing the movements variables!
+            velocidadMax = 0;
+            xMin = 0;
+            xMax = 0;
+            zMin = 0;
+            zMax = 0;
+            //Stopping the vacuum shuffing effect!
+            speed = 0;
             //calling the loss/win menu
-            SceneManager.LoadScene("menu_ScoreDisplay");
+            Invoke("Die", 2);
         }
     }
+
+    //calling the losing event!
+    void Die()
+    {
+        //loading the loss/win menu !
+        SceneManager.LoadScene("menu_ScoreDisplay");
+    }
+
+    private void OnApplicationQuit()
+    {
+        //updating the player state lock controller before quit !
+        playerStatesA.lockController = false;
+    }
+
 }

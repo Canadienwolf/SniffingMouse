@@ -28,8 +28,8 @@ public class GameMangerScript : MonoBehaviour
         gameOver.gameObject.SetActive(false);
         //badSmellText.gameObject.SetActive(false);
         gameOver.text = " Time Limit Reached ! Game Over !";
-        // get in the last highscore
-        gameStates.highScore = PlayerPrefs.GetInt("Highscore", 0);
+        // get in the last highscore for that specific scene that we are in at the moment !
+        gameStates.highScore = PlayerPrefs.GetInt("Highscore" + SceneManager.GetActiveScene().buildIndex.ToString(), 0);
         //updating the game/player states important variables !
         gameStates.score = 0;
         gameStates.timer = 120f;
@@ -41,6 +41,7 @@ public class GameMangerScript : MonoBehaviour
         //Updating Ui feedback for the player !
         scoreText.text = "Score : " + gameStates.score.ToString();
         highScoreText.text = "HighScore : " + gameStates.highScore.ToString();
+
         timerText.text = "Timer : " + gameStates.timer.ToString("f0");
 
         //timer method !
@@ -56,22 +57,6 @@ public class GameMangerScript : MonoBehaviour
         //calling that public local method when the player win !
         WinMethod();
 
-
-
-        /////////////////******* will work on the feedback later on *********///////////////
-        //detecting the interaction with the bad smell
-      /*  if (SmellDetectionScript.help == true)
-        {
-            help = gameStates.timer;
-            badSmellText.text = "BBBrrr , no a Bad Smell !";
-            badSmellText.gameObject.SetActive(true);
-            SmellDetectionScript.help = false;
-        }
-        if ((int)gameStates.timer == ((int)help - 3))
-        {
-
-            //badSmellText.gameObject.SetActive(false);
-        }*/
 
     }
 

@@ -2405,6 +2405,7 @@ MonoBehaviour:
   zMax: 20
   xMin: -20
   zMin: -20
+  playerStatesA: {fileID: 11400000, guid: b7d465a55c6536d42a06e7c8347f9a4c, type: 2}
 --- !u!1 &936484807
 GameObject:
   m_ObjectHideFlags: 0
@@ -3018,11 +3019,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01dd77bf8afb29468d7f2cced94619f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverText: {fileID: 210980349}
   playerStatesB: {fileID: 0}
-  gameStates: {fileID: 0}
   frequency: 10
   magnitude: 5
+  effectTime: 5
+  drunkBobbles: {fileID: 0}
 --- !u!1 &1207221023
 GameObject:
   m_ObjectHideFlags: 0
@@ -3573,12 +3574,12 @@ PrefabInstance:
     - target: {fileID: 1435060525793672995, guid: 3b043e43a77e5d545966a222ad59c91d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000017197285
+      value: -0.00000001720349
       objectReference: {fileID: 0}
     - target: {fileID: 1435060525793672995, guid: 3b043e43a77e5d545966a222ad59c91d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 3.3663222e-10
+      value: -5.717138e-10
       objectReference: {fileID: 0}
     - target: {fileID: 1435060525793672995, guid: 3b043e43a77e5d545966a222ad59c91d,
         type: 3}
@@ -3839,11 +3840,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01dd77bf8afb29468d7f2cced94619f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverText: {fileID: 210980349}
   playerStatesB: {fileID: 11400000, guid: b7d465a55c6536d42a06e7c8347f9a4c, type: 2}
-  gameStates: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
   frequency: 15
   magnitude: 1.5
+  effectTime: 5
+  drunkBobbles: {fileID: 0}
 --- !u!1 &1474328879
 GameObject:
   m_ObjectHideFlags: 0
@@ -5108,11 +5109,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01dd77bf8afb29468d7f2cced94619f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverText: {fileID: 210980349}
   playerStatesB: {fileID: 0}
-  gameStates: {fileID: 0}
   frequency: 10
   magnitude: 5
+  effectTime: 5
+  drunkBobbles: {fileID: 0}
 --- !u!1001 &1750194401
 PrefabInstance:
   m_ObjectHideFlags: 0
