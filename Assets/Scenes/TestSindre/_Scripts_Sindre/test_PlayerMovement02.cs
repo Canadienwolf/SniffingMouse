@@ -6,6 +6,7 @@ public class test_PlayerMovement02 : MonoBehaviour
 {
     public PlayerStatesMovements psm;
     public test_GroundCheck gc;
+    public test_ClimbChecker cc;
     public Transform camTrans;
 
     public float walkSpeed = 2;
@@ -13,18 +14,20 @@ public class test_PlayerMovement02 : MonoBehaviour
     public float smellingSpeed = 1;
     public float rotationSpeed = 10;
     public float jumpForce = 5f;
+    public float initalJumpForce = 0.5f;
+    public float wallJumpForce = 10f;
     public float jumpTime = .5f;
-    public float doubleJumpForce = 5f;
-    public float doubleJumpTime = .5f;
+    public float wallRunLength = 5f;
+    public float wallRunTime = .5f;
     public float gravityMultiplier = 5f;
     [Range(0, 1)]
     public float airControl = 0.5f;
+    public float climbFalloff = 1f;
 
     private float vertInput, horInput;
     private bool jumpInput, runInput, smellInput;
-    private bool isMoving, isRunning;
+    private bool isMoving, isRunning, isClimbing;
     [HideInInspector] public float currentSpeed;
-    private bool secondJump;
     private Rigidbody rb;
 
     // Start is called before the first frame update
@@ -46,6 +49,8 @@ public class test_PlayerMovement02 : MonoBehaviour
             InputCheck();
             CurrentSpeed();
             RotatePlayer();
+            Jump();
+            WallJump();
         }
     }
 
@@ -70,8 +75,12 @@ public class test_PlayerMovement02 : MonoBehaviour
     {
         vertInput = Input.GetAxis("Vertical");
         horInput = Input.GetAxis("Horizontal");
-        if (Input.GetButtonDown("Jump") && !psm.lockController && gc.isGrounded) StartCoroutine(Jump(1));
-        if (Input.GetButtonDown("Jump") && !psm.lockController && !gc.isGrounded && !secondJump) StartCoroutine(Jump(2));
+        if (cc.canClimb) rb.useGravity = false; else rb.useGravity = true;
+        if ((Input.GetKeyDown("space") || Input.GetButtonDown("Jump")) && cc.canClimb) { isClimbing = true; Invoke("StopWallJump", wallRunTime); }
+        else if ((Input.GetKeyDown("space") || Input.GetButtonDown("Jump")) && gc.isGrounded) StartJump();
+        jumpInput = Input.GetKey("space");
+        jumpInput = Input.GetButton("Jump");
+        if (Input.GetKeyUp("space") || Input.GetButtonUp("Jump")) { jumpCounter = jumpTime + 1; StopWallJump(); }
         runInput = Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Run") != 0 ? true : false;
         if (Input.GetKey("f") || Input.GetButton("Smell")) smellInput = true; else smellInput = false;
 
@@ -82,7 +91,6 @@ public class test_PlayerMovement02 : MonoBehaviour
         psm.isRunning = isRunning;
         psm.isGrounded = gc.isGrounded;
         psm.isSmelling = smellInput;
-        if (gc.isGrounded) secondJump = false;
         if (!psm.isJumping && !gc.isGrounded && rb.useGravity) rb.AddForce(Vector3.down * gravityMultiplier);
     }
 
@@ -129,31 +137,44 @@ public class test_PlayerMovement02 : MonoBehaviour
         }
     }
 
-    IEnumerator Jump(int idx)
-    {  
-        if(idx == 1)
+    float jumpCounter;
+    void StartJump()
+    {
+        GetComponent<Rigidbody>().AddForce(Vector3.up * initalJumpForce, ForceMode.Impulse);
+    }
+
+    void Jump()
+    {
+        if (!isClimbing)
         {
-            psm.isJumping = true;
-            rb.useGravity = false;
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            yield return new WaitForSeconds(jumpTime);
-            ResetJump();
-        }
-        else if (idx == 2)
-        {
-            psm.isJumping = true;
-            secondJump = true;
-            rb.useGravity = false;
-            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-            rb.AddForce(Vector3.up * doubleJumpForce, ForceMode.Impulse);
-            yield return new WaitForSeconds(doubleJumpTime);
-            ResetJump();
+            if (jumpCounter < jumpTime && jumpInput)
+            {
+                GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce);
+                jumpCounter += Time.deltaTime;
+                psm.isJumping = true;
+            }
+            else
+            {
+                GetComponent<Rigidbody>().AddForce(Vector3.down * gravityMultiplier);
+                psm.isJumping = false;
+            }
+
+            if (gc.isGrounded) jumpCounter = 0;
         }
     }
 
-    void ResetJump()
+    void WallJump()
+    {
+        if (isClimbing)
+        {
+            rb.useGravity = false;
+            rb.velocity = Vector3.up * wallJumpForce;
+        }
+    }
+
+    void StopWallJump()
     {
         rb.useGravity = true;
-        psm.isJumping = false;
+        isClimbing = false;
     }
 }
