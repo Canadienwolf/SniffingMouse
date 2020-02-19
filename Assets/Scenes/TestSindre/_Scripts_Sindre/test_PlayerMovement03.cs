@@ -39,6 +39,7 @@ public class test_PlayerMovement03 : MonoBehaviour
     private Rigidbody rb;
     private Vector3 moveDir;
     private float currentMoveSpeed;
+    private float currentJumpTime;
 
     void Start()
     {
@@ -49,6 +50,9 @@ public class test_PlayerMovement03 : MonoBehaviour
     {
         SetGetStates();
         SetSpeed();
+        SetDirection();
+        InputCheck();
+        RotatePlayer();
     }
 
     void FixedUpdate()
@@ -58,10 +62,14 @@ public class test_PlayerMovement03 : MonoBehaviour
 
     void InputCheck()
     {
-        //Move input
         horInput = Input.GetAxis("Horizontal");
         vertInput = Input.GetAxis("Vertical");
-        if (horInput != 0 || vertInput != 0) _isMoving = true;
+        if (horInput != 0 || vertInput != 0) _isMoving = true; else _isMoving = false;
+        if (Input.GetKey(KeyCode.LeftShift)) _isRunning = true; else _isRunning = false;
+        if (_isJumping) currentJumpTime = Mathf.MoveTowards(currentJumpTime, jumpTime, Time.deltaTime);
+        if (_isGrounded) currentJumpTime = 0;
+        if (Input.GetKey("space") && currentJumpTime < jumpTime) _isJumping = true; else _isJumping = false;
+        if (Input.GetKey("f")) _isSmelling = true; else _isSmelling = false;
     }
 
     void SetGetStates()
@@ -69,6 +77,7 @@ public class test_PlayerMovement03 : MonoBehaviour
         //Get states
         _isGrounded = gc.isGrounded;
         _isLocked = psm.lockController;
+        _isClimbing = cc.canClimb;
 
         //Set states
         psm.isMoving = _isMoving;
@@ -100,7 +109,7 @@ public class test_PlayerMovement03 : MonoBehaviour
 
     void SetSpeed()
     {
-        if (_isClimbing)
+        if (_isClimbing && _isRunning)
         {
             currentMoveSpeed = climbStartSpeed;
         }
@@ -116,12 +125,21 @@ public class test_PlayerMovement03 : MonoBehaviour
         {
             currentMoveSpeed = smellSpeed;
         }
+        else
+        {
+            currentMoveSpeed = 0;
+        }
 
     }
 
     void MovePlayer()
     {
         rb.velocity = moveDir * currentMoveSpeed;
+
+        if (!_isGrounded && !_isJumping && !_isClimbing)
+        {
+            rb.velocity += Vector3.down * gravityMultiplier;
+        }
     }
 
     void RotatePlayer()

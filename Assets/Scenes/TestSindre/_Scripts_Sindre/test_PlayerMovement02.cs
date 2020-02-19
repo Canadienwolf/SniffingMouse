@@ -75,7 +75,7 @@ public class test_PlayerMovement02 : MonoBehaviour
     {
         vertInput = Input.GetAxis("Vertical");
         horInput = Input.GetAxis("Horizontal");
-        if (cc.canClimb) rb.useGravity = false; else rb.useGravity = true;
+        //if (cc.canClimb) rb.useGravity = false; else rb.useGravity = true;
         if ((Input.GetKeyDown("space") || Input.GetButtonDown("Jump")) && cc.canClimb) { isClimbing = true; Invoke("StopWallJump", wallRunTime); }
         else if ((Input.GetKeyDown("space") || Input.GetButtonDown("Jump")) && gc.isGrounded) StartJump();
         jumpInput = Input.GetKey("space");
