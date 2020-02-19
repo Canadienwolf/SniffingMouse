@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1619116065557960511}
   m_Layer: 0
-  m_Name: TrapNet
+  m_Name: TrapNet_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -169,9 +169,10 @@ GameObject:
   - component: {fileID: 2430744978926830790}
   - component: {fileID: 4145400328598958109}
   - component: {fileID: 4145400328598958108}
+  - component: {fileID: 1323095940}
   m_Layer: 0
   m_Name: TrapNet_v01
-  m_TagString: Untagged
+  m_TagString: Destructible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,7 +249,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4385924485506724031, guid: 718c8596e4306954eb6834f0ec1c5e39, type: 3}
 --- !u!54 &4145400328598958108
@@ -267,6 +268,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1323095940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4145400328598958106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a0cd0e09acb47141a9cf4d44d1db39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heavy: 0
+  sharp: 1
+  heavyVel: 0
+  sharpVel: 1
 --- !u!1 &4422355282053943377
 GameObject:
   m_ObjectHideFlags: 0
