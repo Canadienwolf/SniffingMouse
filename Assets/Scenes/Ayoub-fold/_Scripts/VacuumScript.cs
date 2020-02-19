@@ -111,7 +111,7 @@ public class VacuumScript : MonoBehaviour
     }
 
     //for detecting the collision with the player!
-    private void OnCollisionStay(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
