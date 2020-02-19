@@ -25,6 +25,8 @@ public class SmellDetectionScript : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(player.transform.position);
+
         if (affected)
         {
             //player.transform.position += new Vector3(Mathf.Sin(Time.time * frequency) * magnitude * player.GetComponent<test_PlayerMovement02>().currentSpeed * 0.1f, 0, 0);
@@ -47,6 +49,7 @@ public class SmellDetectionScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            
             affected = true;
             timeLeft = effectTime;
             if (drunkBobble == null)
