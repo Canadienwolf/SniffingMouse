@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SmellDetectionScript : MonoBehaviour
 {
     //variables needed !
     public PlayerStatesMovements playerStatesB;
+    public GameStates GameStatesA;
     GameObject player;
     bool affected;
     float timeLeft;
@@ -70,5 +72,14 @@ public class SmellDetectionScript : MonoBehaviour
             timeLeft = effectTime;
         }
 
+    }
+
+    //calling the losing event!
+    void Die()
+    {
+        //saving the score in that current level you're in in order to display it later on !
+        PlayerPrefs.SetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(), GameStatesA.score);
+        //loading the loss/win menu !
+        SceneManager.LoadScene("menu_ScoreDisplay");
     }
 }

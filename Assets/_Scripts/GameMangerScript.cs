@@ -112,6 +112,8 @@ public class GameMangerScript : MonoBehaviour
     {
         //saving the score in that current level you're in in order to display it later on !
         PlayerPrefs.SetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(), gameStates.score);
+        //need to test that line of code later !
+        PlayerPrefs.SetInt("Highscore" + SceneManager.GetActiveScene().buildIndex.ToString(), gameStates.highScore);
         //updating the game/player states important variables !
         gameStates.score = 0;
         gameStates.timer = 120f;
