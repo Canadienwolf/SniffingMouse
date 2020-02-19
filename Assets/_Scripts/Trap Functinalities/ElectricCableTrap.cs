@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DeathOnContact : MonoBehaviour
+public class ElectricCableTrap : MonoBehaviour
 {
 
-    public int timer = 5;
-
-    private bool _isDisabled;
+    public bool isDisarmed = false;
+    
+    public int timer;
     
     public PlayerStatesMovements playerstatesA;
     private void OnTriggerEnter(Collider other)
@@ -17,19 +17,13 @@ public class DeathOnContact : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            if (!_isDisabled)
+            if (isDisarmed == false)
             {
                 playerstatesA.lockController = true;
             
                 Invoke("SceneChange", timer);
             }
         }
-    }
-
-    //TODO Need to program in what will happend when the gameobject is destroyed by sharp/ heavy object.
-    private void OnDestroy()
-    {
-        throw new NotImplementedException();
     }
 
     void SceneChange()
