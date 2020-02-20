@@ -20,6 +20,8 @@ public class PlayerStatesMovements : ScriptableObject
 
     public bool isGrounded;
 
+    public bool isClimbing;
+
     //for locking the movements controller
     public bool lockController;
 }
