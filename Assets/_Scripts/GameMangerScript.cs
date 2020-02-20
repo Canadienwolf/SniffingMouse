@@ -32,6 +32,7 @@ public class GameMangerScript : MonoBehaviour
     {
         // start the game !
         Time.timeScale = 1;
+        //countig how many cheese objects are  in the scene !
         cheeseCounter = GameObject.FindGameObjectsWithTag("Cheese").Length;
         gameOver.gameObject.SetActive(false);
         //badSmellText.gameObject.SetActive(false);
@@ -112,7 +113,7 @@ public class GameMangerScript : MonoBehaviour
     {
         //saving the score in that current level you're in in order to display it later on !
         PlayerPrefs.SetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(), gameStates.score);
-        //need to test that line of code later !
+        //need to test that line of code later ! (just for saving the current highscore for the current level !)
         PlayerPrefs.SetInt("Highscore" + SceneManager.GetActiveScene().buildIndex.ToString(), gameStates.highScore);
         //updating the game/player states important variables !
         gameStates.score = 0;
