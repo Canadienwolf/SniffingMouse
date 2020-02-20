@@ -31,6 +31,9 @@
 		<relationship name="timeline">
 			<destination>{e669a75b-6ad4-4ad1-a3fe-b6c34c6425d4}</destination>
 		</relationship>
+		<relationship name="banks">
+			<destination>{b9996e4b-d629-41aa-841a-a889b5d59dc1}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixer" id="{a12f4f53-8412-4e18-bf32-7032474166af}">
 		<relationship name="masterBus">
@@ -69,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{e1578b15-86c4-4daf-81b9-762301ad750c}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{bcbfaeb1-73c6-48dc-b962-4e35aec6b2bb}</destination>
 		</relationship>
@@ -94,6 +100,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{daaa0faf-d2da-4179-83a1-f3380352f7bc}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -113,7 +122,11 @@
 			<destination>{9feb9a9d-2720-474e-8de6-762c325f43d9}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{b6873623-3ab4-4383-bea9-007bf4327c0f}" />
+	<object class="MixerBusPanner" id="{b6873623-3ab4-4383-bea9-007bf4327c0f}">
+		<property name="surroundPanDirection">
+			<value>71.5650482</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{25248835-7651-42c9-af03-69142b684667}" />
 	<object class="MixerBusEffectChain" id="{ede0695e-ce0c-4d7d-bf99-96ecbd6f93d3}">
 		<relationship name="effects">
@@ -122,6 +135,10 @@
 	</object>
 	<object class="MixerBusPanner" id="{ea5ae521-e80d-42ef-a83a-2fd4f26df6f2}" />
 	<object class="MixerBusFader" id="{85d14564-898d-4fd1-91bc-255bd7bbb8a9}" />
-	<object class="SpatialiserEffect" id="{9feb9a9d-2720-474e-8de6-762c325f43d9}" />
+	<object class="SpatialiserEffect" id="{9feb9a9d-2720-474e-8de6-762c325f43d9}">
+		<property name="userPanDirection">
+			<value>-38.6598091</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{116740a5-6d49-4fa6-b5e0-91a3fdca4147}" />
 </objects>

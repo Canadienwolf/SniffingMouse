@@ -878,7 +878,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8490781374792748082}
-  m_LocalRotation: {x: 0.11055148, y: -8.702998e-10, z: -0.0000000078240925, w: -0.99387044}
+  m_LocalRotation: {x: 0.11055148, y: -8.702995e-10, z: -0.000000007824091, w: -0.99387044}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -952,8 +952,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8490781374802587337}
-  m_LocalRotation: {x: 0.043156285, y: 0.0000000016119299, z: -0.000000012335578,
-    w: -0.9990683}
+  m_LocalRotation: {x: 0.043156285, y: 0.0000000016119304, z: -0.000000012335581,
+    w: -0.9990684}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1097,17 +1097,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   psm: {fileID: 11400000, guid: b7d465a55c6536d42a06e7c8347f9a4c, type: 2}
   gc: {fileID: 8490781375811931418}
+  cc: {fileID: 0}
   camTrans: {fileID: 8490781376012157175}
   walkSpeed: 8
   runSpeed: 20
   smellingSpeed: 4
   rotationSpeed: 10
   jumpForce: 16
+  initalJumpForce: 0.5
+  wallJumpForce: 10
   jumpTime: 0.2
-  doubleJumpForce: 16
-  doubleJumpTime: 0.2
+  wallRunLength: 5
+  wallRunTime: 0.5
   gravityMultiplier: 14
   airControl: 0.719
+  climbFalloff: 1
   currentSpeed: 0
 --- !u!114 &7367620009688460830
 MonoBehaviour:
@@ -1666,7 +1670,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8490781376012157175}
   - component: {fileID: 8490781376012157172}
-  - component: {fileID: 8490781376012157173}
   - component: {fileID: 8490781376012157174}
   m_Layer: 0
   m_Name: Main Camera
@@ -1682,7 +1685,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8490781376012157170}
-  m_LocalRotation: {x: -0.043156285, y: -0.000000004297587, z: -1.8564085e-10, w: 0.9990683}
+  m_LocalRotation: {x: -0.043156285, y: -0.0000000042975876, z: -1.8564088e-10, w: 0.9990683}
   m_LocalPosition: {x: 0, y: 2.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1732,14 +1735,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &8490781376012157173
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8490781376012157170}
-  m_Enabled: 1
 --- !u!114 &8490781376012157174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1882,7 +1877,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8490781376415736939}
-  m_LocalRotation: {x: 0.024976607, y: -0.0000000167478, z: 0.00000001985877, w: -0.9996881}
+  m_LocalRotation: {x: 0.024976587, y: 0.000000017701469, z: 0.00000002072883, w: -0.9996881}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
