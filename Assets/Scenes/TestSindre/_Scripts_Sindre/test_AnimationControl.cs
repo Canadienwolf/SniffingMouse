@@ -15,5 +15,6 @@ public class test_AnimationControl : MonoBehaviour
         anim.SetBool("Running", psm.isRunning);
         anim.SetBool("Grounded", psm.isGrounded);
         anim.SetBool("Jumping", psm.isJumping);
+        anim.SetBool("Climbing", psm.isClimbing);
     }
 }
