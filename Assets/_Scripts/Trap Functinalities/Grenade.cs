@@ -34,6 +34,7 @@ public class Grenade : MonoBehaviour
     {
         for (int i = 0; i < explotion.Length; i++)
         {
+            explotion[i].gameObject.SetActive(true);
             explotion[i].Play();
             explotion[i].transform.parent = null;
         }
@@ -45,6 +46,7 @@ public class Grenade : MonoBehaviour
         }
         else
         {
+            gameObject.SetActive(false);
             Destroy(this.gameObject);
         }
         transform.GetChild(0).gameObject.SetActive(false);

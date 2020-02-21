@@ -27,55 +27,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 9067009033250746534, guid: 7d1a60ca96aa5924a9d7c3a37f8a172a, type: 3}
---- !u!135 &1915411425
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145783356070238840}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.2
-  m_Center: {x: 2, y: 1.3, z: -0.1}
---- !u!114 &998482143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145783356070238840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Event: event:/SFX/Traps/SpringLoadedTrap/IMPACT_Metal_Hit_Sheet_Metal_RR2_mono
-  PlayEvent: 3
-  StopEvent: 4
-  AllowFadeout: 1
-  TriggerOnce: 1
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!114 &1915411428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145783356070238840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc91b82c40fd454c95cf8afffd0808f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerStatesA: {fileID: 11400000, guid: b7d465a55c6536d42a06e7c8347f9a4c, type: 2}
 --- !u!1 &5587637701971272434
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,19 +59,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &171050142
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8353487488371488158}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 8, y: 0.61542475, z: 4}
-  m_Center: {x: 0, y: -0.31136417, z: 0}
 --- !u!1001 &1588168401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -274,28 +212,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8685646818769637607, guid: 9fcb917d8fb0c614e852f7f8bc2d9e78,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fcb917d8fb0c614e852f7f8bc2d9e78, type: 3}
---- !u!1 &2145783356070238840 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 840045391146927040, guid: 9fcb917d8fb0c614e852f7f8bc2d9e78,
-    type: 3}
-  m_PrefabInstance: {fileID: 1616557258249296312}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3142390277836499051 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4463956795510141395, guid: 9fcb917d8fb0c614e852f7f8bc2d9e78,
-    type: 3}
-  m_PrefabInstance: {fileID: 1616557258249296312}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8353487488371488158 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7314592218777005094, guid: 9fcb917d8fb0c614e852f7f8bc2d9e78,
     type: 3}
   m_PrefabInstance: {fileID: 1616557258249296312}
   m_PrefabAsset: {fileID: 0}
