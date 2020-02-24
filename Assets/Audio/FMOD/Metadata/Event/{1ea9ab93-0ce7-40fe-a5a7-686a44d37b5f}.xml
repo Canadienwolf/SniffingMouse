@@ -75,9 +75,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{98779e8f-4e2c-4396-bb5f-57d82ea42b2e}">
-		<property name="volume">
-			<value>-28</value>
-		</property>
 		<relationship name="effectChain">
 			<destination>{42d7aeda-e07d-44e1-920d-22f3d96912f7}</destination>
 		</relationship>
@@ -146,14 +143,11 @@
 	<object class="MixerBusPanner" id="{8c012108-ec8d-41bf-820b-f6a9ce516656}" />
 	<object class="MixerBusFader" id="{292b35d8-1c39-4828-ac3d-df37af538b0e}" />
 	<object class="SpatialiserEffect" id="{4b300774-514e-4b21-8e55-118afbfc51e8}">
-		<property name="distanceRolloffType">
-			<value>1</value>
-		</property>
 		<property name="minimumDistance">
 			<value>0</value>
 		</property>
 		<property name="maximumDistance">
-			<value>8.39999962</value>
+			<value>80</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{8046c4c5-5e54-4aa6-b59a-290ad8a5e667}" />
