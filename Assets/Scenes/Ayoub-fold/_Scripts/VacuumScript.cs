@@ -42,6 +42,8 @@ public class VacuumScript : MonoBehaviour
 
         //finding the player Gamobject!
         player = GameObject.FindGameObjectWithTag("Player");
+        
+        
     }
 
     // Update is called once per frame
@@ -107,7 +109,7 @@ public class VacuumScript : MonoBehaviour
       
 
         //just for test !
-        Debug.Log("dist :" + dist);
+        //Debug.Log("dist :" + dist);
     }
 
     //for detecting the collision with the player!
