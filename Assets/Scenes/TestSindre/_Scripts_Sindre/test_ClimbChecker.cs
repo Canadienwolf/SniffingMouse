@@ -9,7 +9,7 @@ public class test_ClimbChecker : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag != "Player" && other.tag != "Pickable")
+        if (other.tag != "Player" && other.tag != "Pickable" && !other.GetComponent<Collider>().isTrigger)
         {
             canClimb = true;
             justHit = true;
@@ -19,7 +19,7 @@ public class test_ClimbChecker : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag != "Player" && other.tag != "Pickable")
+        if (other.tag != "Player" && other.tag != "Pickable" && !other.GetComponent<Collider>().isTrigger)
         {
             canClimb = true;
         }
@@ -27,7 +27,7 @@ public class test_ClimbChecker : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag != "Player" && other.tag != "Pickable")
+        if (other.tag != "Player" && other.tag != "Pickable" && !other.GetComponent<Collider>().isTrigger)
         {
             canClimb = false;
         }

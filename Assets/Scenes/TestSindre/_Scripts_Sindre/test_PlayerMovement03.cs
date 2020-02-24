@@ -25,7 +25,7 @@ public class test_PlayerMovement03 : MonoBehaviour
     public float gravityMultiplier = 10f;
 
     //Climbing attributes//
-    public float climbStartSpeed = 5;
+    public float climbSpeed = 5;
     public float climbTime = 1;
 
 
@@ -44,6 +44,7 @@ public class test_PlayerMovement03 : MonoBehaviour
     private Vector3 moveDir;
     private float currentMoveSpeed;
     private float currentJumpTime;
+    private float currentClimbTime;
     private float currentAirVel;
 
     private void OnEnable()
@@ -54,6 +55,7 @@ public class test_PlayerMovement03 : MonoBehaviour
 
     private void OnDisable()
     {
+        psm.lockController = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -90,6 +92,7 @@ public class test_PlayerMovement03 : MonoBehaviour
         if (_isGrounded) currentJumpTime = 0;
         if (_isJumping) currentJumpTime = Mathf.MoveTowards(currentJumpTime, jumpTime, Time.deltaTime);
         if (Input.GetKey("space") && currentJumpTime < jumpTime && !_isClimbing) _isJumping = true; else _isJumping = false;
+        if (Input.GetKeyUp("space") && !gc.isGrounded) currentJumpTime = jumpTime;
         if (Input.GetKey("f")) _isSmelling = true; else _isSmelling = false;
     }
 
@@ -99,7 +102,8 @@ public class test_PlayerMovement03 : MonoBehaviour
         _isGrounded = gc.isGrounded;
         _isLocked = psm.lockController;
         _canClimb = cc.canClimb;
-        if (_canClimb && _isRunning) _isClimbing = true; else _isClimbing = false;
+        if (_canClimb && _isRunning && currentClimbTime < climbTime - 0.1f) _isClimbing = true; else _isClimbing = false;
+        if (_isGrounded) currentClimbTime = 0;
 
         //Set states
         psm.isMoving = _isMoving;
@@ -132,11 +136,11 @@ public class test_PlayerMovement03 : MonoBehaviour
             if (_isGrounded || _isJumping || cc.justHit)
             {
                 _isJumping = false;
-                currentMoveSpeed = climbStartSpeed;
+                currentMoveSpeed = climbSpeed;
             }
             else
             {
-                currentMoveSpeed = Mathf.MoveTowards(currentMoveSpeed, 0, Time.deltaTime * climbStartSpeed / climbTime);
+                currentClimbTime = Mathf.MoveTowards(currentClimbTime, climbTime, Time.deltaTime);
             }
         }
         else if (_isMoving && !_isRunning && !_isSmelling)
