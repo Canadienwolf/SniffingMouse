@@ -7,35 +7,17 @@ using UnityEngine.EventSystems;
 
 public class PickupSystem : MonoBehaviour
 {
-    
-    
-    
     //public
     public Transform heldItemTransform;
     public GameObject temparent;
     public GameObject pickableObject;
-    public Vector3 puloc;
     public float maxPower = 50f;
     public float powerAcceleration = 100f;
 
-    
-    
     //private
-    private GameObject _player;
     public bool _pickedUp = false;
     private float power;
     private bool _canThrow;
-
-    private void Awake()
-    {
-        _player = gameObject;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per fr%%ame
     void Update()
@@ -55,9 +37,6 @@ public class PickupSystem : MonoBehaviour
                 pickableObject.transform.localPosition = new Vector3(0, 0, 0);
                 pickableObject.transform.localRotation = Quaternion.identity;
                 PickbleColliders(false);
-
-
-                print("Picked item up");
                 
                 _pickedUp = true;
             }
@@ -67,8 +46,6 @@ public class PickupSystem : MonoBehaviour
                 pickableObject.transform.parent = null;
                 pickableObject.GetComponent<Rigidbody>().isKinematic = false;
                 PickbleColliders(true);
-
-                print("Sindrus 10 000");
                 
                 _pickedUp = false;
             }
@@ -108,7 +85,7 @@ public class PickupSystem : MonoBehaviour
 
     private void OnTriggerEnter(Collider Pickable)
     {
-        if (Pickable.CompareTag("Pickable"))
+        if (Pickable.CompareTag("Pickable") && !_pickedUp)
         {
             pickableObject = Pickable.gameObject;
         }
