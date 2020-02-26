@@ -5,17 +5,18 @@ using UnityEngine;
 
 public class CatchPlayer : MonoBehaviour
 {
+    public float endTime = 3;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
             if (other.GetComponent<PickupSystem>().pickableObject == null)
             {
-                Invoke("Catch", 3);
+                Invoke("Catch", endTime);
             }
             else if(other.GetComponent<PickupSystem>().pickableObject.GetComponent<SharpOrHeavy>() == null)
             {
-                Invoke("Catch", 3);
+                Invoke("Catch", endTime);
 
             }
         }
