@@ -75,6 +75,16 @@ public class test_PlayerMovement03 : MonoBehaviour
             InputCheck();
             RotatePlayer();
         }
+
+        if (_isLocked)
+        {
+            currentMoveSpeed = 0;
+            currentClimbTime = 0;
+            currentJumpTime = 0;
+            currentAirVel = 0;
+            _isMoving = false;
+            rb.velocity = Vector3.zero;
+        }
     }
 
     void FixedUpdate()
@@ -170,7 +180,7 @@ public class test_PlayerMovement03 : MonoBehaviour
         {
             currentAirVel = Mathf.MoveTowards(currentAirVel, -gravityMultiplier, Time.deltaTime * gravityMultiplier * 2);
         }
-        else if(_isJumping)
+        else if (_isJumping)
         {
             if (_isGrounded)
             {
