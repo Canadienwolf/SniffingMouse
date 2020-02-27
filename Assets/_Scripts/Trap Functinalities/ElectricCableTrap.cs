@@ -26,9 +26,13 @@ public class ElectricCableTrap : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        
+    }
+
     void SceneChange()
     {
         SceneManager.LoadScene("menu_ScoreDisplay");
     }
-    
 }
