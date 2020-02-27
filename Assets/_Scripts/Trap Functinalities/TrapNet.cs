@@ -27,7 +27,7 @@ public class TrapNet : MonoBehaviour
 
     private void Update()
     {
-        if (triggerActive)
+        if (triggerActive && trapNet != null)
         {
             trapNet.transform.position = Vector3.MoveTowards(trapNet.transform.position, triggerButton.transform.position, Time.deltaTime * speed);
         }

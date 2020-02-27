@@ -26,11 +26,13 @@ public class DeathOnContact : MonoBehaviour
         }
     }
 
+    /*
     //TODO Need to program in what will happend when the gameobject is destroyed by sharp/ heavy object.
     private void OnDestroy()
     {
         throw new NotImplementedException();
     }
+    */
 
     void SceneChange()
     {

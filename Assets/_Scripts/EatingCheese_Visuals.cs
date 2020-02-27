@@ -6,6 +6,7 @@ using UnityEngine;
 public class EatingCheese_Visuals : MonoBehaviour
 {
     public ParticleSystem ps;
+    public GameObject deactivatePartical;
 
     private CheeseScript cs;
     private bool startedPlaying;
@@ -24,6 +25,7 @@ public class EatingCheese_Visuals : MonoBehaviour
             {
                 ps.Play();
                 startedPlaying = true;
+                deactivatePartical.SetActive(false);
             }
 
             transform.localScale = Vector3.MoveTowards(transform.localScale, Vector3.zero, Time.deltaTime * 2/cs.eatTime);
