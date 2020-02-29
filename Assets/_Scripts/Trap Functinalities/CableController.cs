@@ -23,4 +23,9 @@ public class CableController : MonoBehaviour
         {
         }
     }
+
+    private void OnTriggerEnter(Collider Pickable)
+    {
+        Destroy(gameObject);
+    }
 }

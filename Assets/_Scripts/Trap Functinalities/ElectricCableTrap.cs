@@ -24,11 +24,11 @@ public class ElectricCableTrap : MonoBehaviour
                 Invoke("SceneChange", timer);
             }
         }
-    }
 
-    private void OnDestroy()
-    {
-        
+        if (other.tag == "Pickable")
+        {
+            Destroy(gameObject);
+        }
     }
 
     void SceneChange()
