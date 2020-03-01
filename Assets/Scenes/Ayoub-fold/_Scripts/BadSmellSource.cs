@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class BadSmellSource : MonoBehaviour
 {
     public GameStates gamestatesA;
+    public PlayerStatesMovements playerStatesA;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            playerStatesA.isMoving = false;
            // Debug.Log("entered!");
            //calling the loss event !
             Die();
