@@ -11,6 +11,6 @@ public class DisplayScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        txt.text = "Time: " + gs.timer + "\n Your Score: " + gs.score + "\n Highscore: " + gs.highScore;
+        txt.text = "\n"+ GameMangerScript.endMsg + "\n Time: " + gs.timer + "\n Your Score: " + GameMangerScript.score + "\n Highscore: " + gs.highScore;
     }
 }

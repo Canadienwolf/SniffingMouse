@@ -13,13 +13,14 @@ public class BadSmellSource : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             playerStatesA.isMoving = false;
-           // Debug.Log("entered!");
-           //calling the loss event !
-            Die();
+            // Debug.Log("entered!");
+            //calling the loss event !
+            //Die();
+            GameMangerScript.EndGame("You lost !",-3);
         }
     }
 
-    void Die()
+   /* void Die()
     {
         //saving the score in that current level you're in in order to display it later on !
         PlayerPrefs.SetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(), gamestatesA.score);
@@ -27,5 +28,5 @@ public class BadSmellSource : MonoBehaviour
         PlayerPrefs.SetInt("Highscore" + SceneManager.GetActiveScene().buildIndex.ToString(), gamestatesA.highScore);
         //loading the loss/win menu !
         SceneManager.LoadScene("menu_ScoreDisplay");
-    }
+    }*/
 }

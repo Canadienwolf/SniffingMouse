@@ -11,6 +11,10 @@ public class GameStates : ScriptableObject
 
     //Current score
     public int score=0;
+    //Current score
+    public int scorelost = 0;
+    //Current score
+    public int scoreadded = 0;
 
     //The highscore used for the game !
     public int highScore=0;
@@ -32,7 +36,8 @@ public class GameStates : ScriptableObject
     {
         //incrementing the score by 5 for every cheese , then adding more on the cheese script depending on the type of cheese!
         score += 5;
-
+        //counting how many score points are gained !
+        scoreadded += 5;
     }
 
     //losing score point function !
@@ -40,8 +45,17 @@ public class GameStates : ScriptableObject
     {
         //decreasing the score by 3 when we want the player to lose some score points !
         score -= 3;
+        if (score < 0)
+        {
+            score = 0;
+        }
+        //counting how many score points are lost !
+        scorelost -= 3;
 
     }
+
+
+
 
     //must be called in the update later on !
     public void TimeFlies()
