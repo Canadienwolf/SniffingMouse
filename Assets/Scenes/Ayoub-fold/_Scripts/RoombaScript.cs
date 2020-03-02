@@ -14,7 +14,7 @@ public class RoombaScript : MonoBehaviour
     GameObject player;
 
     //Distance and speed varibles !
-    float dist, speed = 8f;
+    public float dist, speed = 8f;
 
     //Rigidbody of the object!
     Rigidbody rg;
@@ -22,6 +22,17 @@ public class RoombaScript : MonoBehaviour
     //help variables !
     bool move = true;
     float timer=0;
+    float randomNumber;
+    bool finished=false;
+    int help;
+
+    //max velocity variable !
+    public float velocidadMax;
+    //variables for x,y axis and time ,angle !
+    private float x;
+    private float z;
+   // private float tiempo;
+    private float angulo;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +46,7 @@ public class RoombaScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(timer);
+        //Debug.Log(timer);
 
         //calculating the Distance between the mouse and the vacuum cleaner!
         dist = Vector3.Distance(this.gameObject.transform.position, player.transform.position);
@@ -46,7 +57,27 @@ public class RoombaScript : MonoBehaviour
             rg.transform.Translate(Vector3.forward * Time.deltaTime * speed);
 
         }
+        else
+        {
+
+            if (Quaternion.Dot(transform.rotation, Quaternion.Euler(transform.rotation.x, angulo, transform.rotation.z)) >= 0.997f)
+            {
+                move = true;
+            }
+            else
+            {
+                rg.transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, angulo, 0), 20 * Time.deltaTime);
+            }
+
+        }
+
+
         
+
+        Debug.Log(randomNumber);
+        Debug.Log(rg.transform.rotation.y) ;
+       
+       
 
         //checking for the distance between the mouse and the vacuum cleaner!
         if (dist < 8f)
@@ -64,12 +95,12 @@ public class RoombaScript : MonoBehaviour
     {
         //just for the roomba movement thingy !
         timer = 0;
-        move = false;
-       // Debug.Log(collision.gameObject.name);
+        // move = false;
+        // Debug.Log(collision.gameObject.name);
 
-        //detecting the collision with the player or the other stuff!
-        if (collision.gameObject.CompareTag("Player"))
+         if (collision.gameObject.CompareTag("Player"))
         {
+            move = false;
             //updating the player state lock controller!
             playerStatesA.lockController = true;
             //Stopping the vacuum shuffing effect!
@@ -78,22 +109,31 @@ public class RoombaScript : MonoBehaviour
             GameStatesA.LoseScorePoints();
             //calling the loss/win menu
             Invoke("Die", 2);
-        }
-        else if (collision.gameObject.name=="Ground")
+
+           
+        }else if (collision.gameObject.name != "Ground")
         {
-            move = true;
-        }
-        else
-        {
-            //interupting the roomba movement!
-            //move = false;
+            move = false;
+            //rg.transform.rotation = Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z);
+            randomNumber = Random.Range(45, 260);
+            x = Random.Range(-velocidadMax, velocidadMax);
+            z = Random.Range(-velocidadMax, velocidadMax);
+            angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
+            //rg.transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, randomNumber, 0), 20 * Time.deltaTime);
+            //need to modify that code !
+            //rg.transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, randomNumber, 0), 20 * Time.deltaTime);
             //changing the rotation axis for the roomba !
-             rg.transform.Rotate(new Vector3(0, Random.Range(90, 180), 0));
+            // rg.transform.Rotate(new Vector3(0, Random.Range(90, 180), 0));
+            // rg.transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, Random.Range(90, 180), 0), speed * Time.deltaTime);
             // rg.transform.Translate(Vector3.forward * Time.deltaTime);
             //letting the roomba moves again after few seconds!
-            StartCoroutine(moveWait());
+            // move = true;
         }
+
+
     }
+    
+
 
     //calling the losing event!
     void Die()
@@ -106,6 +146,7 @@ public class RoombaScript : MonoBehaviour
     {
         yield return new WaitForSeconds(3.0f);
         move = true;
+        finished = false;
     }
 
     private void OnApplicationQuit()

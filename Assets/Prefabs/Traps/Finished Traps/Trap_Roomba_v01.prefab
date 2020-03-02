@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 5461898209732576007}
   - component: {fileID: 5852519522656234156}
   - component: {fileID: 573989626}
-  - component: {fileID: 247833115}
+  - component: {fileID: 1763306348}
   m_Layer: 0
   m_Name: Roomba_Body
   m_TagString: Untagged
@@ -219,7 +219,7 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
---- !u!114 &247833115
+--- !u!114 &1763306348
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,9 +228,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3535132673803175411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc2dfe71b6961ad4a86db5691f772bd2, type: 3}
+  m_Script: {fileID: 11500000, guid: a2fd66f1eac12044e830f76201eacac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocidadMax: 0.5
+  xMax: 100
+  zMax: 100
+  xMin: -100
+  zMin: -100
   playerStatesA: {fileID: 11400000, guid: b7d465a55c6536d42a06e7c8347f9a4c, type: 2}
   GameStatesA: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
 --- !u!1 &4215540919863314273

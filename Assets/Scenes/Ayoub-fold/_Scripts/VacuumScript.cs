@@ -28,8 +28,12 @@ public class VacuumScript : MonoBehaviour
     //Player gameObject
     GameObject player;
 
+    //Rigidbody of the object!
+    Rigidbody rg;
+
     //Distance and speed varibles !
     float dist, speed = 8f;
+    bool move = true;
 
     // Use this for initialization
     void Start()
@@ -38,7 +42,9 @@ public class VacuumScript : MonoBehaviour
         x = Random.Range(-velocidadMax, velocidadMax);
         z = Random.Range(-velocidadMax, velocidadMax);
         angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
-        transform.localRotation = Quaternion.Euler(0, angulo, 0);
+        //transform.localRotation = Quaternion.Euler(0, angulo, 0);
+        //getting the rigidbody of the gameobject!
+        rg = this.gameObject.GetComponent<Rigidbody>();
 
         //finding the player Gamobject!
         player = GameObject.FindGameObjectWithTag("Player");
@@ -55,38 +61,57 @@ public class VacuumScript : MonoBehaviour
         //timer variable updates!
         tiempo += Time.deltaTime;
 
-        //checking the necessary conditions(min,max axis) inorder to updates the axis variables and the vacuum rotation!
-        if (transform.localPosition.x > xMax)
+
+        if (move == true)
         {
-            x = Random.Range(-velocidadMax, 0.0f);
-            angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
-            transform.localRotation = Quaternion.Euler(0, angulo, 0);
-            tiempo = 0.0f;
+            //checking the necessary conditions(min,max axis) inorder to updates the axis variables and the vacuum rotation!
+            if (transform.localPosition.x > xMax)
+            {
+                x = Random.Range(-velocidadMax, 0.0f);
+                angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
+                transform.localRotation = Quaternion.Euler(0, angulo, 0);
+                tiempo = 0.0f;
+            }
+            if (transform.localPosition.x < xMin)
+            {
+                x = Random.Range(0.0f, velocidadMax);
+                angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
+                transform.localRotation = Quaternion.Euler(0, angulo, 0);
+                tiempo = 0.0f;
+            }
+            if (transform.localPosition.z > zMax)
+            {
+                z = Random.Range(-velocidadMax, 0.0f);
+                angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
+                transform.localRotation = Quaternion.Euler(0, angulo, 0);
+                tiempo = 0.0f;
+            }
+            if (transform.localPosition.z < zMin)
+            {
+                z = Random.Range(0.0f, velocidadMax);
+                angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
+                transform.localRotation = Quaternion.Euler(0, angulo, 0);
+                tiempo = 0.0f;
+            }
+            //moving the roomba forward !
+            rg.transform.Translate(Vector3.forward * Time.deltaTime * 8);
         }
-        if (transform.localPosition.x < xMin)
+        else
         {
-            x = Random.Range(0.0f, velocidadMax);
-            angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
-            transform.localRotation = Quaternion.Euler(0, angulo, 0);
-            tiempo = 0.0f;
-        }
-        if (transform.localPosition.z > zMax)
-        {
-            z = Random.Range(-velocidadMax, 0.0f);
-            angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
-            transform.localRotation = Quaternion.Euler(0, angulo, 0);
-            tiempo = 0.0f;
-        }
-        if (transform.localPosition.z < zMin)
-        {
-            z = Random.Range(0.0f, velocidadMax);
-            angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
-            transform.localRotation = Quaternion.Euler(0, angulo, 0);
-            tiempo = 0.0f;
+            if (Quaternion.Dot(transform.rotation, Quaternion.Euler(transform.rotation.x, angulo, transform.rotation.z)) >= 0.997f)
+            {
+                move = true;
+            }
+            else
+            {
+                rg.transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, angulo, 0), 20 * Time.deltaTime);
+            }
         }
 
+      
+
         //updating the axis and angle variables based on the timer!
-        if (tiempo > 1.0f)
+       /* if (tiempo > 1.0f)
         {
             x = Random.Range(-velocidadMax, velocidadMax);
             z = Random.Range(-velocidadMax, velocidadMax);
@@ -96,7 +121,8 @@ public class VacuumScript : MonoBehaviour
         }
 
         //moving the vacuum cleaner using the variables already updated !
-        transform.localPosition = new Vector3(transform.localPosition.x + x, transform.localPosition.y, transform.localPosition.z + z);
+        transform.localPosition = new Vector3(transform.localPosition.x + x, transform.localPosition.y, transform.localPosition.z + z);*/
+
 
         //checking for the distance between the mouse and the vacuum cleaner!
         if (dist < 8f)
@@ -107,9 +133,6 @@ public class VacuumScript : MonoBehaviour
             player.transform.position = Vector3.MoveTowards(player.transform.position, transform.position, step);
         }
       
-
-        //just for test !
-        //Debug.Log("dist :" + dist);
     }
 
     //for detecting the collision with the player!
@@ -130,15 +153,21 @@ public class VacuumScript : MonoBehaviour
             //calling the loss/win menu
             Invoke("Die", 2);
         }
+        else if (collision.gameObject.name != "Ground")
+        {
+            x = Random.Range(-velocidadMax, velocidadMax);
+            z = Random.Range(-velocidadMax, velocidadMax);
+            angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
+            move = false;
+            
+        }
+
     }
 
     //calling the losing event!
     void Die()
     {
-        //saving the score in that current level you're in in order to display it later on !
-        PlayerPrefs.SetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(), GameStatesA.score);
-        //loading the loss/win menu !
-        SceneManager.LoadScene("menu_ScoreDisplay");
+        GameMangerScript.EndGame("You Lost !", -5);
     }
 
     private void OnApplicationQuit()
