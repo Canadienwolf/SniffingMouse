@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4405195409248200619}
   - component: {fileID: 4645853744253410717}
   - component: {fileID: 1388773581326868836}
+  - component: {fileID: 5698820306837523211}
   m_Layer: 0
   m_Name: whiskeyglass_v01
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5698820306837523211
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826758228048958904}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7545540037413135360, guid: c9f0347a30414e34fab06c5e160253b4, type: 3}

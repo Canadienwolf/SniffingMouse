@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5925078286322967582}
   - component: {fileID: 3414042909360922152}
   - component: {fileID: 8961482228063134417}
+  - component: {fileID: 7915562505498189550}
   m_Layer: 0
   m_Name: Table_Hallway_v01
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7915562505498189550
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7233135696955823629}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5896832443722461880, guid: 4ff1083ad668a80429d709f2f5f47140, type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4365094207230623597}
   - component: {fileID: 4740294463167366491}
   - component: {fileID: 1365824174775105954}
+  - component: {fileID: 7113961683504300763}
   m_Layer: 0
   m_Name: Vase_w_Flower_v01
   m_TagString: Untagged
@@ -80,6 +81,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7113961683504300763
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777073061421534590}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8246494051924840529, guid: 0c9aab2848cb75c4f940444de33e44e7, type: 3}
 --- !u!1 &1405578763629478528
 GameObject:
   m_ObjectHideFlags: 0

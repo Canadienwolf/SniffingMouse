@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1157396852163222081}
   - component: {fileID: 764345808614354745}
   - component: {fileID: 2239755456225969606}
+  - component: {fileID: 2239372964620710980}
   m_Layer: 0
   m_Name: Pillow
   m_TagString: Untagged
@@ -79,6 +80,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2239372964620710980
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499020119170304498}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.799999, y: 1.5999999, z: 5.6}
+  m_Center: {x: -0.00000166893, y: 0.79999876, z: 0}
 --- !u!1 &2494472926296308263
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +104,7 @@ GameObject:
   - component: {fileID: 976006089735544596}
   - component: {fileID: 1662067439114691886}
   - component: {fileID: 5651101896206383295}
+  - component: {fileID: 4868660399866967879}
   m_Layer: 0
   m_Name: Bedframe
   m_TagString: Untagged
@@ -158,6 +173,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4868660399866967879
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2494472926296308263}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3573550516947501702, guid: 93f9a820ce8fac646bddcf04a058d307, type: 3}
 --- !u!1 &7646349768827951194
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +231,7 @@ GameObject:
   - component: {fileID: 5901052741816477455}
   - component: {fileID: 4813387431038870310}
   - component: {fileID: 616223004893729672}
+  - component: {fileID: 4736138437797029981}
   m_Layer: 0
   m_Name: Duvet
   m_TagString: Untagged
@@ -270,3 +300,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4736138437797029981
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8269113182520007502}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.440001, y: 1.1200012, z: 23.519997}
+  m_Center: {x: -0.0000011920929, y: 0.49248415, z: 0}
