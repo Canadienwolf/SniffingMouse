@@ -63,9 +63,9 @@ public class RoombaScript : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //just for the roomba movement thingy !
-        timer = GameStatesA.timer-3;
-
-        Debug.Log(collision.gameObject.name);
+        timer = 0;
+        move = false;
+       // Debug.Log(collision.gameObject.name);
 
         //detecting the collision with the player or the other stuff!
         if (collision.gameObject.CompareTag("Player"))
@@ -91,8 +91,7 @@ public class RoombaScript : MonoBehaviour
              rg.transform.Rotate(new Vector3(0, Random.Range(90, 180), 0));
             // rg.transform.Translate(Vector3.forward * Time.deltaTime);
             //letting the roomba moves again after few seconds!
-            move = true;
-
+            StartCoroutine(moveWait());
         }
     }
 
@@ -100,8 +99,13 @@ public class RoombaScript : MonoBehaviour
     void Die()
     {
         GameMangerScript.EndGame("You Lost !", -5);
-        //saving the score in that current level you're in in order to display it later on !
-       // PlayerPrefs.SetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(), GameStatesA.score);
+    }
+
+    //waiting for 3 seconds before moving again !
+    IEnumerator moveWait()
+    {
+        yield return new WaitForSeconds(3.0f);
+        move = true;
     }
 
     private void OnApplicationQuit()

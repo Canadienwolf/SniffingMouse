@@ -91,9 +91,9 @@ GameObject:
   - component: {fileID: 3644827452985383505}
   - component: {fileID: 122150578784477717}
   - component: {fileID: 5461898209732576007}
-  - component: {fileID: 8908203485404594305}
   - component: {fileID: 5852519522656234156}
   - component: {fileID: 573989626}
+  - component: {fileID: 247833115}
   m_Layer: 0
   m_Name: Roomba_Body
   m_TagString: Untagged
@@ -108,8 +108,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3535132673803175411}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00044755643, y: 0.021148706, z: -0.000000006288742}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.00044755643, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5045365506763827591}
@@ -180,25 +180,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6748750971175299868, guid: 2d4b10b1dbf97d746830545e219ac29a, type: 3}
---- !u!114 &8908203485404594305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3535132673803175411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2fd66f1eac12044e830f76201eacac5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadMax: 0.1
-  xMax: 15
-  zMax: 15
-  xMin: -15
-  zMin: -15
-  playerStatesA: {fileID: 11400000, guid: b7d465a55c6536d42a06e7c8347f9a4c, type: 2}
-  GameStatesA: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
 --- !u!54 &5852519522656234156
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -238,6 +219,20 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &247833115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3535132673803175411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc2dfe71b6961ad4a86db5691f772bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStatesA: {fileID: 11400000, guid: b7d465a55c6536d42a06e7c8347f9a4c, type: 2}
+  GameStatesA: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
 --- !u!1 &4215540919863314273
 GameObject:
   m_ObjectHideFlags: 0
