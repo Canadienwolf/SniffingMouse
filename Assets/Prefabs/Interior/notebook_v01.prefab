@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3836214824270852463}
   - component: {fileID: 5217419831892986713}
   - component: {fileID: 1971299944350660512}
+  - component: {fileID: 55748670535537225}
   m_Layer: 0
   m_Name: notebook_v01
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &55748670535537225
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245341547130159996}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.97439, y: 0.40303877, z: 4.0201573}
+  m_Center: {x: 0, y: 0.20164056, z: 0}
