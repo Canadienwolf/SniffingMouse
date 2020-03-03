@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 7790358692579037435}
   - component: {fileID: 7790358692579037432}
   - component: {fileID: 826351938027816594}
+  - component: {fileID: 3071934770466510073}
+  - component: {fileID: 8917936155035708568}
   m_Layer: 9
   m_Name: Cage
   m_TagString: Destructible
@@ -152,6 +154,34 @@ MonoBehaviour:
   sharp: 0
   heavyVel: 0.5
   sharpVel: 0
+--- !u!65 &3071934770466510073
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072911782058392689}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.440037, y: 2.505437, z: 1}
+  m_Center: {x: -0.02687645, y: 1.7742648, z: 0}
+--- !u!114 &8917936155035708568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072911782058392689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea03d2bd1c43ec64c8f2c8be9ebffc21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endTime: 3
+  endMessage: You got caught
+  lostScore: -10
 --- !u!1 &1223581588664955273
 GameObject:
   m_ObjectHideFlags: 0
