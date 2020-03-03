@@ -66,6 +66,9 @@ public class GameMangerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //updating the score !
+        score = gameStates.score;
         //Updating Ui feedback for the player !
         scoreText.text = "Score : " + gameStates.score.ToString();
         highScoreText.text = "HighScore : " + gameStates.highScore.ToString();
@@ -84,9 +87,6 @@ public class GameMangerScript : MonoBehaviour
 
         //calling that public local method when the player win !
         WinMethod();
-
-        //updating the score !
-        score = gameStates.score;
 
         //new highscore check !
         gameStates.newHighScore();
@@ -129,6 +129,7 @@ public class GameMangerScript : MonoBehaviour
         if (score < 0)
         {
             score = 0;
+
         }
         //loading the loss/win menu !
         SceneManager.LoadScene("menu_ScoreDisplay");

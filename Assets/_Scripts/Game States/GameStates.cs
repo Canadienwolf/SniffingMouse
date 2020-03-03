@@ -38,6 +38,7 @@ public class GameStates : ScriptableObject
         score += 5;
         //counting how many score points are gained !
         scoreadded += 5;
+        GameMangerScript.score = score;
     }
 
     //losing score point function !
@@ -51,6 +52,7 @@ public class GameStates : ScriptableObject
         }
         //counting how many score points are lost !
         scorelost -= 3;
+        GameMangerScript.score = score;
 
     }
 

@@ -167,6 +167,7 @@ public class VacuumScript : MonoBehaviour
     //calling the losing event!
     void Die()
     {
+        //calling our static endgame method !
         GameMangerScript.EndGame("You Lost !", -5);
     }
 

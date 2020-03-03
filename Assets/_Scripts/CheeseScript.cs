@@ -43,6 +43,7 @@ public class CheeseScript : MonoBehaviour
                     moreThanOnce = true;
                     gameStates.AddScorePoints();
                     gameStates.score += 2;
+                    GameMangerScript.score = gameStates.score;
                     gameStates.newHighScore();
                     istrigger = false;
                 }
@@ -57,6 +58,7 @@ public class CheeseScript : MonoBehaviour
                     moreThanOnce = true;
                     gameStates.AddScorePoints();
                     gameStates.score += 3;
+                    GameMangerScript.score = gameStates.score;
                     gameStates.newHighScore();
                     istrigger = false;
                 }
@@ -72,6 +74,7 @@ public class CheeseScript : MonoBehaviour
                     moreThanOnce = true;
                     gameStates.AddScorePoints();
                     gameStates.score += 5;
+                    GameMangerScript.score = gameStates.score;
                     gameStates.newHighScore();
                     istrigger = false;
                 }
