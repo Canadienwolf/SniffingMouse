@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class VacuumScript : MonoBehaviour
 {
     //max velocity variable !
-    public float velocidadMax;
+    public float velocidadMax=0.5f;
 
     //max,min variables for x,z axis (can be modified in the inspector !)
     public float xMax;
@@ -32,17 +32,23 @@ public class VacuumScript : MonoBehaviour
     Rigidbody rg;
 
     //Distance and speed varibles !
-    float dist, speed = 8f;
+    float dist;
+    public float speed = 8f;
     bool move = true;
 
     // Use this for initialization
     void Start()
     {
         //initialisation of the variables at the begining !
+        xMax = Random.Range(100, 200);
+        zMax = Random.Range(100, 200);
+        xMin = Random.Range(-200, -100);
+        zMin = Random.Range(-200, -100);
         x = Random.Range(-velocidadMax, velocidadMax);
         z = Random.Range(-velocidadMax, velocidadMax);
         angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
         //transform.localRotation = Quaternion.Euler(0, angulo, 0);
+
         //getting the rigidbody of the gameobject!
         rg = this.gameObject.GetComponent<Rigidbody>();
 
@@ -61,7 +67,7 @@ public class VacuumScript : MonoBehaviour
         //timer variable updates!
         tiempo += Time.deltaTime;
 
-
+        //checking if the roomba is allowed to move! 
         if (move == true)
         {
             //checking the necessary conditions(min,max axis) inorder to updates the axis variables and the vacuum rotation!
@@ -98,6 +104,7 @@ public class VacuumScript : MonoBehaviour
         }
         else
         {
+            //checking if the rotation of the roomba has finished!
             if (Quaternion.Dot(transform.rotation, Quaternion.Euler(transform.rotation.x, angulo, transform.rotation.z)) >= 0.997f)
             {
                 move = true;
