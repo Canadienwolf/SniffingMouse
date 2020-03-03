@@ -73,6 +73,7 @@ public class GameMangerScript : MonoBehaviour
         scoreText.text = "Score : " + gameStates.score.ToString();
         highScoreText.text = "HighScore : " + gameStates.highScore.ToString();
 
+        //the public timer from the gamestates !
         timerText.text = "Timer : " + gameStates.timer.ToString("f0");
 
         //timer method !
