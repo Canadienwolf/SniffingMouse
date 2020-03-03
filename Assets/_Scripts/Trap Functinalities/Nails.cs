@@ -20,6 +20,6 @@ public class Nails : MonoBehaviour
 
     void Kill()
     {
-        SceneManager.LoadScene("menu_ScoreDisplay", LoadSceneMode.Single);
+        GameMangerScript.EndGame("You got impaled", -15);
     }
 }

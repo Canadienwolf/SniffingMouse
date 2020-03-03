@@ -6,6 +6,8 @@ using UnityEngine;
 public class CatchPlayer : MonoBehaviour
 {
     public float endTime = 3;
+    public string endMessage = "You died";
+    public int lostScore = 0;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -24,6 +26,6 @@ public class CatchPlayer : MonoBehaviour
 
     void Catch()
     {
-        SceneManager.LoadScene("menu_ScoreDisplay", LoadSceneMode.Single);
+        GameMangerScript.EndGame(endMessage, lostScore);
     }
 }

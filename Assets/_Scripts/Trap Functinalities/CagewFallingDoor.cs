@@ -7,6 +7,7 @@ public class CagewFallingDoor : MonoBehaviour
 {
     public GameObject door;
     public GameObject cage;
+    public GameObject cheese;
 
     GameObject target;
 
@@ -22,6 +23,11 @@ public class CagewFallingDoor : MonoBehaviour
         if (door.transform.localPosition.y < 0.1f && target != null && cage != null)
         {
             Invoke("CatchPlayer", 2);
+        }
+        if (cage == null)
+        {
+            cheese.transform.parent = null;
+            Destroy(gameObject);
         }
     }
 
@@ -43,10 +49,5 @@ public class CagewFallingDoor : MonoBehaviour
         {
             target = null;
         }
-    }
-
-    void CatchPlayer()
-    {
-        SceneManager.LoadScene("menu_ScoreDisplay");
     }
 }

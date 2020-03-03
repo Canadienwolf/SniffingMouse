@@ -45,7 +45,7 @@ public class TrapDetection : MonoBehaviour
     void Die()
     {
         //loading the loss/win menu !
-        SceneManager.LoadScene("menu_ScoreDisplay");
+        GameMangerScript.EndGame("You got crushed", -15);
     }
 
     private void OnApplicationQuit()

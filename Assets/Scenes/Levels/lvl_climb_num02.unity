@@ -4034,17 +4034,17 @@ PrefabInstance:
     - target: {fileID: 6002790067369207032, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.02497659
+      value: 0.02497661
       objectReference: {fileID: 0}
     - target: {fileID: 6002790067369207032, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000001847306
+      value: -0.00000001591556
       objectReference: {fileID: 0}
     - target: {fileID: 6002790067369207032, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000052416357
+      value: 0.000000051557183
       objectReference: {fileID: 0}
     - target: {fileID: 6002790067369207032, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
@@ -4784,6 +4784,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endTime: 6
+  endMessage: You got the cheese
+  lostScore: 10
 --- !u!135 &1746402877
 SphereCollider:
   m_ObjectHideFlags: 0
