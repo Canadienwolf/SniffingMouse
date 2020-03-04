@@ -56,7 +56,7 @@ public class UFO_Behaviour : MonoBehaviour
     //Timer for how much time that you have left before the UFO starts turning to a trap and the map becoming more difficult.
     void timer()
     {
-        slider.;
+        //slider.;
     }
 
     //Makes the UFO follow the player whenever the player moves.
