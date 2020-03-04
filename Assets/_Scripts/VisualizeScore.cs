@@ -50,7 +50,7 @@ public class VisualizeScore : MonoBehaviour
             txt.color = new Color32(195, 47, 53, 0);
         }
 
-        Invoke("HideText", 3);
+        Invoke("HideText", 2);
     }
 
     void HideText()

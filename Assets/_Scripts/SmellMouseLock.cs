@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class SmellMouseLock : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class SmellMouseLock : MonoBehaviour
     private Transform _cheeseParent;
     private int buttonCount = 0;
     private float timeCounter;
+    [SerializeField]private Animator anim;
     //--------------------------------------------//
     
     //public
@@ -36,6 +38,7 @@ public class SmellMouseLock : MonoBehaviour
         
         //Find the player
         _player = GameObject.FindWithTag("Player");
+        anim = _player.transform.GetChild(0).GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -54,7 +57,7 @@ public class SmellMouseLock : MonoBehaviour
             {
                 buttonCount ++;
             }
-            if (buttonCount == buttonCountThreshold || timeCounter > maxTime)
+            if (buttonCount == buttonCountThreshold || timeCounter > maxTime || _player.GetComponent<test_PlayerMovement03>().cc.canClimb)
             {
                 playerstatesA.lockController = false;
                 buttonCount = 0;
@@ -66,6 +69,8 @@ public class SmellMouseLock : MonoBehaviour
         {
             timeCounter = 0;
         }
+
+        anim.SetBool("CaughtBySmell", mouseCaught);
     }
     
     public PlayerStatesMovements playerstatesA;
