@@ -13,8 +13,14 @@ public class UFO_Behaviour : MonoBehaviour
     public Transform player;
     public float followSharpness = 10f;
 
+    //Score
     public TextMesh score;
     public GameStates gs;
+    
+    //Timer
+    public GameObject slider;
+    private float timeLeft;
+    
     
     [Header("Turn speed of the UFO")]
     public float turnSpeed = 1f;
@@ -50,7 +56,7 @@ public class UFO_Behaviour : MonoBehaviour
     //Timer for how much time that you have left before the UFO starts turning to a trap and the map becoming more difficult.
     void timer()
     {
-        
+        slider.;
     }
 
     //Makes the UFO follow the player whenever the player moves.
