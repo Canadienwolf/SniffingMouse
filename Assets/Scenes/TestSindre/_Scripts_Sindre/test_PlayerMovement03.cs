@@ -42,7 +42,7 @@ public class test_PlayerMovement03 : MonoBehaviour
     private float horInput, vertInput;
     private Rigidbody rb;
     private Vector3 moveDir;
-    private float currentMoveSpeed;
+    [HideInInspector] public float currentMoveSpeed;
     private float currentJumpTime;
     private float currentClimbTime;
     private float currentAirVel;

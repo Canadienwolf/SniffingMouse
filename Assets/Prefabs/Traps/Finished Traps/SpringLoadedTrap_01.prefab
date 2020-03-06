@@ -27,6 +27,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 9067009033250746534, guid: 7d1a60ca96aa5924a9d7c3a37f8a172a, type: 3}
+--- !u!114 &1893605770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145783356070238840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817bbae054becd84984913e43e47307a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deaths: 0
+  delayTime: 0.3
+  behaviorSpeed: 10
+  heightOffset: 0.6
 --- !u!1 &5587637701971272434
 GameObject:
   m_ObjectHideFlags: 0
@@ -37,7 +53,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6557801614318278035}
   m_Layer: 0
-  m_Name: SpringLoadedTrap
+  m_Name: SpringLoadedTrap_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,6 +168,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6557801614318278035}
     m_Modifications:
+    - target: {fileID: 1915411428, guid: 9fcb917d8fb0c614e852f7f8bc2d9e78, type: 3}
+      propertyPath: cheese
+      value: 
+      objectReference: {fileID: 526494395775368159}
     - target: {fileID: 840045391146927040, guid: 9fcb917d8fb0c614e852f7f8bc2d9e78,
         type: 3}
       propertyPath: m_Name
@@ -214,6 +234,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fcb917d8fb0c614e852f7f8bc2d9e78, type: 3}
+--- !u!1 &2145783356070238840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 840045391146927040, guid: 9fcb917d8fb0c614e852f7f8bc2d9e78,
+    type: 3}
+  m_PrefabInstance: {fileID: 1616557258249296312}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3142390277836499051 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4463956795510141395, guid: 9fcb917d8fb0c614e852f7f8bc2d9e78,

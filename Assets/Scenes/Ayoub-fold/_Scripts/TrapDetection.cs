@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class TrapDetection : MonoBehaviour
 {
     public PlayerStatesMovements playerStatesA;
+    public GameObject cheese;
     Animator anim;
 
     private bool activated;
@@ -15,6 +16,7 @@ public class TrapDetection : MonoBehaviour
     {
         //getting the animator that's on the trap !
         anim = this.gameObject.GetComponent<Animator>();
+        EnableDisableCols(false);
     }
 
 
@@ -30,6 +32,7 @@ public class TrapDetection : MonoBehaviour
             {
                 //locking the player controlls
                 playerStatesA.lockController = true;
+                playerStatesA.isEating = false;
                 //calling the losing event (menu)!
                 Invoke("Die", 2);
             }
@@ -38,6 +41,16 @@ public class TrapDetection : MonoBehaviour
         {
             anim.Play("apim_SpringLoaded_Trap");
             activated = true;
+            EnableDisableCols(true);
+            GetComponent<SphereCollider>().enabled = false;
+        }
+    }
+
+    void EnableDisableCols(bool idx)
+    {
+        foreach (Collider c in cheese.GetComponents<Collider>())
+        {
+            c.enabled = idx;
         }
     }
 
