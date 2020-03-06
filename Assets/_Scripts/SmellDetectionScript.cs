@@ -27,13 +27,12 @@ public class SmellDetectionScript : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(player.transform.position);
 
         if (affected)
         {
             //player.transform.position += new Vector3(Mathf.Sin(Time.time * frequency) * magnitude * player.GetComponent<test_PlayerMovement02>().currentSpeed * 0.1f, 0, 0);
             float angle = Mathf.Sin(Time.time * frequency) * magnitude * Mathf.Rad2Deg;
-            player.transform.localRotation *= Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(angle, Vector3.up), Time.deltaTime * player.GetComponent<test_PlayerMovement02>().currentSpeed);
+            player.transform.localRotation *= Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(angle, Vector3.up), Time.deltaTime * player.GetComponent<test_PlayerMovement03>().currentMoveSpeed);
             timeLeft -= Time.deltaTime;
             if (timeLeft <= 0)
             {

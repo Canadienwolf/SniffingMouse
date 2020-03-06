@@ -13,6 +13,27 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1513572679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6890101290309884467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817bbae054becd84984913e43e47307a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deaths: 1
+  delayTime: 0
+  behaviorSpeed: 1.5
+  heightOffset: 0
+  head: {fileID: 6947437844107633329, guid: 828deb3727158ca4090bdcde613c2e9a, type: 3}
+  headExplotion: {fileID: 3505365421585663323, guid: 5050d618200b5414ea3dfa175482d2b2,
+    type: 3}
+  explodeTime: 2
+  headSize: 3
 --- !u!114 &49394360699544800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gamestatesA: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
   playerStatesA: {fileID: 11400000, guid: b7d465a55c6536d42a06e7c8347f9a4c, type: 2}
+  deathTime: 3
 --- !u!1 &8620070676887081382
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,8 +159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStatesB: {fileID: 11400000, guid: b7d465a55c6536d42a06e7c8347f9a4c, type: 2}
   GameStatesA: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
-  frequency: 16
-  magnitude: 2
+  frequency: 8
+  magnitude: 3
   effectTime: 5
   drunkBobbles: {fileID: 5135139436030957485, guid: af14f3ffb4cf72c479e9df6beef445c6,
     type: 3}
@@ -218,10 +240,6 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 3}
-      propertyPath: ShapeModule.type
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 5
       objectReference: {fileID: 0}
@@ -252,10 +270,6 @@ PrefabInstance:
     - target: {fileID: 19800000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.m_NumAlphaKeys
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 3}
-      propertyPath: ShapeModule.radiusThickness
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 3}
