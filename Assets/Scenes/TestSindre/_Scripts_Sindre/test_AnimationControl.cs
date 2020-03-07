@@ -16,5 +16,9 @@ public class test_AnimationControl : MonoBehaviour
         anim.SetBool("Grounded", psm.isGrounded);
         anim.SetBool("Jumping", psm.isJumping);
         anim.SetBool("Climbing", psm.isClimbing);
+        anim.SetBool("CaughtBySmell", psm.caughtBySmell);
+
+        if (psm.isEating)
+            psm.caughtBySmell = false;
     }
 }

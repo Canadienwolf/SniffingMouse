@@ -15,10 +15,10 @@ public class SmellMouseLock : MonoBehaviour
     private Transform _cheeseParent;
     private int buttonCount = 0;
     private float timeCounter;
-    [SerializeField]private Animator anim;
     //--------------------------------------------//
-    
+
     //public
+    public PlayerStatesMovements psm;
     [Header("Times the player has to press a button to get relesed")]
     public int buttonCountThreshold = 5;
     [Header("How fast the mouse will transported to cheeses position")]
@@ -37,13 +37,18 @@ public class SmellMouseLock : MonoBehaviour
         _cheeseParent = transform.parent.transform.parent;
         
         //Find the player
-        _player = GameObject.FindWithTag("Player");
-        anim = _player.transform.GetChild(0).GetComponent<Animator>();
+        _player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    private void OnDisable()
+    {
+        //anim.SetBool("CaughtBySmell", false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        psm.caughtBySmell = mouseCaught;
         if (mouseCaught) 
         {
             if (Vector3.Distance(_player.transform.position, _cheeseParent.position) > 1)
@@ -64,13 +69,17 @@ public class SmellMouseLock : MonoBehaviour
                 mouseCaught = false;
                 //_player.GetComponent<Rigidbody>().useGravity = true;
             }
+
+            if (_player.GetComponent<test_PlayerMovement03>().psm.isEating)
+            {
+                buttonCount = 0;
+                mouseCaught = false;
+            }
         }
         else
         {
             timeCounter = 0;
         }
-
-        anim.SetBool("CaughtBySmell", mouseCaught);
     }
     
     public PlayerStatesMovements playerstatesA;

@@ -22,6 +22,8 @@ public class PlayerStatesMovements : ScriptableObject
 
     public bool isClimbing;
 
+    public bool caughtBySmell;
+
     //for locking the movements controller
     public bool lockController;
 }

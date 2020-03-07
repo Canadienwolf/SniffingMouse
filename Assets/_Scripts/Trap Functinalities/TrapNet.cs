@@ -32,11 +32,13 @@ public class TrapNet : MonoBehaviour
             trapNet.transform.position = Vector3.MoveTowards(trapNet.transform.position, triggerButton.transform.position, Time.deltaTime * speed);
         }
 
+        
         if (trapNet == null)
         {
             cutTrapnet.SetActive(true);
-            cutTrapnet.transform.position = trapNet.transform.position;
+            //cutTrapnet.transform.position = trapNet.transform.position;
         }
+        
     }
 
     private void OnTriggerEnter(Collider other)

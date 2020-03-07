@@ -34,7 +34,8 @@ public class PickupSystem : MonoBehaviour
                 pickableObject.transform.parent = heldItemTransform.transform;
                 pickableObject.transform.position = heldItemTransform.transform.position;
                 pickableObject.GetComponent<Rigidbody>().isKinematic = true;
-                pickableObject.transform.localPosition = new Vector3(0, 0, 0);
+                pickableObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                pickableObject.transform.position = heldItemTransform.position;
                 pickableObject.transform.localRotation = Quaternion.identity;
                 PickbleColliders(false);
                 
@@ -64,6 +65,7 @@ public class PickupSystem : MonoBehaviour
             {
                 pickableObject.transform.parent = null;
                 pickableObject.GetComponent<Rigidbody>().isKinematic = false;
+                pickableObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
                 pickableObject.GetComponent<Rigidbody>().AddForce(heldItemTransform.forward * power, ForceMode.Impulse);
                 PickbleColliders(true);
                 pickableObject = null;
