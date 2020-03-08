@@ -32,6 +32,7 @@ public class UFO_Behaviour : MonoBehaviour
     {
         //Cache the initial offest at the time of load/ spawn
         _followOffset = transform.position - player.position;
+        timeSlider.GetComponent<Slider>().maxValue = gs.timer;
     }
 
     // Update is called once per frame
@@ -60,7 +61,8 @@ public class UFO_Behaviour : MonoBehaviour
         //sliderTextString = textUpdateNumber.ToString();
         //sliderText.text = sliderTextString;
         //timeLeft = timeSlider.value
-        Debug.Log("Slider works");
+
+        timeSlider.GetComponent<Slider>().value = gs.timer;
     }
 
     //Makes the UFO follow the player whenever the player moves.
