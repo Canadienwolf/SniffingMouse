@@ -19,7 +19,7 @@ public class UFO_Behaviour : MonoBehaviour
     
     //Timer
     public GameObject timeSlider;
-    private int timeLeft;
+    private Slider timeLeft;
     
     
     [Header("Turn speed of the UFO")]
@@ -51,18 +51,12 @@ public class UFO_Behaviour : MonoBehaviour
     {
         playerTailing();
         
-        
     }
 
     //Timer for how much time that you have left before the UFO starts turning to a trap and the map becoming more difficult.
     public void timer()
     {
-        //timeLeft = gs.timer.ToString();
-        //sliderTextString = textUpdateNumber.ToString();
-        //sliderText.text = sliderTextString;
-        //timeLeft = timeSlider.value
-
-        timeSlider.GetComponent<Slider>().value = gs.timer;
+        timeLeft.value = gs.timer;
     }
 
     //Makes the UFO follow the player whenever the player moves.
@@ -77,4 +71,6 @@ public class UFO_Behaviour : MonoBehaviour
         //smooth follow
         transform.position += (targetPosition - transform.position) * followSharpness;
     }
+    
+    
 }
