@@ -690,14 +690,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &329197333
-AudioListener:
+--- !u!114 &329197333
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329197332}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!20 &329197334
 Camera:
   m_ObjectHideFlags: 0
@@ -3198,7 +3203,7 @@ PrefabInstance:
     - target: {fileID: 8375917718001888303, guid: 23f20192d288e924d9c862a1a3f1097a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -112.65
+      value: -112.6499
       objectReference: {fileID: 0}
     - target: {fileID: 8375917718001888303, guid: 23f20192d288e924d9c862a1a3f1097a,
         type: 3}

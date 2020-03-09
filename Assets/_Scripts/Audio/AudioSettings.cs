@@ -23,7 +23,6 @@ public class AudioSettings : MonoBehaviour
         //Makes sure that the gameobject is not destroyed between scene changes
         DontDestroyOnLoad(gameObject);
         
-        
         //Checks if there are more instances than one of the MusicManager gameobject and then destroys it
         if (GameObject.FindGameObjectsWithTag(gameObject.tag).Length > 1)
         {
@@ -39,6 +38,10 @@ public class AudioSettings : MonoBehaviour
         Music.setVolume (MusicVolume);
         SFX.setVolume (SFXVolume);
         Master.setVolume (MasterVolume);
+        
+        Music = FMODUnity.RuntimeManager.GetBus("bus:/Master/Music");
+        SFX = FMODUnity.RuntimeManager.GetBus("bus:/Master/SFX");
+        Master = FMODUnity.RuntimeManager.GetBus("bus:/Master");
     }
 
     public void MasterVolumeLevel (float newMasterVolume)
