@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AudioSettings : MonoBehaviour
@@ -15,9 +16,16 @@ public class AudioSettings : MonoBehaviour
     public float MusicVolume = 0.5f;
     public float SFXVolume = 0.5f;
     public float MasterVolume = 1f;
+    
 
     void Awake ()
     {
+        
+         
+        Music = FMODUnity.RuntimeManager.GetBus("bus:/Master/Music");
+        SFX = FMODUnity.RuntimeManager.GetBus("bus:/Master/SFX");
+        Master = FMODUnity.RuntimeManager.GetBus("bus:/Master");
+        
         //SFXVolumeTestEvent = FMODUnity.RuntimeManager.CreateInstance ("event:/SFX/SFXVolumeTest");
         
         //Makes sure that the gameobject is not destroyed between scene changes
@@ -38,10 +46,8 @@ public class AudioSettings : MonoBehaviour
         Music.setVolume (MusicVolume);
         SFX.setVolume (SFXVolume);
         Master.setVolume (MasterVolume);
+
         
-        Music = FMODUnity.RuntimeManager.GetBus("bus:/Master/Music");
-        SFX = FMODUnity.RuntimeManager.GetBus("bus:/Master/SFX");
-        Master = FMODUnity.RuntimeManager.GetBus("bus:/Master");
     }
 
     public void MasterVolumeLevel (float newMasterVolume)

@@ -2421,6 +2421,7 @@ GameObject:
   - component: {fileID: 1761450453}
   - component: {fileID: 1761450455}
   - component: {fileID: 1761450454}
+  - component: {fileID: 1761450456}
   m_Layer: 5
   m_Name: OptionsPanel
   m_TagString: Untagged
@@ -2488,6 +2489,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761450452}
   m_CullTransparentMesh: 0
+--- !u!114 &1761450456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761450452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ff2248164c286145b13803c07df80d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MM: {fileID: 0}
+  MusicSlider: {fileID: 987590131}
+  SFXSlider: {fileID: 2120073546}
+  MasterSlider: {fileID: 1937769358}
 --- !u!114 &1832777892 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4937041638075607619, guid: 8ff0ff4d97347744fb591c139467183c,
