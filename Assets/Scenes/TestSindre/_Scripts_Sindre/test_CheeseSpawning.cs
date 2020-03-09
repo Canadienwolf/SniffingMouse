@@ -39,7 +39,7 @@ public class test_CheeseSpawning : MonoBehaviour
         {
             if (spawnPoints[i] != null)
             {
-                GameObject go = Instantiate(cheeses[Random.Range(0, cheeses.Length)], spawnPoints[i].position, Quaternion.Euler(0, Random.Range(0, 360), 0));
+                GameObject go = Instantiate(cheeses[Random.Range(0, cheeses.Length)], spawnPoints[i].position, spawnPoints[i].rotation);
                 go.transform.parent = spawnPoints[i];
             }
         }
@@ -65,7 +65,7 @@ public class test_CheeseSpawning : MonoBehaviour
 
         if (spawnPoints.Count == 0)
         {
-            SceneManager.LoadScene(2, LoadSceneMode.Single);
+            //SceneManager.LoadScene(2, LoadSceneMode.Single);
         }
     }
 }

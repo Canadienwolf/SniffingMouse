@@ -70,24 +70,27 @@ public class GameMangerScript : MonoBehaviour
         //updating the score !
         score = gameStates.score;
         //Updating Ui feedback for the player !
-        scoreText.text = "Score : " + gameStates.score.ToString();
-        highScoreText.text = "HighScore : " + gameStates.highScore.ToString();
+        if(scoreText != null)
+            scoreText.text = "Score : " + gameStates.score.ToString();
+        if(highScoreText != null)
+            highScoreText.text = "HighScore : " + gameStates.highScore.ToString();
 
         //the public timer from the gamestates !
-        timerText.text = "Timer : " + gameStates.timer.ToString("f0");
+        if(timerText != null)
+            timerText.text = "Timer : " + gameStates.timer.ToString("f0");
 
         //timer method !
         gameStates.TimeFlies();
 
        // Debug.Log("timer: " + gameStates.timer + "\n");
-        Debug.Log("help: " + help + "\n");
+        //Debug.Log("help: " + help + "\n");
 
         //calling that public local method when the player lose !
-        LoseMethod();
+        //LoseMethod();
 
 
         //calling that public local method when the player win !
-        WinMethod();
+        //WinMethod();
 
         //new highscore check !
         gameStates.newHighScore();
