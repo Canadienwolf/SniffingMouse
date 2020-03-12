@@ -9,6 +9,7 @@ public class GameMangerScript : MonoBehaviour
     //game and player states variables!
     public GameStates gameStates;
     public PlayerStatesMovements playerStatesMov;
+    public float time = 120;
     //player feedback texts !
     public Text timerText;
     public Text scoreText;
@@ -31,7 +32,8 @@ public class GameMangerScript : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
+        gameStates.timer = time;
     }
 
     // Start is called before the first frame update
@@ -48,7 +50,6 @@ public class GameMangerScript : MonoBehaviour
         gameStates.highScore = PlayerPrefs.GetInt("Highscore" + SceneManager.GetActiveScene().buildIndex.ToString(), 0);
         //updating the game/player states important variables !
         gameStates.score = 0;
-        gameStates.timer = 120f;
         gameStates.scoreadded = 0;
         gameStates.scorelost = 0;
         //loading and displaying the previous score on the current level !

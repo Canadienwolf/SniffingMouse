@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.Remoting.Messaging;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
@@ -12,6 +11,7 @@ public class UFO_Behaviour : MonoBehaviour
     public Transform player;
     public float followSharpness = 10f;
     public float frontOffset = 10f;
+    public GameObject halo;
 
     //Score
     public TextMesh score;
@@ -36,16 +36,25 @@ public class UFO_Behaviour : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
-    float angle;
+    Vector3 targetPos;
     // Update is called once per frame
     void Update()
     {
-        Vector3 targetPos = new Vector3(player.position.x, transform.position.y, player.position.z) + player.forward * frontOffset;
+        if (gs.timer > 0)
+        {
+            halo.SetActive(false);
+            targetPos = new Vector3(player.position.x, transform.position.y, player.position.z) + player.forward * frontOffset;
+        }
+        else
+        {
+            halo.SetActive(true);
+            targetPos = new Vector3(player.position.x, transform.position.y, player.position.z);
+        }
         agent.SetDestination(targetPos);
 
         //transform.position = player.position + _followOffset;
 
-        transform.Rotate(0, turnSpeed, 0);
+        transform.Rotate(new Vector3(0, turnSpeed, 0) * Time.deltaTime);
 
         score.text = gs.score.ToString();
         
