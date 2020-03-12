@@ -17,5 +17,6 @@ public class PauseResume : MonoBehaviour
         {
             menuController.PauseGame(transform.GetChild(0).gameObject);
         }
+        
     }
 }
