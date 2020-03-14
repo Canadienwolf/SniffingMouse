@@ -8,7 +8,7 @@ using UnityEngine.AI;
 public class UFO_Behaviour : MonoBehaviour
 {
     //The gameobject to follow
-    public Transform player;
+    private Transform player;
     public float followSharpness = 10f;
     public float frontOffset = 10f;
     public GameObject halo;
@@ -34,6 +34,7 @@ public class UFO_Behaviour : MonoBehaviour
         //_followOffset = transform.position - player.position;
         timeLeft.maxValue = gs.timer;
         agent = GetComponent<NavMeshAgent>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     Vector3 targetPos;

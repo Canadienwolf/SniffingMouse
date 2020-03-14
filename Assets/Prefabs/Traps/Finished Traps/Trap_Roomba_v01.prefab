@@ -231,13 +231,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2fd66f1eac12044e830f76201eacac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadMax: 0.5
-  xMax: 100
-  zMax: 100
-  xMin: -100
-  zMin: -100
+  velocidadMax: 0.1
+  xMax: 1000
+  zMax: 1000
+  xMin: -1000
+  zMin: -1000
   playerStatesA: {fileID: 11400000, guid: b7d465a55c6536d42a06e7c8347f9a4c, type: 2}
   GameStatesA: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
+  speed: 8
 --- !u!1 &4215540919863314273
 GameObject:
   m_ObjectHideFlags: 0
