@@ -26,4 +26,16 @@ public class ufo_Halo : MonoBehaviour
             other.transform.position += Vector3.up * speed * Time.deltaTime;
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            psm.lockController = false;
+            foreach (Collider c in other.GetComponents<Collider>())
+            {
+                c.isTrigger = false;
+            }
+        }
+    }
 }

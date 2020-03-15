@@ -313,14 +313,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4f0cdef9c4be9642acac07775362b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   followSharpness: 10
-  frontOffset: 10
+  frontOffset: 20
   halo: {fileID: 218918417}
   score: {fileID: 4710222099415000703}
   gs: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
   timeLeft: {fileID: 4710222100619540558}
-  turnSpeed: 1
+  turnSpeed: 50
 --- !u!195 &528125726
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -490,7 +489,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 0
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -1083,7 +1082,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 50
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

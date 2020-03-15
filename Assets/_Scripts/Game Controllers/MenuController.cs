@@ -19,6 +19,11 @@ public class MenuController : MonoBehaviour
     {
         Application.Quit();
     }
+    
+    public void GoToLastScene()
+    {
+        SceneManager.LoadScene(GameMangerScript.sceneName, LoadSceneMode.Single);
+    }
 
     public void GoToSceneString(string idx)
     {

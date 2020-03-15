@@ -6,11 +6,18 @@ using UnityEngine;
 public class DisplayScore : MonoBehaviour
 {
     public GameStates gs;
-    public Text txt;
+    public Text header;
+    public Text score;
+    public Text highscore;
 
     // Start is called before the first frame update
     void Start()
     {
-        txt.text = "\n"+ GameMangerScript.endMsg + "\n \n Time: " + gs.timer + "\n Your Score: " + GameMangerScript.score + "\n Highscore: " + gs.highScore;
+        if(header != null)
+            header.text = GameMangerScript.endMsg;
+        if(score != null)
+            score.text = GameMangerScript.score + "";
+        if(highscore != null)
+            highscore.text = gs.highScore + "";
     }
 }
