@@ -174,8 +174,16 @@ public class VacuumScript : MonoBehaviour
     //calling the losing event!
     void Die()
     {
+        //temp fix for midterm !
+        GameStatesA.score -= 5;
+      /*  if (GameStatesA.score < 0)
+        {
+            GameStatesA.score = 0;
+        }*/
+       
         //calling our static endgame method !
-        GameMangerScript.EndGame("You Lost !", -5);
+        GameMangerScript.EndGame("You got crushed, you lost score points !", -5);
+        
     }
 
     private void OnApplicationQuit()

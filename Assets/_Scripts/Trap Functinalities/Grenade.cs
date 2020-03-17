@@ -70,6 +70,7 @@ public class Grenade : MonoBehaviour
 
     void Kill()
     {
-        SceneManager.LoadScene("menu_ScoreDisplay", LoadSceneMode.Single);
+         SceneManager.LoadScene("menu_ScoreDisplay", LoadSceneMode.Single);
+        
     }
 }

@@ -21,8 +21,8 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526494395775368159}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 30
@@ -43,6 +43,10 @@ MonoBehaviour:
   delayTime: 0.3
   behaviorSpeed: 10
   heightOffset: 0.6
+  head: {fileID: 0}
+  headExplotion: {fileID: 0}
+  explodeTime: 1
+  headSize: 3
 --- !u!1 &5587637701971272434
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,6 +176,11 @@ PrefabInstance:
       propertyPath: cheese
       value: 
       objectReference: {fileID: 526494395775368159}
+    - target: {fileID: 1915411428, guid: 9fcb917d8fb0c614e852f7f8bc2d9e78, type: 3}
+      propertyPath: gamestatesA
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc,
+        type: 2}
     - target: {fileID: 840045391146927040, guid: 9fcb917d8fb0c614e852f7f8bc2d9e78,
         type: 3}
       propertyPath: m_Name
