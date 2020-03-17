@@ -41,6 +41,7 @@ public class UFO_Behaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (gs.timer > 0)
         {
             halo.SetActive(false);
@@ -85,6 +86,4 @@ public class UFO_Behaviour : MonoBehaviour
         //smooth follow
         transform.position += (targetPosition - transform.position) * followSharpness;
     }
-    
-    
 }

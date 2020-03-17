@@ -1992,6 +1992,35 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 307707856}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &333347558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 218918417, guid: 966ec5943a4f60a45bb8fa0ba6a780e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 780091816}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &333347562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333347558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Traps/UFO/WEAPON_Energy_Beam_05_loop_mono
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 9.749999
+  OverrideMaxDistance: 700
 --- !u!1001 &353827308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9135,7 +9164,7 @@ PrefabInstance:
     - target: {fileID: 6002790067369207032, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000035939266
+      value: 0.000000035939323
       objectReference: {fileID: 0}
     - target: {fileID: 6002790067369207032, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
@@ -9210,17 +9239,17 @@ PrefabInstance:
     - target: {fileID: 6002790068967541921, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.110551484
+      value: 0.11055149
       objectReference: {fileID: 0}
     - target: {fileID: 6002790068967541921, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000039264634
+      value: -0.000000030714173
       objectReference: {fileID: 0}
     - target: {fileID: 6002790068967541921, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00000031503424
+      value: -0.00000031408314
       objectReference: {fileID: 0}
     - target: {fileID: 6002790068967541921, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
