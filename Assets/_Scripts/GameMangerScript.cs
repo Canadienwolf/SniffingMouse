@@ -67,7 +67,7 @@ public class GameMangerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log("score : "+ score);
         //updating the score !
         score = gameStates.score;
         //Updating Ui feedback for the player !
@@ -131,15 +131,19 @@ public class GameMangerScript : MonoBehaviour
     {
         endMsg = message;
         score += scorePoints;
-        if (score < 0)
-        {
-            score = 0;
+       // if (score < 0)
+       // {
+         //   score = 0;
 
-        }
+        //}
         //loading the loss/win menu !
         SceneManager.LoadScene("menu_ScoreDisplay");
+       
+
+
     }
 
+    
     //onApplicationQuit
     private void OnApplicationQuit()
     {

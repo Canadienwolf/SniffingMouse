@@ -8,7 +8,8 @@ public class TrapDetection : MonoBehaviour
     public PlayerStatesMovements playerStatesA;
     public GameObject cheese;
     Animator anim;
-
+    public GameStates gamestatesA;
+    
     private bool activated;
     
     // Start is called before the first frame update
@@ -57,8 +58,14 @@ public class TrapDetection : MonoBehaviour
     //calling the losing event!
     void Die()
     {
+        gamestatesA.score -= 15;
+       /* if (gamestatesA.score < 0)
+        {
+            gamestatesA.score = 0;
+        }*/
         //loading the loss/win menu !
-        GameMangerScript.EndGame("You got crushed", -15);
+        GameMangerScript.EndGame("You got crushed , and lost score points !", (-15));
+      
     }
 
     private void OnApplicationQuit()

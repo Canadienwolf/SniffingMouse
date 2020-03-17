@@ -13,10 +13,14 @@ public class DisplayScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //for test !
+        //Debug.Log("score :" + GameMangerScript.score);
         if(header != null)
             header.text = GameMangerScript.endMsg;
         if(score != null)
-            score.text = GameMangerScript.score + "";
+            score.text = gs.score + "";
+        //changed it in order to fix it after mid term !
+        //score.text = GameMangerScript.score + "";
         if(highscore != null)
             highscore.text = gs.highScore + "";
     }
