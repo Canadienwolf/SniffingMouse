@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 218918419}
   - component: {fileID: 1845024971974884680}
   - component: {fileID: 333347562}
+  - component: {fileID: 7277829480940709213}
   m_Layer: 0
   m_Name: HaloRoot
   m_TagString: Untagged
@@ -109,6 +110,29 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 9.749999
   OverrideMaxDistance: 700
+--- !u!114 &7277829480940709213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218918417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Traps/UFO/WEAPON_Energy_Beam_05_loop_mono
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 9.749999
+  OverrideMaxDistance: 700
 --- !u!1 &478837591
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,8 +161,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 478837591}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 3, y: 0.5, z: 3}
   m_Children: []
   m_Father: {fileID: 573030930704627013}
   m_RootOrder: 0
@@ -490,6 +514,8 @@ MonoBehaviour:
   followSharpness: 10
   frontOffset: 20
   halo: {fileID: 218918417}
+  beamDelayTime: 1
+  beamHeight: 20
   score: {fileID: 4710222099415000703}
   gs: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
   timeLeft: {fileID: 4710222100619540558}
@@ -1296,7 +1322,7 @@ Transform:
   m_GameObject: {fileID: 6112477835713476256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 478837592}
   m_Father: {fileID: 218918418}

@@ -12,6 +12,8 @@ public class UFO_Behaviour : MonoBehaviour
     public float followSharpness = 10f;
     public float frontOffset = 10f;
     public GameObject halo;
+    public float beamDelayTime = 1;
+    public float beamHeight = 20;
 
     //Score
     public TextMesh score;
@@ -51,6 +53,7 @@ public class UFO_Behaviour : MonoBehaviour
         {
             halo.SetActive(true);
             targetPos = new Vector3(player.position.x, transform.position.y, player.position.z);
+            halo.transform.GetChild(0).transform.localScale = Vector3.MoveTowards(halo.transform.GetChild(0).transform.localScale, new Vector3(1, beamHeight, 1), Time.deltaTime * beamHeight / beamDelayTime);
         }
         agent.SetDestination(targetPos);
 
