@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7403305441500578205}
   - component: {fileID: 2010529218556132267}
   - component: {fileID: 5249610326602614610}
+  - component: {fileID: -4128043282376910966}
   m_Layer: 0
   m_Name: kitchentop_Small_v01
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-4128043282376910966
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5829499376250991502}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1862143923537470138, guid: d5982108988dee645b355f6a1114b3ae, type: 3}
