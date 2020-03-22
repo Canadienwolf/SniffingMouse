@@ -5,72 +5,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class AudioSettings : MonoBehaviour
+[CreateAssetMenu(fileName = "AudioManager ", menuName = "Audio Settings ")]
+public class AudioSettings : ScriptableObject 
 {
-
-    FMOD.Studio.EventInstance SFXVolumeTestEvent;
-
-    public FMOD.Studio.Bus Music;
-    public FMOD.Studio.Bus SFX;
-    public FMOD.Studio.Bus Master;
+    
+    //Volume controls
     public float MusicVolume = 0.5f;
     public float SFXVolume = 0.5f;
-    public float MasterVolume = 1f;
-    
+    public float MasterVolume = 0.5f;
 
-    void Awake ()
+
+    private void Awake()
     {
-        
-         
-        Music = FMODUnity.RuntimeManager.GetBus("bus:/Master/Music");
-        SFX = FMODUnity.RuntimeManager.GetBus("bus:/Master/SFX");
-        Master = FMODUnity.RuntimeManager.GetBus("bus:/Master");
-        
-        //SFXVolumeTestEvent = FMODUnity.RuntimeManager.CreateInstance ("event:/SFX/SFXVolumeTest");
-        
-        //Makes sure that the gameobject is not destroyed between scene changes
-        DontDestroyOnLoad(gameObject);
-        
-        //Checks if there are more instances than one of the MusicManager gameobject and then destroys it
-        if (GameObject.FindGameObjectsWithTag(gameObject.tag).Length > 1)
-        {
-            Destroy(gameObject);
-        }
-        
-    }
-
-    
-    
-    void Update () 
-    {
-        Music.setVolume (MusicVolume);
-        SFX.setVolume (SFXVolume);
-        Master.setVolume (MasterVolume);
-
-        
-    }
-
-    public void MasterVolumeLevel (float newMasterVolume)
-    {
-        MasterVolume = newMasterVolume;
-    }
-
-    public void MusicVolumeLevel (float newMusicVolume)
-    {
-        MusicVolume = newMusicVolume;
-    }
-
-    public void SFXVolumeLevel (float newSFXVolume)
-    {
-        SFXVolume = newSFXVolume;
-
-        
-        FMOD.Studio.PLAYBACK_STATE PbState;
-        SFXVolumeTestEvent.getPlaybackState (out PbState);
-        if (PbState != FMOD.Studio.PLAYBACK_STATE.PLAYING) 
-        {
-            SFXVolumeTestEvent.start ();
-        }
+        MusicVolume = PlayerPrefs.GetFloat("MusicVolume", MusicVolume);
+        MasterVolume = PlayerPrefs.GetFloat("MasterVolume", MasterVolume);
+        SFXVolume = PlayerPrefs.GetFloat("SFXVolume", SFXVolume);
         
     }
 }
