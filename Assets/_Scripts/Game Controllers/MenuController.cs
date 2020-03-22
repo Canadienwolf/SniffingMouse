@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
+
+    public GameObject Options;
+    public GameObject MainMenu;
+    
     public void EnableObject(GameObject go)
     {
         go.SetActive(true);
@@ -53,12 +57,14 @@ public class MenuController : MonoBehaviour
 
     public void OptionsMenu()
     {
-        
+        MainMenu.SetActive(false);
+        Options.SetActive(true);
     }
 
-    public void back()
+    public void BackToMainMenu()
     {
-        
+        MainMenu.SetActive(true);
+        Options.SetActive(false);
     }
     
 }
