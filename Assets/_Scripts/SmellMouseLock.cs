@@ -12,7 +12,7 @@ public class SmellMouseLock : MonoBehaviour
     private bool mouseCaught;
     private float timeThreshold = 0.5f;
     private float lastButtonPressed;
-    private Transform _cheeseParent;
+    public Transform _cheeseParent;
     private int buttonCount = 0;
     private float timeCounter;
     //--------------------------------------------//
@@ -34,7 +34,7 @@ public class SmellMouseLock : MonoBehaviour
     {
         
         //Finding the location of where the parent is.
-        _cheeseParent = transform.parent.transform.parent;
+        //_cheeseParent = transform.parent.transform.parent;
         
         //Find the player
         _player = GameObject.FindGameObjectWithTag("Player");
