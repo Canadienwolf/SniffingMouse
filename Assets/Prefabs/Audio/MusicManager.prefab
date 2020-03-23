@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4937041638075607620}
-  - component: {fileID: 682156156086121626}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: musicManager
@@ -31,16 +30,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &682156156086121626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4937041638075607623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf6f49f265a2fbb41ae0eee56fb054b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GSAudioManager: {fileID: 11400000, guid: 773b9c5d64d9bc143b0d4b779a8fc8eb, type: 2}

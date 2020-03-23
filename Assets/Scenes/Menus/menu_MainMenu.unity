@@ -1176,18 +1176,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840877769}
   m_CullTransparentMesh: 0
---- !u!114 &913066806 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 682156156086121626, guid: 8ff0ff4d97347744fb591c139467183c,
-    type: 3}
-  m_PrefabInstance: {fileID: 4937041637624959719}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf6f49f265a2fbb41ae0eee56fb054b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &917929364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,7 +1498,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 913066806}
+      - m_Target: {fileID: 1761450457}
         m_MethodName: MusicVolumeLevel
         m_Mode: 0
         m_Arguments:
@@ -2621,6 +2609,7 @@ GameObject:
   - component: {fileID: 1761450455}
   - component: {fileID: 1761450454}
   - component: {fileID: 1761450456}
+  - component: {fileID: 1761450457}
   m_Layer: 5
   m_Name: OptionsPanel
   m_TagString: Untagged
@@ -2700,6 +2689,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ff2248164c286145b13803c07df80d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1761450457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761450452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6f49f265a2fbb41ae0eee56fb054b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GSAudioManager: {fileID: 11400000, guid: 773b9c5d64d9bc143b0d4b779a8fc8eb, type: 2}
+  MusicVolume: 0.5
+  musicSlider: {fileID: 987590131}
+  SFXVolume: 0.5
+  SFXSlider: {fileID: 2120073546}
+  MasterVolume: 1
+  MasterSlider: {fileID: 1937769358}
 --- !u!1 &1884404928
 GameObject:
   m_ObjectHideFlags: 0
@@ -3143,7 +3151,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 913066806}
+      - m_Target: {fileID: 1761450457}
         m_MethodName: MasterVolumeLevel
         m_Mode: 0
         m_Arguments:
@@ -3612,7 +3620,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 913066806}
+      - m_Target: {fileID: 1761450457}
         m_MethodName: SFXVolumeLevel
         m_Mode: 0
         m_Arguments:
