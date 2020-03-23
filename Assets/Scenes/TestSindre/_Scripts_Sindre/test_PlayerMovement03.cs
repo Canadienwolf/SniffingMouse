@@ -176,7 +176,7 @@ public class test_PlayerMovement03 : MonoBehaviour
         rb.velocity = moveDir * currentMoveSpeed;
         rb.velocity += Vector3.up * currentAirVel;
 
-        if (!_isGrounded && !_isJumping && !_isClimbing)
+        if ((!_isGrounded && !_isJumping && !_isClimbing) || (_isSmelling && !_isGrounded))
         {
             currentAirVel = Mathf.MoveTowards(currentAirVel, -gravityMultiplier, Time.deltaTime * gravityMultiplier * 2);
         }

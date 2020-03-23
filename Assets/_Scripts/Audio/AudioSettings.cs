@@ -20,6 +20,5 @@ public class AudioSettings : ScriptableObject
         MusicVolume = PlayerPrefs.GetFloat("MusicVolume", MusicVolume);
         MasterVolume = PlayerPrefs.GetFloat("MasterVolume", MasterVolume);
         SFXVolume = PlayerPrefs.GetFloat("SFXVolume", SFXVolume);
-        
     }
 }

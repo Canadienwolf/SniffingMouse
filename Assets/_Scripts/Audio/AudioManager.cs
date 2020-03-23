@@ -18,8 +18,11 @@ public class AudioManager : MonoBehaviour
     
     //Volume controls
     public float MusicVolume;
+    public Slider musicSlider;
     public float SFXVolume;
+    public Slider SFXSlider;
     public float MasterVolume;
+    public Slider MasterSlider;
 
     private void Awake()
     {
@@ -30,6 +33,13 @@ public class AudioManager : MonoBehaviour
         MasterVolume = GSAudioManager.MasterVolume;
         MusicVolume = GSAudioManager.MusicVolume;
         SFXVolume = GSAudioManager.SFXVolume;
+    }
+
+    void Start()
+    {
+        musicSlider.value = GSAudioManager.MusicVolume;
+        SFXSlider.value = GSAudioManager.SFXVolume;
+        MasterSlider.value = GSAudioManager.MasterVolume;
     }
 
     // Update is called once per frame
@@ -44,18 +54,21 @@ public class AudioManager : MonoBehaviour
     {
         MasterVolume = newMasterVolume;
         PlayerPrefs.SetFloat("MasterVolume", MasterVolume);
+        GSAudioManager.MasterVolume = newMasterVolume;
     }
 
     public void MusicVolumeLevel (float newMusicVolume)
     {
         MusicVolume = newMusicVolume;
         PlayerPrefs.SetFloat("MusicVolume", MusicVolume);
+        GSAudioManager.MusicVolume = newMusicVolume;
     }
 
     public void SFXVolumeLevel (float newSFXVolume)
     {
         SFXVolume = newSFXVolume;
         PlayerPrefs.SetFloat("SFXVolume", SFXVolume);
+        GSAudioManager.SFXVolume = newSFXVolume;
 
         /*
         FMOD.Studio.PLAYBACK_STATE PbState;
@@ -65,6 +78,6 @@ public class AudioManager : MonoBehaviour
             SFXVolumeTestEvent.start ();
         }
         */
-        
+
     }
 }

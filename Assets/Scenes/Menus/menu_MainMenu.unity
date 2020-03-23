@@ -2700,10 +2700,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ff2248164c286145b13803c07df80d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MM: {fileID: 0}
-  MusicSlider: {fileID: 987590131}
-  SFXSlider: {fileID: 2120073546}
-  MasterSlider: {fileID: 1937769358}
 --- !u!1 &1884404928
 GameObject:
   m_ObjectHideFlags: 0
@@ -3640,6 +3636,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 773b9c5d64d9bc143b0d4b779a8fc8eb,
         type: 2}
+    - target: {fileID: 682156156086121626, guid: 8ff0ff4d97347744fb591c139467183c,
+        type: 3}
+      propertyPath: MusicVolume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 682156156086121626, guid: 8ff0ff4d97347744fb591c139467183c,
+        type: 3}
+      propertyPath: SFXVolume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 682156156086121626, guid: 8ff0ff4d97347744fb591c139467183c,
+        type: 3}
+      propertyPath: MasterVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 682156156086121626, guid: 8ff0ff4d97347744fb591c139467183c,
+        type: 3}
+      propertyPath: MasterSlider
+      value: 
+      objectReference: {fileID: 1937769358}
+    - target: {fileID: 682156156086121626, guid: 8ff0ff4d97347744fb591c139467183c,
+        type: 3}
+      propertyPath: SFXSlider
+      value: 
+      objectReference: {fileID: 2120073546}
+    - target: {fileID: 682156156086121626, guid: 8ff0ff4d97347744fb591c139467183c,
+        type: 3}
+      propertyPath: musicSlider
+      value: 
+      objectReference: {fileID: 987590131}
     - target: {fileID: 4937041638075607620, guid: 8ff0ff4d97347744fb591c139467183c,
         type: 3}
       propertyPath: m_LocalPosition.x

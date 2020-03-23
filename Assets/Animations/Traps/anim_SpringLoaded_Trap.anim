@@ -1937,4 +1937,32 @@ AnimationClip:
     script: {fileID: 0}
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: EnableObject
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.21666667
+    functionName: SetTimeTheScale
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0.1
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.3
+    functionName: SetTimeTheScale
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0.8
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.43333334
+    functionName: SetTimeTheScale
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 1
+    intParameter: 0
+    messageOptions: 0

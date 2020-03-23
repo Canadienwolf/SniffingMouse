@@ -10,7 +10,6 @@ public class TrapNet : MonoBehaviour
     [Range(0, 100)]
     public float speed;
     
-    [HideInInspector]
     public GameObject trapNet;
     public GameObject cutTrapnet;
 
