@@ -40,8 +40,8 @@ public class SetTimeScale : MonoBehaviour
         virtualCam.SetActive(true);
     }
 
-    public void DisableObject(GameObject go)
+    public void DisableObject()
     {
-        go.SetActive(false);
+        virtualCam.SetActive(false);
     }
 }

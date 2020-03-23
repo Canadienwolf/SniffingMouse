@@ -48,8 +48,8 @@ public class CheeseScript : MonoBehaviour
                     istrigger = false;
                 }
                 playerstatesA.isEating = true;
-                eatTime = 2.5f;
-                Destroy(transform.parent.gameObject, 2.5f);
+                //eatTime = 2.5f;
+                Destroy(transform.parent.gameObject, eatTime);
             }else if (this.gameObject.CompareTag("mediumCheese"))
             {
                 //checking ifthe player collided with that type of cheese !
@@ -63,8 +63,8 @@ public class CheeseScript : MonoBehaviour
                     istrigger = false;
                 }
                 playerstatesA.isEating = true;
-                eatTime = 5;
-                Destroy(transform.parent.gameObject, 5);
+                //eatTime = 5;
+                Destroy(transform.parent.gameObject, eatTime);
             }
             else if (this.gameObject.CompareTag("largeCheese"))
             {
@@ -80,8 +80,8 @@ public class CheeseScript : MonoBehaviour
                 }
                
                 playerstatesA.isEating = true;
-                eatTime = 7.5f;
-                Destroy(transform.parent.gameObject, 7.5f);
+                //eatTime = 7.5f;
+                Destroy(transform.parent.gameObject, eatTime);
             }
         }
         

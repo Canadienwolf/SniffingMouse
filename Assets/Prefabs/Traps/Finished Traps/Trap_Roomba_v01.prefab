@@ -93,7 +93,10 @@ GameObject:
   - component: {fileID: 5461898209732576007}
   - component: {fileID: 5852519522656234156}
   - component: {fileID: 573989626}
-  - component: {fileID: 1763306348}
+  - component: {fileID: 269968451}
+  - component: {fileID: 269968452}
+  - component: {fileID: 269968458}
+  - component: {fileID: 269968457}
   m_Layer: 0
   m_Name: Roomba_Body
   m_TagString: Untagged
@@ -109,8 +112,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3535132673803175411}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00044755643, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.00044755643, y: 0.5, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 5045365506763827591}
   - {fileID: 4507512842412321574}
@@ -191,10 +194,10 @@ Rigidbody:
   m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &573989626
 MonoBehaviour:
@@ -219,7 +222,46 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
---- !u!114 &1763306348
+--- !u!65 &269968451
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3535132673803175411}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 0.5, z: 6.5}
+  m_Center: {x: 0, y: 0.25, z: 0}
+--- !u!65 &269968452
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3535132673803175411}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 0.5, z: 5}
+  m_Center: {x: 0, y: 0.25, z: 0}
+--- !u!65 &269968458
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3535132673803175411}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.5, y: 0.5, z: 4}
+  m_Center: {x: 0, y: 0.25, z: 0}
+--- !u!114 &269968457
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,17 +270,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 3535132673803175411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2fd66f1eac12044e830f76201eacac5, type: 3}
+  m_Script: {fileID: 11500000, guid: 388919272b222d54a96e12c7281431d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadMax: 0.1
-  xMax: 1000
-  zMax: 1000
-  xMin: -1000
-  zMin: -1000
-  playerStatesA: {fileID: 11400000, guid: b7d465a55c6536d42a06e7c8347f9a4c, type: 2}
-  GameStatesA: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
-  speed: 8
+  speed: 3
+  rotSpeed: 30
+  minAngle: -180
+  maxAngle: 180
+  isOff: 0
+  psm: {fileID: 11400000, guid: b7d465a55c6536d42a06e7c8347f9a4c, type: 2}
+  menuDelay: 3
+  suckPartical: {fileID: 6421815811250336809, guid: da114d440a9a5e548901404d7581c17a,
+    type: 3}
 --- !u!1 &4215540919863314273
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +379,8 @@ GameObject:
   - component: {fileID: 4507512842412321574}
   - component: {fileID: 4999094411613726255}
   - component: {fileID: 468699758924076557}
+  - component: {fileID: 339700411}
+  - component: {fileID: 339700410}
   m_Layer: 0
   m_Name: Roomba_Button
   m_TagString: Untagged
@@ -351,8 +396,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6166620664721798702}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.075, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1.2, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 9088266183820598125}
   m_RootOrder: 1
@@ -404,6 +449,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &339700411
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6166620664721798702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7889336436098456425, guid: 2d4b10b1dbf97d746830545e219ac29a, type: 3}
+--- !u!114 &339700410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6166620664721798702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e494059a973e1a046a1e6a2fa1bf6c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetTime: 3
 --- !u!1 &7224356881304426490
 GameObject:
   m_ObjectHideFlags: 0
