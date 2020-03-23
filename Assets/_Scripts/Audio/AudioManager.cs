@@ -26,6 +26,7 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
+        
         Music = FMODUnity.RuntimeManager.GetBus("bus:/Master/Music");
         SFX = FMODUnity.RuntimeManager.GetBus("bus:/Master/SFX");
         Master = FMODUnity.RuntimeManager.GetBus("bus:/Master");
@@ -33,6 +34,10 @@ public class AudioManager : MonoBehaviour
         MasterVolume = GSAudioManager.MasterVolume;
         MusicVolume = GSAudioManager.MusicVolume;
         SFXVolume = GSAudioManager.SFXVolume;
+        
+        MusicVolume = PlayerPrefs.GetFloat("MusicVolume", MusicVolume);
+        MasterVolume = PlayerPrefs.GetFloat("MasterVolume", MasterVolume);
+        SFXVolume = PlayerPrefs.GetFloat("SFXVolume", SFXVolume);
     }
 
     void Start()
