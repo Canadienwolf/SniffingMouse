@@ -20,8 +20,6 @@ public class GameMangerScript : MonoBehaviour
     //cheese conter for the cheese available in the scene !
     int cheeseCounter;
     float help=0;
-    //just if we want to display the previous score reached!
-    int previousScore;
 
     //use this one !
    // public static int score;
@@ -39,41 +37,30 @@ public class GameMangerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         // start the game !
         Time.timeScale = 1;
-        //countig how many cheese objects are  in the scene !
-        cheeseCounter = GameObject.FindGameObjectsWithTag("Cheese").Length;
-        //gameOver.gameObject.SetActive(false);
-        //badSmellText.gameObject.SetActive(false);
-       // gameOver.text = " Time Limit Reached ! Game Over !";
-        // get in the last highscore for that specific scene that we are in at the moment !
-        gameStates.highScore = PlayerPrefs.GetInt("Highscore" + SceneManager.GetActiveScene().buildIndex.ToString(), 0);
-        //updating the game/player states important variables !
-        gameStates.score = 0;
-        gameStates.scoreadded = 0;
-        gameStates.scorelost = 0;
-         //loading and displaying the previous score on the current level !
-         //  previousScore = PlayerPrefs.GetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(),0);
-        // prevScore.text = "Previous Score : " + previousScore.ToString();
-
-        //setting the score to 0!
-      /*  if(SceneManager.GetActiveScene().name != "menu_ScoreDisplay")
-        {
-            score = 0;
-        }*/
-        
         //getting the current scene name!
         sceneName = SceneManager.GetActiveScene().name;
         //getting the current scene name!
         endMsg = null;
+        //countig how many cheese objects are  in the scene !
+        cheeseCounter = GameObject.FindGameObjectsWithTag("Cheese").Length;
+        // get in the last highscore for that specific scene that we are in at the moment !
+        //gameStates.highScore = PlayerPrefs.GetInt("Highscore" + SceneManager.GetActiveScene().buildIndex.ToString(), 0);
+        gameStates.highScore = PlayerPrefs.GetInt("Highscore" + sceneName.ToString(), 0);
+        //updating the game/player states important variables !
+        gameStates.score = 0;
+        gameStates.scoreadded = 0;
+        gameStates.scorelost = 0;
+        
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("score : "+ score);
-        //updating the score !
-       // score = gameStates.score;
+        
         //Updating Ui feedback for the player !
         if(scoreText != null)
             scoreText.text = "Score : " + gameStates.score.ToString();
@@ -86,16 +73,6 @@ public class GameMangerScript : MonoBehaviour
 
         //timer method !
         gameStates.TimeFlies();
-
-       // Debug.Log("timer: " + gameStates.timer + "\n");
-        //Debug.Log("help: " + help + "\n");
-
-        //calling that public local method when the player lose !
-        //LoseMethod();
-
-
-        //calling that public local method when the player win !
-        //WinMethod();
 
         //new highscore check !
         gameStates.newHighScore();
@@ -130,32 +107,33 @@ public class GameMangerScript : MonoBehaviour
         }
     }
 
-    //method to call for the win/loss event!
-   /* public static void EndGame(string message,int scorePoints)
-    {
-        endMsg = message;
-        score = scorePoints;
-        SceneManager.LoadScene("menu_ScoreDisplay");
-       
-
-
-    }*/
 
     
     //onApplicationQuit
-    private void OnApplicationQuit()
+  /*  private void OnApplicationQuit()
     {
-        //saving the score in that current level you're in in order to display it later on !
-        // PlayerPrefs.SetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(), gameStates.score);
         //need to test that line of code later ! (just for saving the current highscore for the current level !)
-        PlayerPrefs.SetInt("Highscore" + SceneManager.GetActiveScene().buildIndex.ToString(), gameStates.highScore);
+        PlayerPrefs.SetInt("Highscore" + sceneName.ToString(), gameStates.highScore);
         //updating the game/player states important variables !
         //gameStates.score = 0;
         gameStates.timer = 300f;
-        gameStates.scoreadded = 0;
-        gameStates.scorelost = 0;
+       // gameStates.scoreadded = 0;
+       // gameStates.scorelost = 0;
         playerStatesMov.lockController = false;
-        
-
+    }*/
+    private void OnDisable()
+    {
+        //in order to display the highscore before saving it in playerprefs and deleting it afterward!
+        DisplayScore.highScore = gameStates.highScore;
+        //need to test that line of code later ! (just for saving the current highscore for the current level !)
+        PlayerPrefs.SetInt("Highscore" + sceneName.ToString(), gameStates.highScore);
+        //reseting the gamestate highscore variable !
+        gameStates.highScore = 0;
+        //updating the game/player states important variables !
+        //gameStates.score = 0;
+        gameStates.timer = 300f;
+        // gameStates.scoreadded = 0;
+        // gameStates.scorelost = 0;
+        playerStatesMov.lockController = false;
     }
 }

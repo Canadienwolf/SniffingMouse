@@ -9,6 +9,7 @@ public class DisplayScore : MonoBehaviour
     public Text header;
     public Text score;
     public Text highscore;
+    public static int highScore;
 
     // Start is called before the first frame update
     void Start()
@@ -19,10 +20,9 @@ public class DisplayScore : MonoBehaviour
             header.text = gs.endMsg;
         if(score != null)
             score.text = gs.score + "";
-        //changed it in order to fix it after mid term !
-        //score.text = GameMangerScript.score + "";
         if(highscore != null)
-            highscore.text = gs.highScore + "";
+            highscore.text = highScore + "";
+        //highscore.text = gs.highScore + "";
     }
    
 }

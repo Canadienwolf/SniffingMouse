@@ -29,7 +29,7 @@ public class GameStates : ScriptableObject
             //updating the highscore!
              highScore = score;
             //storing the new high score for each scene using playerprefs and scene index for its name !
-            PlayerPrefs.SetInt("Highscore" + SceneManager.GetActiveScene().buildIndex.ToString(), highScore);
+           // PlayerPrefs.SetInt("Highscore" + SceneManager.GetActiveScene().buildIndex.ToString(), highScore);
         }
     }
 
