@@ -12,6 +12,8 @@ public class CheeseScript : MonoBehaviour
     bool istrigger;
     //checking if it has been triggred more than once !
     bool moreThanOnce;
+    //amount of score given!
+    public int scoreGiven = 0;
 
     [HideInInspector] public GameObject target;
 
@@ -43,7 +45,8 @@ public class CheeseScript : MonoBehaviour
                     moreThanOnce = true;
                     gameStates.AddScorePoints();
                     gameStates.score += 2;
-                    GameMangerScript.score = gameStates.score;
+                    //the amount of score added!
+                    scoreGiven = gameStates.scoreadded + 2;
                     gameStates.newHighScore();
                     istrigger = false;
                 }
@@ -58,7 +61,8 @@ public class CheeseScript : MonoBehaviour
                     moreThanOnce = true;
                     gameStates.AddScorePoints();
                     gameStates.score += 3;
-                    GameMangerScript.score = gameStates.score;
+                    //the amount of score added!
+                    scoreGiven = gameStates.scoreadded + 3;
                     gameStates.newHighScore();
                     istrigger = false;
                 }
@@ -74,7 +78,8 @@ public class CheeseScript : MonoBehaviour
                     moreThanOnce = true;
                     gameStates.AddScorePoints();
                     gameStates.score += 5;
-                    GameMangerScript.score = gameStates.score;
+                    //the amount of score added!
+                    scoreGiven = gameStates.scoreadded + 5;
                     gameStates.newHighScore();
                     istrigger = false;
                 }

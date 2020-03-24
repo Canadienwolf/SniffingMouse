@@ -10,21 +10,23 @@ public class VisualizeScore : MonoBehaviour
     private string displayText;
     private bool displaying;
     private byte alpha;
+    //always declare a gamestates in order to use score functions/endgame method !
+    public GameStates gameStatesA;
 
     // Start is called before the first frame update
     void Start()
     {
         txt = GetComponent<Text>();
-        currentScore = GameMangerScript.score;
+        currentScore = gameStatesA.score;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentScore != GameMangerScript.score)
+        if (currentScore != gameStatesA.score)
         {
             Display();
-            currentScore = GameMangerScript.score;
+            currentScore = gameStatesA.score;
         }
 
         if (displaying)
@@ -37,9 +39,9 @@ public class VisualizeScore : MonoBehaviour
     void Display()
     {
         displaying = true;
-        int difference = GameMangerScript.score - currentScore;
+        int difference = gameStatesA.score - currentScore;
         alpha = 0;
-        if (currentScore < GameMangerScript.score)
+        if (currentScore < gameStatesA.score)
         {
             txt.text = "+" + difference;
             txt.color = new Color32(87, 195, 67, 0);

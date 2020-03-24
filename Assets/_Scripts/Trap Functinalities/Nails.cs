@@ -9,6 +9,8 @@ public class Nails : MonoBehaviour
     public GameObject head;
 
     private bool died;
+    //always declare a gamestates in order to use score functions/endgame method !
+    public GameStates gameStatesA;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -27,6 +29,6 @@ public class Nails : MonoBehaviour
 
     void Kill()
     {
-        GameMangerScript.EndGame("You got impaled", -15);
+        gameStatesA.EndGame("You got impaled", -15);
     }
 }

@@ -6,6 +6,7 @@ public class test_CheeseCounter : MonoBehaviour
 {
     private GameObject[] cheese;
     public List<GameObject> cheeses;
+    public GameStates gameStatesA;
 
     private void Start()
     {
@@ -28,7 +29,7 @@ public class test_CheeseCounter : MonoBehaviour
 
         if (cheeses.Count == 0)
         {
-            GameMangerScript.EndGame("You found all the cheese", 0);
+            gameStatesA.EndGame("You found all the cheese", 0);
         }
     }
 }

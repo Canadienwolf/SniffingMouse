@@ -24,7 +24,7 @@ public class BadSmellSource : MonoBehaviour
 
     void End()
     {
-        GameMangerScript.EndGame("That was too stinky!", -3);
+        gamestatesA.EndGame("That was too stinky!", -3);
      
     }
 

@@ -19,6 +19,8 @@ public class GameStates : ScriptableObject
     //The highscore used for the game !
     public int highScore=0;
 
+    public string endMsg;
+
     //Highscore handling function !
     public void newHighScore()
     {
@@ -38,7 +40,7 @@ public class GameStates : ScriptableObject
         score += 5;
         //counting how many score points are gained !
         scoreadded += 5;
-        GameMangerScript.score = score;
+       // GameMangerScript.score = score;
     }
 
     //losing score point function !
@@ -52,11 +54,18 @@ public class GameStates : ScriptableObject
         }
         //counting how many score points are lost !
         scorelost -= 3;
-        GameMangerScript.score = score;
+        //GameMangerScript.score = score;
 
     }
 
+    //method to call for the win/loss event!
+    public void EndGame(string message, int scorePoints)
+    {
+        endMsg = message;
+        score += scorePoints;
+        SceneManager.LoadScene("menu_ScoreDisplay");
 
+    }
 
 
     //must be called in the update later on !

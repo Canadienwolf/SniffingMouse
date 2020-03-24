@@ -24,7 +24,7 @@ public class GameMangerScript : MonoBehaviour
     int previousScore;
 
     //use this one !
-    public static int score;
+   // public static int score;
     //use this one !
     public static string endMsg;
     //current scene name!
@@ -52,12 +52,16 @@ public class GameMangerScript : MonoBehaviour
         gameStates.score = 0;
         gameStates.scoreadded = 0;
         gameStates.scorelost = 0;
-        //loading and displaying the previous score on the current level !
-        previousScore = PlayerPrefs.GetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(),0);
-       // prevScore.text = "Previous Score : " + previousScore.ToString();
+         //loading and displaying the previous score on the current level !
+         //  previousScore = PlayerPrefs.GetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(),0);
+        // prevScore.text = "Previous Score : " + previousScore.ToString();
 
         //setting the score to 0!
-        score = 0;
+      /*  if(SceneManager.GetActiveScene().name != "menu_ScoreDisplay")
+        {
+            score = 0;
+        }*/
+        
         //getting the current scene name!
         sceneName = SceneManager.GetActiveScene().name;
         //getting the current scene name!
@@ -67,9 +71,9 @@ public class GameMangerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("score : "+ score);
+        //Debug.Log("score : "+ score);
         //updating the score !
-        score = gameStates.score;
+       // score = gameStates.score;
         //Updating Ui feedback for the player !
         if(scoreText != null)
             scoreText.text = "Score : " + gameStates.score.ToString();
@@ -108,7 +112,7 @@ public class GameMangerScript : MonoBehaviour
             PlayerPrefs.SetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(), gameStates.score);
             //interrupt the game 
             Time.timeScale = 0;
-            EndGame("Time Passed , You Lost !", 0);
+            gameStates.EndGame("Time Passed , You Lost !", 0);
 
         }
     }
@@ -122,37 +126,31 @@ public class GameMangerScript : MonoBehaviour
             PlayerPrefs.SetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(), gameStates.score);
             //interrupt the game 
             Time.timeScale = 0;
-            EndGame("Congratulations , you won !", 0);
+            gameStates.EndGame("Congratulations , you won !", 0);
         }
     }
 
     //method to call for the win/loss event!
-    public static void EndGame(string message,int scorePoints)
+   /* public static void EndGame(string message,int scorePoints)
     {
         endMsg = message;
-        score += scorePoints;
-       // if (score < 0)
-       // {
-         //   score = 0;
-
-        //}
-        //loading the loss/win menu !
+        score = scorePoints;
         SceneManager.LoadScene("menu_ScoreDisplay");
        
 
 
-    }
+    }*/
 
     
     //onApplicationQuit
     private void OnApplicationQuit()
     {
         //saving the score in that current level you're in in order to display it later on !
-        PlayerPrefs.SetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(), gameStates.score);
+        // PlayerPrefs.SetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(), gameStates.score);
         //need to test that line of code later ! (just for saving the current highscore for the current level !)
         PlayerPrefs.SetInt("Highscore" + SceneManager.GetActiveScene().buildIndex.ToString(), gameStates.highScore);
         //updating the game/player states important variables !
-        gameStates.score = 0;
+        //gameStates.score = 0;
         gameStates.timer = 300f;
         gameStates.scoreadded = 0;
         gameStates.scorelost = 0;

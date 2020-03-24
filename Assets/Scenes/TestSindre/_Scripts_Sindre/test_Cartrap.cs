@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class test_Cartrap : MonoBehaviour
 {
+    //always have a gamestate declared if u want to use endgame(new approach!)
+    public GameStates gameStatesA;
     public float startDelay = 1f;
     public float driveSpeed = 5f;
     public float turnSpeed = 10f;
@@ -68,6 +70,6 @@ public class test_Cartrap : MonoBehaviour
 
     void Die()
     {
-        GameMangerScript.EndGame("You crashed!", (-15));
+        gameStatesA.EndGame("You crashed!", (-15));
     }
 }

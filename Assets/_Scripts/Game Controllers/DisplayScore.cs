@@ -16,7 +16,7 @@ public class DisplayScore : MonoBehaviour
         //for test !
         //Debug.Log("score :" + GameMangerScript.score);
         if(header != null)
-            header.text = GameMangerScript.endMsg;
+            header.text = gs.endMsg;
         if(score != null)
             score.text = gs.score + "";
         //changed it in order to fix it after mid term !
@@ -24,4 +24,5 @@ public class DisplayScore : MonoBehaviour
         if(highscore != null)
             highscore.text = gs.highScore + "";
     }
+   
 }

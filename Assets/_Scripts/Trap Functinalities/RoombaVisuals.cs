@@ -17,6 +17,13 @@ public class RoombaVisuals : MonoBehaviour
 
     private float angleToRot;
     private bool rotating;
+    //always declare a gamestates in order to use score functions/endgame method !
+    public GameStates gameStatesA;
+
+    //checking if it has been triggred more than once !
+    bool moreThanOnce;
+    //checking if the cheese is triggred by the player
+    bool istrigger=true;
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +63,7 @@ public class RoombaVisuals : MonoBehaviour
 
     void Lose()
     {
-        GameMangerScript.EndGame("You got sucked!", (-15));
+        gameStatesA.EndGame("You got sucked!", (-15));
     }
 
     void SuckIn(GameObject player)
@@ -72,6 +79,7 @@ public class RoombaVisuals : MonoBehaviour
             SetAngle();
             rotating = true;
             transform.position += transform.forward * -0.2f;
+            
         }
     }
 
@@ -81,7 +89,19 @@ public class RoombaVisuals : MonoBehaviour
         {
             psm.lockController = true;
             SuckIn(other.gameObject);
-            Invoke("Lose", menuDelay);
+            
+            //checking ifthe player collided with that type of cheese !
+            if (istrigger == true)
+            {
+                if (moreThanOnce == false)
+                {
+                    moreThanOnce = true;
+                    //calling the losing event (menu)!
+                    Invoke("Lose", menuDelay);
+                }
+                //moreThanOnce = true;
+                
+            }
         }
     }
 }

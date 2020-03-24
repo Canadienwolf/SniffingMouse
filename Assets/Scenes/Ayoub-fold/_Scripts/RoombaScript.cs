@@ -138,7 +138,7 @@ public class RoombaScript : MonoBehaviour
     //calling the losing event!
     void Die()
     {
-        GameMangerScript.EndGame("You Lost !", -5);
+        GameStatesA.EndGame("You Lost !", -5);
     }
 
     //waiting for 3 seconds before moving again !

@@ -36,6 +36,11 @@ public class VacuumScript : MonoBehaviour
     public float speed = 8f;
     bool move = true;
 
+    //checking if it has been triggred more than once !
+    bool moreThanOnce;
+    //checking if the cheese is triggred by the player
+    bool istrigger;
+
     // Use this for initialization
     void Start()
     {
@@ -157,8 +162,19 @@ public class VacuumScript : MonoBehaviour
             zMax = 0;
             //Stopping the vacuum shuffing effect!
             speed = 0;
+            if (moreThanOnce == false)
+            {
+                istrigger = true;
+            }
+            //checking ifthe player collided with that type of cheese !
+            if (istrigger == true)
+            {
+                moreThanOnce = true;
+                //calling the losing event (menu)!
+                Invoke("Die", 2);
+            }
             //calling the loss/win menu
-            Invoke("Die", 2);
+           // Invoke("Die", 2);
         }
         else if (collision.gameObject.name != "Ground")
         {
@@ -174,15 +190,10 @@ public class VacuumScript : MonoBehaviour
     //calling the losing event!
     void Die()
     {
-        //temp fix for midterm !
-        GameStatesA.score -= 5;
-      /*  if (GameStatesA.score < 0)
-        {
-            GameStatesA.score = 0;
-        }*/
+        
        
         //calling our static endgame method !
-        GameMangerScript.EndGame("You got crushed, you lost score points !", -5);
+        GameStatesA.EndGame("You got crushed, you lost score points !", -5);
         
     }
 

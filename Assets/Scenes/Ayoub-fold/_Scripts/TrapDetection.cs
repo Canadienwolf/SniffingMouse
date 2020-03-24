@@ -9,7 +9,10 @@ public class TrapDetection : MonoBehaviour
     public GameObject cheese;
     Animator anim;
     public GameStates gamestatesA;
-    
+    //checking if it has been triggred more than once !
+    bool moreThanOnce;
+    //checking if the cheese is triggred by the player
+    bool istrigger = true;
     private bool activated;
     
     // Start is called before the first frame update
@@ -26,7 +29,20 @@ public class TrapDetection : MonoBehaviour
         //Detecting collision with player
         if (other.gameObject.CompareTag("Player"))
         {
+           
+            //checking ifthe player collided with that type of cheese !
+            if (istrigger == true)
+            {
+                if (moreThanOnce == false)
+                {
+                    moreThanOnce = true;
+                    //calling the losing event (menu)!
+                    Invoke("Die", 2);
+                    //Die();
 
+                }
+
+            }
             //activating the animation
             anim.Play("apim_SpringLoaded_Trap");
             if (!activated)
@@ -34,9 +50,9 @@ public class TrapDetection : MonoBehaviour
                 //locking the player controlls
                 playerStatesA.lockController = true;
                 playerStatesA.isEating = false;
-                //calling the losing event (menu)!
-                Invoke("Die", 2);
+                
             }
+           
         }
         if (other.tag == "Pickable")
         {
@@ -46,6 +62,7 @@ public class TrapDetection : MonoBehaviour
             GetComponent<SphereCollider>().enabled = false;
         }
     }
+ 
 
     void EnableDisableCols(bool idx)
     {
@@ -58,14 +75,15 @@ public class TrapDetection : MonoBehaviour
     //calling the losing event!
     void Die()
     {
-        gamestatesA.score -= 15;
-       /* if (gamestatesA.score < 0)
-        {
-            gamestatesA.score = 0;
-        }*/
+        
         //loading the loss/win menu !
-        GameMangerScript.EndGame("You got crushed , and lost score points !", (-15));
+        gamestatesA.EndGame("You got crushed , and lost score points !", (-15));
       
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        
     }
 
     private void OnApplicationQuit()
