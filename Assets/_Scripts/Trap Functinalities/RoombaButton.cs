@@ -5,6 +5,7 @@ using UnityEngine;
 public class RoombaButton : MonoBehaviour
 {
     public float resetTime = 3f;
+    public ParticleSystem suckIn;
 
     private RoombaVisuals rv;
     private Vector3 startPos;
@@ -22,6 +23,7 @@ public class RoombaButton : MonoBehaviour
         {
             rv.isOff = true;
             transform.localPosition = new Vector3(0, 1, 0);
+            suckIn.Stop();
             Invoke("RestartRoomba", resetTime);
         }
     }
@@ -30,5 +32,6 @@ public class RoombaButton : MonoBehaviour
     {
         rv.isOff = false;
         transform.localPosition = startPos;
+        suckIn.Play();
     }
 }
