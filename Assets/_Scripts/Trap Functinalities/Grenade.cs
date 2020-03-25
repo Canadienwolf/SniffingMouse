@@ -7,6 +7,7 @@ public class Grenade : MonoBehaviour
 {
     public PlayerStatesMovements psm;
     public ParticleSystem activeDisplayer;
+    public ParticleSystem areaDisplayer;
     public ParticleSystem[] explotion;
 
     public float detonationTime = 3f;
@@ -25,6 +26,7 @@ public class Grenade : MonoBehaviour
         if (active && target != null)
         {
             activeDisplayer.Play();
+            areaDisplayer.Play();
             Invoke("Explode", detonationTime);
             active = false;
         }
@@ -42,7 +44,8 @@ public class Grenade : MonoBehaviour
         if (Vector3.Distance(target.transform.position, transform.position) < killRange)
         {
             psm.lockController = true;
-            Invoke("Kill", 1);
+            target.transform.GetChild(0).gameObject.SetActive(false);
+            Invoke("Kill", 3);
         }
         else
         {
