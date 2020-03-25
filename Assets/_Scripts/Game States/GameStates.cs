@@ -11,9 +11,9 @@ public class GameStates : ScriptableObject
 
     //Current score
     public int score=0;
-    //Current score
+    //just to know how many scorepoints lost
     public int scorelost = 0;
-    //Current score
+    //just to know how many scorepoints added
     public int scoreadded = 0;
 
     //The highscore used for the game !
@@ -38,7 +38,7 @@ public class GameStates : ScriptableObject
         //incrementing the score by 5 for every cheese , then adding more on the cheese script depending on the type of cheese!
         score += points;
         //counting how many score points are gained !
-        scoreadded += 5;
+        scoreadded = points;
        
     }
 
@@ -52,7 +52,7 @@ public class GameStates : ScriptableObject
             score = 0;
         }
         //counting how many score points are lost !
-        scorelost -= points;
+        scorelost = points;
       
 
     }
