@@ -14,9 +14,6 @@ public class GameMangerScript : MonoBehaviour
     public Text timerText;
     public Text scoreText;
     public Text highScoreText;
-  //  public Text gameOver;
-  //  public Text prevScore;
-    // public Text badSmellText;
     //cheese conter for the cheese available in the scene !
     int cheeseCounter;
     float help=0;
@@ -77,6 +74,9 @@ public class GameMangerScript : MonoBehaviour
         //new highscore check !
         gameStates.newHighScore();
 
+        //losing after the time passed out !
+        LoseMethod();
+
     }
     //just for the gameManger
     public void LoseMethod()
@@ -85,8 +85,6 @@ public class GameMangerScript : MonoBehaviour
         {
             //setting the timer to 0 when it's reached !
             gameStates.timer = 0;
-            //saving the score in that current level you're in in order to display it later on !
-            PlayerPrefs.SetInt("PreviousScore" + SceneManager.GetActiveScene().buildIndex.ToString(), gameStates.score);
             //interrupt the game 
             Time.timeScale = 0;
             gameStates.EndGame("Time Passed , You Lost !", 0);

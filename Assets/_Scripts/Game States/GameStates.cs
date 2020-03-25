@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameStates : ScriptableObject
 {
     //The timer ( need to be assigned a value later on ! )
-    public float timer=120f;
+    public float timer=300f;
 
     //Current score
     public int score=0;
