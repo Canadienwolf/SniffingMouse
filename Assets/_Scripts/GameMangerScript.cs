@@ -109,18 +109,7 @@ public class GameMangerScript : MonoBehaviour
 
 
     
-    //onApplicationQuit
-  /*  private void OnApplicationQuit()
-    {
-        //need to test that line of code later ! (just for saving the current highscore for the current level !)
-        PlayerPrefs.SetInt("Highscore" + sceneName.ToString(), gameStates.highScore);
-        //updating the game/player states important variables !
-        //gameStates.score = 0;
-        gameStates.timer = 300f;
-       // gameStates.scoreadded = 0;
-       // gameStates.scorelost = 0;
-        playerStatesMov.lockController = false;
-    }*/
+
     private void OnDisable()
     {
         //in order to display the highscore before saving it in playerprefs and deleting it afterward!

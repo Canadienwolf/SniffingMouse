@@ -43,8 +43,8 @@ public class CheeseScript : MonoBehaviour
                 if (istrigger == true)
                 {
                     moreThanOnce = true;
-                    //adding 4 points to the score !
-                    gameStates.AddScorePoints(4);
+                    //adding 5 points to the score !
+                    gameStates.AddScorePoints(5);
                     //the amount of score added!
                     scoreGiven = gameStates.scoreadded;
                     //checking if the score is more than the highscore to update it
@@ -61,7 +61,7 @@ public class CheeseScript : MonoBehaviour
                 {
                     moreThanOnce = true;
                     //adding 6 points to the score !
-                    gameStates.AddScorePoints(6);
+                    gameStates.AddScorePoints(15);
                     //the amount of score added!
                     scoreGiven = gameStates.scoreadded;
                     //checking if the score is more than the highscore to update it
@@ -79,7 +79,7 @@ public class CheeseScript : MonoBehaviour
                 {
                     moreThanOnce = true;
                     //adding 9 points to the score !
-                    gameStates.AddScorePoints(9);
+                    gameStates.AddScorePoints(gameStates.score);
                     //the amount of score added!
                     scoreGiven = gameStates.scoreadded;
                     //checking if the score is more than the highscore to update it
