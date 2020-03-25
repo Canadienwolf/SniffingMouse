@@ -106,7 +106,7 @@ public class RoombaScript : MonoBehaviour
             //Stopping the vacuum shuffing effect!
             speed = 0;
             //losing score!
-            GameStatesA.LoseScorePoints();
+           // GameStatesA.LoseScorePoints();
             //calling the loss/win menu
             Invoke("Die", 2);
 

@@ -69,7 +69,7 @@ public class SmellDetectionScript : MonoBehaviour
         {
             affected = true;
             timeLeft = effectTime;
-            GameStatesA.LoseScorePoints();
+            GameStatesA.LoseScorePoints(3);
         }
 
     }

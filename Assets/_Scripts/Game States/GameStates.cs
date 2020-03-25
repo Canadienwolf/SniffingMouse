@@ -28,33 +28,32 @@ public class GameStates : ScriptableObject
         {
             //updating the highscore!
              highScore = score;
-            //storing the new high score for each scene using playerprefs and scene index for its name !
-           // PlayerPrefs.SetInt("Highscore" + SceneManager.GetActiveScene().buildIndex.ToString(), highScore);
+         
         }
     }
 
     //adding score points function !
-    public void AddScorePoints()
+    public void AddScorePoints(int points)
     {
         //incrementing the score by 5 for every cheese , then adding more on the cheese script depending on the type of cheese!
-        score += 5;
+        score += points;
         //counting how many score points are gained !
         scoreadded += 5;
-       // GameMangerScript.score = score;
+       
     }
 
     //losing score point function !
-    public void LoseScorePoints()
+    public void LoseScorePoints(int points)
     {
         //decreasing the score by 3 when we want the player to lose some score points !
-        score -= 3;
+        score -= points;
         if (score < 0)
         {
             score = 0;
         }
         //counting how many score points are lost !
-        scorelost -= 3;
-        //GameMangerScript.score = score;
+        scorelost -= points;
+      
 
     }
 

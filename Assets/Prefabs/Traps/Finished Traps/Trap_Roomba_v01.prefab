@@ -4847,8 +4847,6 @@ GameObject:
   - component: {fileID: 5461898209732576007}
   - component: {fileID: 5852519522656234156}
   - component: {fileID: 573989626}
-  - component: {fileID: 269968451}
-  - component: {fileID: 269968452}
   - component: {fileID: 269968458}
   - component: {fileID: 269968457}
   m_Layer: 0
@@ -4977,32 +4975,6 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
---- !u!65 &269968451
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3535132673803175411}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4, y: 0.5, z: 6.5}
-  m_Center: {x: 0, y: 0.25, z: 0}
---- !u!65 &269968452
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3535132673803175411}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5, y: 0.5, z: 5}
-  m_Center: {x: 0, y: 0.25, z: 0}
 --- !u!65 &269968458
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5037,6 +5009,7 @@ MonoBehaviour:
   menuDelay: 3
   suckPartical: {fileID: 6421815811250336809, guid: da114d440a9a5e548901404d7581c17a,
     type: 3}
+  gameStatesA: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
 --- !u!1 &4215540919863314273
 GameObject:
   m_ObjectHideFlags: 0

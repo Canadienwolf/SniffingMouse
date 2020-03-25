@@ -43,10 +43,11 @@ public class CheeseScript : MonoBehaviour
                 if (istrigger == true)
                 {
                     moreThanOnce = true;
-                    gameStates.AddScorePoints();
-                    gameStates.score += 2;
+                    //adding 4 points to the score !
+                    gameStates.AddScorePoints(4);
                     //the amount of score added!
-                    scoreGiven = gameStates.scoreadded + 2;
+                    scoreGiven = gameStates.scoreadded;
+                    //checking if the score is more than the highscore to update it
                     gameStates.newHighScore();
                     istrigger = false;
                 }
@@ -59,10 +60,11 @@ public class CheeseScript : MonoBehaviour
                 if (istrigger == true)
                 {
                     moreThanOnce = true;
-                    gameStates.AddScorePoints();
-                    gameStates.score += 3;
+                    //adding 6 points to the score !
+                    gameStates.AddScorePoints(6);
                     //the amount of score added!
-                    scoreGiven = gameStates.scoreadded + 3;
+                    scoreGiven = gameStates.scoreadded;
+                    //checking if the score is more than the highscore to update it
                     gameStates.newHighScore();
                     istrigger = false;
                 }
@@ -76,10 +78,11 @@ public class CheeseScript : MonoBehaviour
                 if (istrigger == true)
                 {
                     moreThanOnce = true;
-                    gameStates.AddScorePoints();
-                    gameStates.score += 5;
+                    //adding 9 points to the score !
+                    gameStates.AddScorePoints(9);
                     //the amount of score added!
-                    scoreGiven = gameStates.scoreadded + 5;
+                    scoreGiven = gameStates.scoreadded;
+                    //checking if the score is more than the highscore to update it
                     gameStates.newHighScore();
                     istrigger = false;
                 }
