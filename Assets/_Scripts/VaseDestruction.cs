@@ -9,6 +9,8 @@ public class VaseDestruction : MonoBehaviour
     //list of childrens !
     List<GameObject> Children = new List<GameObject>();
     bool broken;
+    //object to spawn !
+    public GameObject spawnedObj;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,8 @@ public class VaseDestruction : MonoBehaviour
         //destroying the broken vase  2 seconds after the collision !
         if (broken)
         {
+            //spawning obj !
+            Instantiate(spawnedObj,gameObject.transform.position,Quaternion.identity);
             Destroy(gameObject, 2);
         }
     }
