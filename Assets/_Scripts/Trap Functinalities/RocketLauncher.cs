@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using Cinemachine;
 
 public class RocketLauncher : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class RocketLauncher : MonoBehaviour
     public ParticleSystem explosion;
     public ParticleSystem thrust;
     public GameObject activeDisplayer;
+    public GameObject followPlayer;
+    public CinemachineVirtualCamera cvc;
 
     public float flyHeight = 10f;
     public float flyTime = 3f;
@@ -49,8 +52,11 @@ public class RocketLauncher : MonoBehaviour
             if (other.tag == "Player")
             {
                 psm.lockController = true;
+                followPlayer.transform.parent = other.transform;
+                cvc.gameObject.SetActive(true);
+                cvc.transform.position = other.transform.parent.transform.GetChild(2).transform.position;
                 Invoke("Kill", flyTime + 3);
-                Destroy(target.transform.GetChild(1).gameObject, flyTime);
+                Destroy(other.transform.GetChild(0).gameObject, flyTime);
             }
             if (other.tag == "Pickable")
             {
