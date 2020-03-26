@@ -11,6 +11,7 @@ public class Nails : MonoBehaviour
     private bool died;
     //always declare a gamestates in order to use score functions/endgame method !
     public GameStates gameStatesA;
+    public PlayerStatesMovements psm;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -25,6 +26,7 @@ public class Nails : MonoBehaviour
             go.transform.GetChild(1).gameObject.SetActive(true);
             go.transform.GetChild(1).transform.position = collision.transform.parent.transform.GetChild(2).transform.position;
             collision.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            psm.lockController = true;
             Invoke("Kill", 5);
         }
     }

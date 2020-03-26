@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Animations;
 
 public class GameMangerScript : MonoBehaviour
 {
@@ -104,10 +105,7 @@ public class GameMangerScript : MonoBehaviour
             gameStates.EndGame("Congratulations , you won !", 0);
         }
     }
-
-
     
-
     private void OnDisable()
     {
         //in order to display the highscore before saving it in playerprefs and deleting it afterward!

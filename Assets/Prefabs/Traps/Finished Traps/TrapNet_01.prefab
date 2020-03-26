@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &845221766
 Transform:
   m_ObjectHideFlags: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845221765}
-  m_LocalRotation: {x: 0.07652026, y: -0.10022396, z: 0.007731103, w: 0.99198794}
+  m_LocalRotation: {x: 0.07652022, y: -0.10022396, z: 0.0077311397, w: 0.991988}
   m_LocalPosition: {x: 1.6152496, y: 2.253277, z: -7.9120407}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 1619116066266706010}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 70
+    FieldOfView: 90
     OrthographicSize: 5
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -455,7 +455,8 @@ MonoBehaviour:
   endTime: 3
   endMessage: You got caught
   lostScore: -10
-  gameStatesA: {fileID: 0}
+  gameStatesA: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
+  virtualCam: {fileID: 845221765}
 --- !u!114 &413950800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,7 +464,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4145400328598958106}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91b18566f01db4542a8146c43509f852, type: 3}
   m_Name: 

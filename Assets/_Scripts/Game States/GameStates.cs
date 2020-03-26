@@ -63,7 +63,6 @@ public class GameStates : ScriptableObject
         endMsg = message;
         score += scorePoints;
         SceneManager.LoadScene("menu_ScoreDisplay");
-
     }
 
 

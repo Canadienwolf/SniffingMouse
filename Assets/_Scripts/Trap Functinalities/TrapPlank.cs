@@ -46,6 +46,11 @@ public class TrapPlank : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        Invoke("NoFall", 3f);
+    }
+
+    void NoFall()
+    {
         falling = false;
     }
 }
