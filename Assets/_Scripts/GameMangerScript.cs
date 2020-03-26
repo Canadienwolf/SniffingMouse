@@ -75,7 +75,7 @@ public class GameMangerScript : MonoBehaviour
         gameStates.newHighScore();
 
         //losing after the time passed out !
-        LoseMethod();
+        //LoseMethod();
 
     }
     //just for the gameManger
