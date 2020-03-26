@@ -6,33 +6,32 @@ using UnityEngine.SceneManagement;
 
 public class ElectricCableTrap : MonoBehaviour
 {
+    public ParticleSystem lightning;
+    public GameObject cam;
 
-    public bool isDisarmed = false;
-    
-    public int timer;
-    
     public PlayerStatesMovements playerstatesA;
+    public GameStates gameStates;
+
+    private void Start()
+    {
+        cam.SetActive(false);
+    }
     private void OnTriggerEnter(Collider other)
     {
-
         if (other.tag == "Player")
         {
-            if (isDisarmed == false)
-            {
-                playerstatesA.lockController = true;
-            
-                Invoke("SceneChange", timer);
-            }
-        }
+            playerstatesA.lockController = true;
+            if (playerstatesA.isGrounded) other.transform.position += new Vector3(0, 0.5f, 0);
+            Instantiate(lightning, other.transform.position, Quaternion.identity);
+            cam.SetActive(true);
+            cam.transform.position = other.transform.parent.transform.GetChild(2).transform.position;
 
-        if (other.tag == "Pickable")
-        {
-            Destroy(gameObject);
+            Invoke("Kill", 3);
         }
     }
 
-    void SceneChange()
+    void Kill()
     {
-        SceneManager.LoadScene("menu_ScoreDisplay");
+        gameStates.EndGame("You got electrocuted", -15);
     }
 }
