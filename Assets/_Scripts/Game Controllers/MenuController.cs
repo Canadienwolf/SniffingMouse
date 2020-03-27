@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
@@ -8,7 +9,15 @@ public class MenuController : MonoBehaviour
 
     public GameObject Options;
     public GameObject MainMenu;
-    
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            BackToMainMenu();
+        }
+    }
+
     public void EnableObject(GameObject go)
     {
         go.SetActive(true);
