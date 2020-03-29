@@ -90,6 +90,42 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-9022107517432162923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SpringLoadedTrap.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/SpringLoadedTrap.bank
+  SubDir: 
+  lastModified: 637209555240000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-8964518095588442012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/SFX.bank
+  SubDir: 
+  lastModified: 637209555240000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-8922768078773174966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +180,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-8812857134664985877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/HolyHandGrenade.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/HolyHandGrenade.bank
+  SubDir: 
+  lastModified: 637209555240000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-8751272646822558486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +213,24 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/MainMenu.bank
   SubDir: 
   lastModified: 637181840520000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-8751047673552960346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/SFX.bank
+  SubDir: 
+  lastModified: 637209553900000000
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -270,6 +342,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-8541354856781023074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/RocketLauncher.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/RocketLauncher.bank
+  SubDir: 
+  lastModified: 637209553920000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-8525133964195798736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,7 +701,7 @@ MonoBehaviour:
   lastModified: 637208614340000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-7911442701823788760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,6 +828,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-7781070953952010125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Death/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Death/Death
+  guid: 222ec3b197ec8641b093c59cd3603ef5
+  Banks:
+  - {fileID: -8964518095588442012}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 5000
 --- !u!114 &-7753485147522330788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1113,7 +1226,7 @@ MonoBehaviour:
   Path: event:/SFX/Traps/UFO/ROBOTIC_Transformation_Sweep_03_Up_stereo
   guid: 1c0b4646470d164c969b9bafd63d2694
   Banks:
-  - {fileID: -3323929757543214500}
+  - {fileID: 8601177907457087908}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1280,6 +1393,24 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/RocketLauncher.bank
   SubDir: 
   lastModified: 637180151020000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-7046831248180351198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637209553900000000
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -1968,7 +2099,7 @@ MonoBehaviour:
   Path: event:/BackgroundMusic/Menu/MainMenu_Background
   guid: 2b5e8b26fd5d00479a6a2777bce3aaab
   Banks:
-  - {fileID: -5397779819852027812}
+  - {fileID: 3090127571748483765}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -2152,11 +2283,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/FMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637208614320000000
+  lastModified: 637209555240000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2370
+    Value: 2412
   Exists: 1
 --- !u!114 &-5820718657836420686
 MonoBehaviour:
@@ -2535,7 +2666,7 @@ MonoBehaviour:
   lastModified: 637208614340000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-5296365356437668686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2569,7 +2700,7 @@ MonoBehaviour:
   Path: event:/SFX/Traps/HolyHandGrenade/MUSIC_EFFECT_Bell_Voice_Negative_11_stereo
   guid: ee5fe6b246d9ad4b847cd73a36951c37
   Banks:
-  - {fileID: 236446879781047798}
+  - {fileID: -8812857134664985877}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -3675,6 +3806,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-3411574506027611169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UFO.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/UFO.bank
+  SubDir: 
+  lastModified: 637209553920000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-3381635473960737003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3762,7 +3911,7 @@ MonoBehaviour:
   Path: event:/SFX/Traps/HolyHandGrenade/EXPLOSION_Distorted_05_Long_stereo
   guid: b69eea9fade0054e9d86d0146076fb04
   Banks:
-  - {fileID: 236446879781047798}
+  - {fileID: -8812857134664985877}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -3787,7 +3936,7 @@ MonoBehaviour:
   lastModified: 637208614340000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3318448840506317673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4062,6 +4211,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-2929251336758423334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Roomba.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/Roomba.bank
+  SubDir: 
+  lastModified: 637209553920000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-2899226320794115040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4149,7 +4316,7 @@ MonoBehaviour:
   Path: event:/SFX/Traps/SpringLoadedTrap/HAMMER_Hit_Body_stereo
   guid: 0a1a99a111b2c24d894e07c53549f6c9
   Banks:
-  - {fileID: 8883168898667166201}
+  - {fileID: -9022107517432162923}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -4496,7 +4663,7 @@ MonoBehaviour:
   Path: event:/SFX/Traps/Fireworks/FIREWORKS_Rocket_Launch_Long_RR5_mono_02
   guid: d4b72a92c5ef544bb79d7a9e3305183f
   Banks:
-  - {fileID: -2139348947357363089}
+  - {fileID: 5244684353814709891}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -4558,6 +4725,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-2163368825851883269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637209555240000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-2149977514450669630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4573,7 +4758,7 @@ MonoBehaviour:
   Path: event:/BackgroundMusic/InGame/Level 01 -
   guid: 341ef7c911d97046b930126025f0b8af
   Banks:
-  - {fileID: 3263669222406299975}
+  - {fileID: -2163368825851883269}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -4616,7 +4801,7 @@ MonoBehaviour:
   lastModified: 637208614340000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-2137424686268960590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6201,15 +6386,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -5975677603136538657}
-  - {fileID: 3263669222406299975}
-  - {fileID: 236446879781047798}
-  - {fileID: -5397779819852027812}
-  - {fileID: 8526013265065514157}
-  - {fileID: -2139348947357363089}
-  - {fileID: -7926053427766477208}
-  - {fileID: 2351294825461432683}
-  - {fileID: 8883168898667166201}
-  - {fileID: -3323929757543214500}
+  - {fileID: -2163368825851883269}
+  - {fileID: -8812857134664985877}
+  - {fileID: 3090127571748483765}
+  - {fileID: 978653008235361454}
+  - {fileID: 5244684353814709891}
+  - {fileID: 211599295959919872}
+  - {fileID: -8964518095588442012}
+  - {fileID: -9022107517432162923}
+  - {fileID: 8601177907457087908}
   EditorEvents:
   - {fileID: -2841096716803708285}
   - {fileID: 1289780960238431144}
@@ -6227,12 +6412,13 @@ MonoBehaviour:
   - {fileID: -7329511267922488321}
   - {fileID: 7126738197359570724}
   - {fileID: 8952412578485465212}
+  - {fileID: -7781070953952010125}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 8526013265065514157}
+  - {fileID: 978653008235361454}
   StringsBanks:
   - {fileID: -5975677603136538657}
-  stringsBankWriteTime: 637208614320000000
+  stringsBankWriteTime: 637209555240000000
   cacheVersion: 3
 --- !u!114 &60590544304683892
 MonoBehaviour:
@@ -6414,6 +6600,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &211599295959919872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Roomba.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/Roomba.bank
+  SubDir: 
+  lastModified: 637209555240000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &220935473763988717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6485,7 +6689,7 @@ MonoBehaviour:
   lastModified: 637208614340000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &266591163759380005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7152,6 +7356,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &978653008235361454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637209555240000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &1007980785213107719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7221,7 +7443,7 @@ MonoBehaviour:
   Path: event:/SFX/Traps/VacumCleaner/APPLIANCE_Hover_Vacuum_Cleaner_01_loop_mono
   guid: 93aba91ee70cfe40a5a7686a44d37b5f
   Banks:
-  - {fileID: -7926053427766477208}
+  - {fileID: 211599295959919872}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -7460,7 +7682,7 @@ MonoBehaviour:
   Path: event:/SFX/Traps/SpringLoadedTrap/IMPACT_Metal_Hit_Sheet_Metal_RR2_mono
   guid: c0ff8a8602d56b4888e766b2199629f8
   Banks:
-  - {fileID: 8883168898667166201}
+  - {fileID: -9022107517432162923}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -7519,6 +7741,24 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/Roomba.bank
   SubDir: 
   lastModified: 637180143880000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &1439700434194229947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637209553900000000
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -8008,6 +8248,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &2206209743507072838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/HolyHandGrenade.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/HolyHandGrenade.bank
+  SubDir: 
+  lastModified: 637209553920000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &2211397942088190011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8205,7 +8463,7 @@ MonoBehaviour:
   lastModified: 637208614340000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &2362164761260139365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8746,6 +9004,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &3090127571748483765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MainMenu.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/MainMenu.bank
+  SubDir: 
+  lastModified: 637209555240000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &3095865574267741426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8797,7 +9073,7 @@ MonoBehaviour:
   Path: event:/BackgroundMusic/InGame/Attic (Level 01)
   guid: a384a3305950814094c3ced9a270def6
   Banks:
-  - {fileID: 3263669222406299975}
+  - {fileID: -2163368825851883269}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -8894,7 +9170,7 @@ MonoBehaviour:
   lastModified: 637208614340000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &3291760330119323781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9108,7 +9384,7 @@ MonoBehaviour:
   Path: event:/SFX/Traps/Fireworks/IMPACT_Incoming_Whoosh_Clap_Crackle_01_mono
   guid: 63e0f1f88fd6c848bc2ee24c3c3f7e71
   Banks:
-  - {fileID: -2139348947357363089}
+  - {fileID: 5244684353814709891}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -10286,6 +10562,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &5244684353814709891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/RocketLauncher.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/RocketLauncher.bank
+  SubDir: 
+  lastModified: 637209555240000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &5255778496443353131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10895,7 +11189,7 @@ MonoBehaviour:
   Path: event:/BackgroundMusic/InGame/Level 04 -
   guid: 72f3352157a27e49ac702426766584ba
   Banks:
-  - {fileID: 3263669222406299975}
+  - {fileID: -2163368825851883269}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -11246,7 +11540,7 @@ MonoBehaviour:
   Path: event:/BackgroundMusic/InGame/Level 03 -
   guid: 5bdeff60b363224bb9a3703162f820cc
   Banks:
-  - {fileID: 3263669222406299975}
+  - {fileID: -2163368825851883269}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -11308,6 +11602,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &6614586351739080583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SpringLoadedTrap.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/SpringLoadedTrap.bank
+  SubDir: 
+  lastModified: 637209553920000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &6626785320596436758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11647,7 +11959,7 @@ MonoBehaviour:
   Path: event:/SFX/Traps/UFO/WEAPON_Energy_Beam_05_loop_mono
   guid: 9b7f04295d0fee439ed92d986bdc50fe
   Banks:
-  - {fileID: -3323929757543214500}
+  - {fileID: 8601177907457087908}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -12177,6 +12489,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &8152223414744851521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MainMenu.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/MainMenu.bank
+  SubDir: 
+  lastModified: 637209553900000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &8169775442543429429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12210,7 +12540,7 @@ MonoBehaviour:
   Path: event:/BackgroundMusic/InGame/Level 02 -
   guid: 12000fa3a6049a4cb73856d414d6f13b
   Banks:
-  - {fileID: 3263669222406299975}
+  - {fileID: -2163368825851883269}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -12415,7 +12745,7 @@ MonoBehaviour:
   lastModified: 637208614320000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &8537660483123430381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12470,6 +12800,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &8601177907457087908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UFO.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/UFO.bank
+  SubDir: 
+  lastModified: 637209555240000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &8624428342242671450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12613,7 +12961,7 @@ MonoBehaviour:
   lastModified: 637208614340000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &8894204957018506442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12683,7 +13031,7 @@ MonoBehaviour:
   Path: event:/SFX/PickableObjects/Ball/CARTOON_Boing_mono
   guid: bc76cb7782d78e4f955608dfb27a6991
   Banks:
-  - {fileID: 2351294825461432683}
+  - {fileID: -8964518095588442012}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1

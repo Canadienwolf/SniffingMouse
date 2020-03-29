@@ -25,7 +25,6 @@ public class BallSound_Controller : MonoBehaviour
     {
         if (other.gameObject.transform.tag == "Ground")
         {
-
             FMODUnity.RuntimeManager.PlayOneShot(DamageEvent);
         }
     }

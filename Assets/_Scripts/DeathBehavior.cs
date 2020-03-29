@@ -46,6 +46,7 @@ public class DeathBehavior : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            DeathMusic();
             Invoke("Kill", delayTime);
         }
     }
@@ -82,5 +83,16 @@ public class DeathBehavior : MonoBehaviour
         yield return new WaitForSeconds(explodeTime);
         Destroy(go);
         Instantiate(headExplotion, go.transform.position, Quaternion.identity);
+    }
+
+    public GameObject deathmusic ;
+    
+    void DeathMusic()
+    {
+        if (dead)
+        {
+            deathmusic = GameObject.FindGameObjectWithTag("Player");
+            deathmusic.GetComponent<DeathMusic>().dying = true;
+        }
     }
 }

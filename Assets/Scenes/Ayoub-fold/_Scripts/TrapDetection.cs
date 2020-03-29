@@ -9,9 +9,9 @@ public class TrapDetection : MonoBehaviour
     public GameObject cheese;
     Animator anim;
     public GameStates gamestatesA;
-    //checking if it has been triggred more than once !
+    //checking if it has been triggered more than once !
     bool moreThanOnce;
-    //checking if the cheese is triggred by the player
+    //checking if the cheese is triggered by the player
     bool istrigger = true;
     private bool activated;
     
@@ -30,7 +30,7 @@ public class TrapDetection : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
            
-            //checking ifthe player collided with that type of cheese !
+            //checking if the player collided with that type of cheese !
             if (istrigger == true)
             {
                 if (moreThanOnce == false)
