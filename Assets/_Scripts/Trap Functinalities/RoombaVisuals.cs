@@ -61,6 +61,11 @@ public class RoombaVisuals : MonoBehaviour
         angleToRot = transform.localRotation.y + rand;
     }
 
+    void Transition()
+    {
+        GameObject.Find("SceneTransition").GetComponent<Animator>().SetTrigger("EndLevel");
+    }
+
     void Lose()
     {
         gameStatesA.EndGame("You got sucked!", (-15));
@@ -98,6 +103,7 @@ public class RoombaVisuals : MonoBehaviour
                     moreThanOnce = true;
                     //calling the losing event (menu)!
                     FindObjectOfType<DeathMusic>().dying = true;
+                    Invoke("Transition", menuDelay - 0.6f);
                     Invoke("Lose", menuDelay);
                 }
                 //moreThanOnce = true;
