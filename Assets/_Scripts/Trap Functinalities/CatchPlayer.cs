@@ -11,6 +11,7 @@ public class CatchPlayer : MonoBehaviour
     //always declare a gamestates in order to use score functions/endgame method !
     public GameStates gameStatesA;
     public GameObject virtualCam;
+    public bool freezePlayer;
 
     private void Start()
     {
@@ -23,16 +24,27 @@ public class CatchPlayer : MonoBehaviour
         {
             if (other.GetComponent<PickupSystem>().pickableObject == null)
             {
-                if (virtualCam != null) virtualCam.SetActive(true);
-                Invoke("Catch", endTime);
+                StartCatch(other.gameObject);
             }
             else if(other.GetComponent<PickupSystem>().pickableObject.GetComponent<SharpOrHeavy>() == null)
             {
-                if(virtualCam != null) virtualCam.SetActive(true);
-                Invoke("Catch", endTime);
-
+                StartCatch(other.gameObject);
             }
         }
+    }
+
+    void StartCatch(GameObject player)
+    {
+        if (freezePlayer) player.GetComponent<test_PlayerMovement03>().psm.lockController = true;
+        if (virtualCam != null) virtualCam.SetActive(true);
+        FindObjectOfType<DeathMusic>().dying = true;
+        Invoke("Transition", endTime - .6f);
+        Invoke("Catch", endTime);
+    }
+
+    void Transition()
+    {
+        GameObject.Find("SceneTransition").GetComponent<Animator>().SetTrigger("EndLevel");
     }
 
     void Catch()

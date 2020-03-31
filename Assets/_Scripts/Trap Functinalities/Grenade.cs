@@ -45,7 +45,9 @@ public class Grenade : MonoBehaviour
         {
             psm.lockController = true;
             target.transform.GetChild(0).gameObject.SetActive(false);
-            Invoke("Kill", 3);
+            FindObjectOfType<DeathMusic>().dying = true;
+            Invoke("Transition", detonationTime - 0.6f);
+            Invoke("Kill", detonationTime);
         }
         else
         {
@@ -71,6 +73,10 @@ public class Grenade : MonoBehaviour
         }
     }
 
+    void Transition()
+    {
+        GameObject.Find("SceneTransition").GetComponent<Animator>().SetTrigger("EndLevel");
+    }
     void Kill()
     {
          SceneManager.LoadScene("menu_ScoreDisplay", LoadSceneMode.Single);

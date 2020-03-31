@@ -97,6 +97,7 @@ public class RoombaVisuals : MonoBehaviour
                 {
                     moreThanOnce = true;
                     //calling the losing event (menu)!
+                    FindObjectOfType<DeathMusic>().dying = true;
                     Invoke("Lose", menuDelay);
                 }
                 //moreThanOnce = true;

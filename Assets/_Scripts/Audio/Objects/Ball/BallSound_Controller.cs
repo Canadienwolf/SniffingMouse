@@ -5,27 +5,18 @@ using UnityEngine;
 
 public class BallSound_Controller : MonoBehaviour
 {
-    
     [FMODUnity.EventRef]
     public string DamageEvent = "";
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    FMOD.Studio.EventInstance DamageAudio;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        DamageAudio = FMODUnity.RuntimeManager.CreateInstance(DamageEvent);
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.transform.tag == "Ground")
-        {
-            FMODUnity.RuntimeManager.PlayOneShot(DamageEvent);
-        }
+        DamageAudio.start();
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(DamageAudio, GetComponent<Transform>(), GetComponent<Rigidbody>());
     }
 }

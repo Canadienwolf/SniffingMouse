@@ -37,6 +37,8 @@ public class TrapDetection : MonoBehaviour
                 {
                     moreThanOnce = true;
                     //calling the losing event (menu)!
+                    FindObjectOfType<DeathMusic>().dying = true;
+                    Invoke("Transition", 1.4f);
                     Invoke("Die", 2);
                     //Die();
 
@@ -70,6 +72,11 @@ public class TrapDetection : MonoBehaviour
         {
             c.enabled = idx;
         }
+    }
+
+    void Transition()
+    {
+        GameObject.Find("SceneTransition").GetComponent<Animator>().SetTrigger("EndLevel");
     }
 
     //calling the losing event!

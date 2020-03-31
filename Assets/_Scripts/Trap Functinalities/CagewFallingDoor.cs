@@ -22,6 +22,7 @@ public class CagewFallingDoor : MonoBehaviour
     {
         if (door.transform.localPosition.y < 0.1f && target != null && cage != null)
         {
+            FindObjectOfType<DeathMusic>().dying = true;
             Invoke("CatchPlayer", 2);
         }
         if (cage == null)

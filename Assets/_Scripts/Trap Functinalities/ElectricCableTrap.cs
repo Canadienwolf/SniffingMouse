@@ -25,9 +25,15 @@ public class ElectricCableTrap : MonoBehaviour
             Instantiate(lightning, other.transform.position, Quaternion.identity);
             cam.SetActive(true);
             cam.transform.position = other.transform.parent.transform.GetChild(2).transform.position;
-
+            FindObjectOfType<DeathMusic>().dying = true;
+            Invoke("Transition", 2.4f);
             Invoke("Kill", 3);
         }
+    }
+
+    void Transition()
+    {
+        GameObject.Find("SceneTransition").GetComponent<Animator>().SetTrigger("EndLevel");
     }
 
     void Kill()

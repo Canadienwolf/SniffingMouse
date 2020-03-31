@@ -10,10 +10,11 @@ public class test_Cartrap : MonoBehaviour
     public float driveSpeed = 5f;
     public float turnSpeed = 10f;
     public float deathDelay = 3f;
+    public float playerHeightOffest = 3f;
     public GameObject drivingCam;
     public GameObject deathCam;
     public PlayerStatesMovements psm;
-    public ParticleSystem explosion;
+    public GameObject explosion;
 
     private bool hit;
     private Vector3 randRot;
@@ -50,7 +51,7 @@ public class test_Cartrap : MonoBehaviour
             drivingCam.SetActive(true);
             GetComponent<Collider>().isTrigger = false;
             other.transform.parent = gameObject.transform;
-            other.transform.position = transform.position;
+            other.transform.position = transform.position + new Vector3(0, playerHeightOffest, 0);
             other.transform.rotation = transform.rotation;
             other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             Invoke("Hit", startDelay);
@@ -63,9 +64,16 @@ public class test_Cartrap : MonoBehaviour
         {
             hit = false;
             deathCam.SetActive(true);
-            Instantiate(explosion, transform.position, Quaternion.identity);
+            FindObjectOfType<DeathMusic>().dying = true;
+            Instantiate(explosion, transform.position + new Vector3(0, playerHeightOffest, 0), Quaternion.identity);
+            Invoke("Transition", deathDelay - 0.6f);
             Invoke("Die", deathDelay);
         }
+    }
+
+    void Transition()
+    {
+        GameObject.Find("SceneTransition").GetComponent<Animator>().SetTrigger("EndLevel");
     }
 
     void Die()

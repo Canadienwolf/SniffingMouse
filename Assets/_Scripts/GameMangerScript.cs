@@ -30,6 +30,7 @@ public class GameMangerScript : MonoBehaviour
     {
         //DontDestroyOnLoad(this.gameObject);
         gameStates.timer = time;
+        gameStates.score = 0;
     }
 
     // Start is called before the first frame update
@@ -48,7 +49,7 @@ public class GameMangerScript : MonoBehaviour
         //gameStates.highScore = PlayerPrefs.GetInt("Highscore" + SceneManager.GetActiveScene().buildIndex.ToString(), 0);
         gameStates.highScore = PlayerPrefs.GetInt("Highscore" + sceneName.ToString(), 0);
         //updating the game/player states important variables !
-        gameStates.score = 0;
+       
         gameStates.scoreadded = 0;
         gameStates.scorelost = 0;
         

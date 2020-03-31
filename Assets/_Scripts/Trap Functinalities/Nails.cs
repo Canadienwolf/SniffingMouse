@@ -27,8 +27,15 @@ public class Nails : MonoBehaviour
             go.transform.GetChild(1).transform.position = collision.transform.parent.transform.GetChild(2).transform.position;
             collision.gameObject.transform.GetChild(0).gameObject.SetActive(false);
             psm.lockController = true;
+            FindObjectOfType<DeathMusic>().dying = true;
+            Invoke("Transition", 4.4f);
             Invoke("Kill", 5);
         }
+    }
+
+    void Transition()
+    {
+        GameObject.Find("SceneTransition").GetComponent<Animator>().SetTrigger("EndLevel");
     }
 
     void Kill()

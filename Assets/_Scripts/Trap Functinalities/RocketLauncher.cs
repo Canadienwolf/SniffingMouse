@@ -55,6 +55,8 @@ public class RocketLauncher : MonoBehaviour
                 followPlayer.transform.parent = other.transform;
                 cvc.gameObject.SetActive(true);
                 cvc.transform.position = other.transform.parent.transform.GetChild(2).transform.position;
+                FindObjectOfType<DeathMusic>().dying = true;
+                Invoke("Transition", flyTime + 2.4f);
                 Invoke("Kill", flyTime + 3);
                 Destroy(other.transform.GetChild(0).gameObject, flyTime);
             }
@@ -71,6 +73,11 @@ public class RocketLauncher : MonoBehaviour
         ps.Play();
         
         
+    }
+
+    void Transition()
+    {
+        GameObject.Find("SceneTransition").GetComponent<Animator>().SetTrigger("EndLevel");
     }
 
     void Kill()
