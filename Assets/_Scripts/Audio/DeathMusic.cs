@@ -10,8 +10,8 @@ public class DeathMusic : MonoBehaviour
     
     
     public bool dying = false;
+    public bool hasplayed = false;
     
-    // Start is called before the first frame update
     void Start()
     {
         
@@ -20,10 +20,13 @@ public class DeathMusic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dying)
+        if (dying && hasplayed == false)
         {
+            GameObject.FindGameObjectWithTag("musicManager").SetActive(false);
+            print("are you dying?");
             FMODUnity.RuntimeManager.PlayOneShot(DeathEvent);
             dying = false;
+            hasplayed = true;
         }
     }
 }

@@ -85,7 +85,7 @@ public class DeathBehavior : MonoBehaviour
         Instantiate(headExplotion, go.transform.position, Quaternion.identity);
     }
 
-    public GameObject deathmusic ;
+    public GameObject deathmusic;
     
     void DeathMusic()
     {
