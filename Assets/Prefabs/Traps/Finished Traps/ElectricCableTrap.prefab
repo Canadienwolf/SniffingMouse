@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 522140285}
   - component: {fileID: 522140288}
-  - component: {fileID: 522140287}
   - component: {fileID: 522140286}
+  - component: {fileID: 167798581}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -45,33 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &522140287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522140284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 1, z: 1}
-  m_LookaheadTime: 0
-  m_LookaheadSmoothing: 10
-  m_LookaheadIgnoreY: 0
-  m_HorizontalDamping: 0.5
-  m_VerticalDamping: 0.5
-  m_ScreenX: 0.5
-  m_ScreenY: 0.5
-  m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
-  m_BiasX: 0
-  m_BiasY: 0
-  m_CenterOnActivate: 1
 --- !u!114 &522140286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,6 +62,33 @@ MonoBehaviour:
   m_AmplitudeGain: 1
   m_FrequencyGain: 2
   mNoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!114 &167798581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522140284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjectOffset: {x: 0, y: 1, z: 0}
+  m_LookaheadTime: 0
+  m_LookaheadSmoothing: 10
+  m_LookaheadIgnoreY: 0
+  m_HorizontalDamping: 0.5
+  m_VerticalDamping: 0.5
+  m_ScreenX: 0.5
+  m_ScreenY: 0.5
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
+  m_SoftZoneWidth: 0.8
+  m_SoftZoneHeight: 0.8
+  m_BiasX: 0
+  m_BiasY: 0
+  m_CenterOnActivate: 1
 --- !u!1 &2128902500
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,10 +139,10 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 3
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 7705802482307740362}
+  m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 70
+    FieldOfView: 50
     OrthographicSize: 5
     NearClipPlane: 0.5
     FarClipPlane: 5000
@@ -9872,6 +9872,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4111784601444929618}
+  - component: {fileID: 1490345321857221043}
   m_Layer: 0
   m_Name: ElectricCableTrap
   m_TagString: Destructible
@@ -9897,6 +9898,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1490345321857221043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4111784601444929619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f95fb7900560a409942b9d8f2fbcd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cable: {fileID: 6677672074595549401}
+  plug: {fileID: 7221420337863573192}
 --- !u!1 &6677672074595549401
 GameObject:
   m_ObjectHideFlags: 0
@@ -9908,12 +9923,12 @@ GameObject:
   - component: {fileID: 7705802482307740362}
   - component: {fileID: 1705602263257024764}
   - component: {fileID: 4942433768498689029}
-  - component: {fileID: 621588081302296601}
   - component: {fileID: 621588081302296600}
   - component: {fileID: 6677672074595549402}
+  - component: {fileID: 1784316248}
   m_Layer: 0
   m_Name: Cable_Straight
-  m_TagString: Untagged
+  m_TagString: Destructible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9927,7 +9942,7 @@ Transform:
   m_GameObject: {fileID: 6677672074595549401}
   m_LocalRotation: {x: 0.0000020191073, y: 0.7071068, z: 0.7071068, w: 0.0000020191073}
   m_LocalPosition: {x: -0.005462013, y: -0, z: 1.913}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2137444726}
   m_Father: {fileID: 4111784601444929618}
@@ -9980,20 +9995,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &621588081302296601
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6677672074595549401}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.017743345
-  m_Height: 0.3322478
-  m_Direction: 1
-  m_Center: {x: -0.00019493327, y: 0.15973257, z: 4.9357986e-16}
 --- !u!114 &621588081302296600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10027,6 +10028,20 @@ MonoBehaviour:
   sharp: 1
   heavyVel: 0
   sharpVel: 0
+--- !u!64 &1784316248
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6677672074595549401}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7404010259505790244, guid: 6910fa36fb68cc54b9f79fdd8126c3c3, type: 3}
 --- !u!1 &7221420337863573192
 GameObject:
   m_ObjectHideFlags: 0
@@ -10038,6 +10053,7 @@ GameObject:
   - component: {fileID: 5939397237409139931}
   - component: {fileID: 3402466145410381549}
   - component: {fileID: 8938367103458707988}
+  - component: {fileID: 917983264}
   m_Layer: 0
   m_Name: plug_v01
   m_TagString: Untagged
@@ -10106,3 +10122,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &917983264
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7221420337863573192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6617209, y: 1.535076, z: 0.2804854}
+  m_Center: {x: 3.3243913e-15, y: 0.46786743, z: -0.0000001432657}
