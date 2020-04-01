@@ -6,21 +6,10 @@ public class VaseDestruction : MonoBehaviour
 {
     //gamestate variable to use score methods!
     public GameStates gameStates;
-    //list of childrens !
-    List<GameObject> Children = new List<GameObject>();
     bool broken;
     //object to spawn !
     public GameObject spawnedObj;
-    // Start is called before the first frame update
-    void Start()
-    {
-        foreach (Transform child in transform)
-        {
-            
-                Children.Add(child.gameObject);
-            
-        }
-    }
+   
     //update method !
     private void Update()
     {
@@ -29,7 +18,8 @@ public class VaseDestruction : MonoBehaviour
         {
             //spawning obj !
             Instantiate(spawnedObj,gameObject.transform.position,Quaternion.identity);
-            Destroy(gameObject, 2);
+            Destroy(gameObject);
+            broken = false;
         }
     }
     //detecting colision with the player !
@@ -37,24 +27,27 @@ public class VaseDestruction : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            //changing the position/rotation of some parts of the vase in order to look like a destructable object !
-            foreach (GameObject child in Children)
-            {
-                child.transform.position = new Vector3(child.gameObject.transform.position.x, 1, child.gameObject.transform.position.z);
-
-            }
-            //re-positioning
-            Children[0].transform.position = new Vector3(Children[0].gameObject.transform.position.x + 2, 1, Children[0].gameObject.transform.position.z);
-            Children[1].transform.position = new Vector3(Children[1].gameObject.transform.position.x - 2, 1, Children[1].gameObject.transform.position.z);
-            Children[2].transform.position = new Vector3(Children[2].gameObject.transform.position.x, 1, Children[2].gameObject.transform.position.z + 2);
-            Children[3].transform.position = new Vector3(Children[3].gameObject.transform.position.x, 1, Children[3].gameObject.transform.position.z - 2);
-            //changing rotation
-            Children[0].gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 90, -90));
-            Children[1].gameObject.transform.rotation = Quaternion.Euler(new Vector3(-180, 90, -90));
-            //diactivating the collider!
-            this.gameObject.GetComponent<BoxCollider>().enabled = false;
             //help variable!
             broken = true;
+            //not needed any more !
+            /*  //changing the position/rotation of some parts of the vase in order to look like a destructable object !
+              foreach (GameObject child in Children)
+              {
+                  child.transform.position = new Vector3(child.gameObject.transform.position.x, 1, child.gameObject.transform.position.z);
+
+              }
+              //re-positioning
+              Children[0].transform.position = new Vector3(Children[0].gameObject.transform.position.x + 2, 1, Children[0].gameObject.transform.position.z);
+              Children[1].transform.position = new Vector3(Children[1].gameObject.transform.position.x - 2, 1, Children[1].gameObject.transform.position.z);
+              Children[2].transform.position = new Vector3(Children[2].gameObject.transform.position.x, 1, Children[2].gameObject.transform.position.z + 2);
+              Children[3].transform.position = new Vector3(Children[3].gameObject.transform.position.x, 1, Children[3].gameObject.transform.position.z - 2);
+              //changing rotation
+              Children[0].gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 90, -90));
+              Children[1].gameObject.transform.rotation = Quaternion.Euler(new Vector3(-180, 90, -90));
+              //diactivating the collider!
+              this.gameObject.GetComponent<BoxCollider>().enabled = false;*/
+            
+
         }
         
 
