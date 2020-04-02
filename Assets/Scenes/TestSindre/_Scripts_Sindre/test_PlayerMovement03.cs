@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class test_PlayerMovement03 : MonoBehaviour
 {
     public PlayerStatesMovements psm;
     public test_GroundCheck gc;
     public test_ClimbChecker cc;
     public Transform camTrans;
+
 
     //States//
     private bool _isMoving;
@@ -27,6 +29,13 @@ public class test_PlayerMovement03 : MonoBehaviour
     private float currentClimbTime;
     private float currentAirVel;
 
+    //Public  variables for buffs/debuffs
+    public float multiplier=1;
+    public float timer = 0f;
+
+    //list of buffs to use for test (just remove the comment to test it)!
+   // public List<GameObject> buffsObj = new List<GameObject>();
+
     private void OnEnable()
     {
         psm.SetFloats();
@@ -44,6 +53,11 @@ public class test_PlayerMovement03 : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        //instanciating the buffs for test (just remove the comment to test it)!
+       /* for (int i=0; i<buffsObj.Count; i++)
+        {
+            Instantiate(buffsObj[i], new Vector3(transform.position.x + Random.Range(-4,4), transform.position.y, transform.position.z + Random.Range(-4, 4)), Quaternion.identity);
+        }*/
     }
 
     void Update()
@@ -66,12 +80,26 @@ public class test_PlayerMovement03 : MonoBehaviour
             _isMoving = false;
             rb.velocity = Vector3.zero;
         }
+
+        //for changing the floats variables to their defaults states after the timer is over !
+        if (timer > 0f)
+        {
+            timer -= Time.deltaTime;
+        }
+        else
+        {
+            psm.ResetFloats();
+            timer = 0;
+            multiplier = 1;
+        }
     }
 
     void FixedUpdate()
     {
         if(!_isLocked)
             MovePlayer();
+
+        
     }
 
     void InputCheck()
