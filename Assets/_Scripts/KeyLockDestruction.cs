@@ -1,38 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class KeyLockDestruction : MonoBehaviour
 {
-    bool destroy;
     public GameObject hitParticle;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public UnityEvent open;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (destroy == true)
-        {
-            Instantiate(hitParticle, this.gameObject.transform.position, Quaternion.identity);
-            //play an animation here / or use a static variable to play it in different script!
-            //destroying the key!
-            Destroy(this.gameObject,1);
-
-
-        }
-    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Lock"))
         {
             Debug.Log("its here");
-            destroy = true;
             //destroying the lock!
-            Destroy(collision.gameObject,1);
+            Destroy(collision.gameObject, 1);
+            //Calls a method from another script
+            open.Invoke();
+            Instantiate(hitParticle, this.gameObject.transform.position, Quaternion.identity);
+            //destroying the key!
+            Destroy(this.gameObject);
         }
     }
 }

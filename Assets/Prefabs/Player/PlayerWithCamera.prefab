@@ -2109,6 +2109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathEvent: event:/SFX/Death/Death
   dying: 0
+  hasplayed: 0
 --- !u!1 &6002790067369207038
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,20 +2639,6 @@ MonoBehaviour:
   gc: {fileID: 6002790067973524879}
   cc: {fileID: 4657964680525170155}
   camTrans: {fileID: 6002790066965889122}
-  walkSpeed: 10
-  walkAcceleration: 20
-  runSpeed: 20
-  runAcceleration: 40
-  smellSpeed: 6
-  smellAcceleration: 20
-  rotationSpeed: 10
-  fallOffSpeed: 40
-  jumpSpeed: 18
-  jumpTime: 0.5
-  gravityMultiplier: 20
-  climbSpeed: 10
-  climbTime: 1.1
-  _isJumping: 0
   currentMoveSpeed: 0
 --- !u!114 &6002790068345234193
 MonoBehaviour:
