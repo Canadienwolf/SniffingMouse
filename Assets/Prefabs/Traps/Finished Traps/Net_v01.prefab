@@ -148,7 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1619116065557960511}
   m_Layer: 0
-  m_Name: TrapNet_01
+  m_Name: Net_v01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -425,6 +425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heavy: 0
   sharp: 1
+  flammable: 0
   heavyVel: 0
   sharpVel: 1
 --- !u!65 &1822886701444211340
@@ -457,6 +458,7 @@ MonoBehaviour:
   lostScore: -10
   gameStatesA: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
   virtualCam: {fileID: 845221765}
+  freezePlayer: 0
 --- !u!114 &413950800
 MonoBehaviour:
   m_ObjectHideFlags: 0
