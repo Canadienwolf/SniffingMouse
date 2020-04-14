@@ -22,7 +22,7 @@ public class DeathMusic : MonoBehaviour
     {
         if (dying && hasplayed == false)
         {
-            GameObject.FindGameObjectWithTag("musicManager").SetActive(false);
+            if(GameObject.FindGameObjectWithTag("musicManager") != null) GameObject.FindGameObjectWithTag("musicManager").SetActive(false);
             print("are you dying?");
             FMODUnity.RuntimeManager.PlayOneShot(DeathEvent);
             dying = false;

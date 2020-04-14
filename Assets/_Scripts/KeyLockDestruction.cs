@@ -12,7 +12,6 @@ public class KeyLockDestruction : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Lock"))
         {
-            Debug.Log("its here");
             //destroying the lock!
             Destroy(collision.gameObject, 1);
             //Calls a method from another script
