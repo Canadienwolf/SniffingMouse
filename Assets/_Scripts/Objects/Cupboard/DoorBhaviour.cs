@@ -22,9 +22,9 @@ public class DoorBhaviour : MonoBehaviour
         
     }
 
-    private void OnTriggerStay(Collider player)
+    private void OnTriggerStay(Collider Player)
     {
-        if (opened == false)
+        if (Input.GetKey(KeyCode.E) && opened == false)
         {
             doorAnimation.SetTrigger("Open");
             opened = true; 
