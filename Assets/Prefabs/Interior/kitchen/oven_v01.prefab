@@ -247,6 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8554917594246062906}
   - component: {fileID: 732110661}
+  - component: {fileID: 6026414706239617112}
   m_Layer: 0
   m_Name: OvenPlate
   m_TagString: Untagged
@@ -273,6 +274,20 @@ Transform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &732110661
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2663045925575870836}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!64 &6026414706239617112
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -612,6 +627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 711629507899689957}
   - component: {fileID: 11810338}
+  - component: {fileID: 4755192121651698433}
   m_Layer: 0
   m_Name: OvenButtons
   m_TagString: Untagged
@@ -640,6 +656,20 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &11810338
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7287980259695718177}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!64 &4755192121651698433
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -872,6 +902,7 @@ GameObject:
   - component: {fileID: 1935160350003668333}
   - component: {fileID: 8230262160218988903}
   - component: {fileID: 755448529}
+  - component: {fileID: 789829194396880240}
   m_Layer: 0
   m_Name: Oven 1
   m_TagString: Untagged
@@ -941,6 +972,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!64 &755448529
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8183733729658597640}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3205702657871549766, guid: 807d613d136346f448d0b06e5b89541b, type: 3}
+--- !u!64 &789829194396880240
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1045,6 +1090,7 @@ GameObject:
   - component: {fileID: 1983929564826972705}
   - component: {fileID: 2005533279465489373}
   - component: {fileID: 1809795273}
+  - component: {fileID: 6615255682474107962}
   m_Layer: 0
   m_Name: OvenFan
   m_TagString: Untagged
@@ -1114,6 +1160,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!64 &1809795273
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9081201979153753377}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3987750253251523919, guid: 807d613d136346f448d0b06e5b89541b, type: 3}
+--- !u!64 &6615255682474107962
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
