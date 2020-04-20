@@ -755,21 +755,9 @@ MonoBehaviour:
   gc: {fileID: 2300707193763378191}
   cc: {fileID: 866831814675233899}
   camTrans: {fileID: 0}
-  walkSpeed: 10
-  walkAcceleration: 20
-  runSpeed: 20
-  runAcceleration: 40
-  smellSpeed: 6
-  smellAcceleration: 20
-  rotationSpeed: 10
-  fallOffSpeed: 40
-  jumpSpeed: 18
-  jumpTime: 0.5
-  gravityMultiplier: 20
-  climbSpeed: 10
-  climbTime: 1.1
-  _isJumping: 0
   currentMoveSpeed: 0
+  multiplier: 1
+  timer: 0
 --- !u!114 &2300707193123003025
 MonoBehaviour:
   m_ObjectHideFlags: 0
