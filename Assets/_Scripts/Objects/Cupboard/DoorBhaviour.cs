@@ -8,11 +8,13 @@ public class DoorBhaviour : MonoBehaviour
 
     public Animator doorAnimation;
 
-    private bool opened = false;
+
+    public int doorPosition;
 
     // Start is called before the first frame update
     void Start()
     {
+        doorPosition = 1;
     }
 
     // Update is called once per frame
@@ -21,12 +23,29 @@ public class DoorBhaviour : MonoBehaviour
         
     }
 
-    private void OnTriggerStay(Collider Player)
+    private void OnTriggerEnter(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.E) && opened == false)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            doorAnimation.SetTrigger("Open");
-            opened = true;
+            print("1");
+            
+            /*
+            if (doorPosition == 2)
+            {
+                print("2");
+                doorAnimation.SetTrigger("Close");
+                doorPosition = 1;
+            }
+            */
+
+            if (doorPosition == 1)
+            {
+                print("3");
+                doorAnimation.SetTrigger("Open");
+                doorPosition = 2;
+            }
+            
+            
         }
     }
 }
