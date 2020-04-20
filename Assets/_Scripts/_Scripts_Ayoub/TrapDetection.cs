@@ -21,6 +21,7 @@ public class TrapDetection : MonoBehaviour
         //getting the animator that's on the trap !
         anim = this.gameObject.GetComponent<Animator>();
         EnableDisableCols(false);
+        cheese.transform.GetChild(0).gameObject.GetComponent<SphereCollider>().enabled = false;
     }
 
 
@@ -37,6 +38,7 @@ public class TrapDetection : MonoBehaviour
                 {
                     moreThanOnce = true;
                     //calling the losing event (menu)!
+                    other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
                     FindObjectOfType<DeathMusic>().dying = true;
                     Invoke("Transition", 1.4f);
                     Invoke("Die", 2);
@@ -60,6 +62,7 @@ public class TrapDetection : MonoBehaviour
         {
             anim.Play("apim_SpringLoaded_Trap");
             activated = true;
+            cheese.transform.GetChild(0).gameObject.GetComponent<SphereCollider>().enabled = true;
             EnableDisableCols(true);
             GetComponent<SphereCollider>().enabled = false;
         }
