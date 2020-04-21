@@ -4874,6 +4874,7 @@ Transform:
   - {fileID: 7954536403823624549}
   - {fileID: 4914338482191607312}
   - {fileID: 411411523}
+  - {fileID: 4418639081273916753}
   m_Father: {fileID: 926551823052273010}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5008,6 +5009,7 @@ MonoBehaviour:
   maxAngle: 180
   isOff: 0
   psm: {fileID: 11400000, guid: b7d465a55c6536d42a06e7c8347f9a4c, type: 2}
+  sfx: {fileID: 5426983431783717676}
   menuDelay: 3
   suckPartical: {fileID: 6421815811250336809, guid: da114d440a9a5e548901404d7581c17a,
     type: 3}
@@ -5048,7 +5050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 926551823052273010}
   m_Layer: 0
-  m_Name: Trap_Roomba_v01
+  m_Name: Roomba_v01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5066,7 +5068,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9088266183820598125}
-  - {fileID: 4418639081273916753}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5094,12 +5095,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5426983431783717676}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.00029837096, y: -0.33333334, z: 0}
+  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
   m_Children: []
-  m_Father: {fileID: 926551823052273010}
-  m_RootOrder: 1
+  m_Father: {fileID: 9088266183820598125}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1317284951586847152
 MonoBehaviour:
@@ -5115,8 +5116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionTag: 
   Event: event:/SFX/Traps/VacumCleaner/APPLIANCE_Hover_Vacuum_Cleaner_01_loop_mono
-  PlayEvent: 1
-  StopEvent: 2
+  PlayEvent: 11
+  StopEvent: 12
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0

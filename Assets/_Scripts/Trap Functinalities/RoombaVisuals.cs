@@ -10,6 +10,7 @@ public class RoombaVisuals : MonoBehaviour
     public float maxAngle = 180f;
     public bool isOff = false;
     public PlayerStatesMovements psm;
+    public GameObject sfx;
 
     [Header("Death Attributes")]
     public float menuDelay = 3f;
@@ -42,6 +43,9 @@ public class RoombaVisuals : MonoBehaviour
             else
                 ForwardMovement();
         }
+
+        sfxControl();
+
 
     }
 
@@ -109,6 +113,18 @@ public class RoombaVisuals : MonoBehaviour
                 //moreThanOnce = true;
                 
             }
+        }
+    }
+
+    void sfxControl()
+    {
+        if (isOff)
+        {
+            sfx.SetActive(false);
+        }
+        else
+        {
+            sfx.SetActive(true);
         }
     }
 }
