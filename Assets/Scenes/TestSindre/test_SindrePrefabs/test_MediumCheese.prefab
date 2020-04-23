@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 526494396589210067}
   m_Layer: 0
   m_Name: test_MediumCheese
-  m_TagString: Untagged
+  m_TagString: Cheese
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -424,6 +424,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ClampVelocityModule.magnitude.scalar
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846927605940710064, guid: b4af72a9bab3e8a4bbf84a28ba9c9278,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7846927605940710065, guid: b4af72a9bab3e8a4bbf84a28ba9c9278,
         type: 3}
