@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{63f103df-b42e-4032-9200-fadc50789936}">
+		<property name="name">
+			<value>NetCondition</value>
+		</property>
+		<relationship name="folder">
+			<destination>{6618a622-479c-4bfc-b6e5-ac68e740a6c4}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{46ac4dcc-eb96-4649-97ba-1c76fee4a624}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{46ac4dcc-eb96-4649-97ba-1c76fee4a624}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>1</value>
+			<value>2</value>
+			<value>3</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
