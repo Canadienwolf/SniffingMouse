@@ -17,7 +17,6 @@ public class CheeseScript : MonoBehaviour
 
     [HideInInspector] public GameObject target;
 
-
     private void OnTriggerStay(Collider other)
     {
         //detecting the collision with the player !
@@ -101,6 +100,6 @@ public class CheeseScript : MonoBehaviour
         playerstatesA.lockController = false;
         playerstatesA.isEating = false;
         moreThanOnce = false;
+        CheeseManager.current.CheeseDestruction();
     }
-
 }

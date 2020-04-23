@@ -2,15 +2,53 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class CheeseManager : MonoBehaviour
 {
+    public static CheeseManager current;
+
     [SerializeField] GameObject cheeseHud;
 
     int cheeseFound;
 
     GameObject[] cheeses;
     GameObject[] cheeseHuds;
+
+    public event Action onFoundAllCheese;
+    public void FoundAllCheese()
+    {
+        if (onFoundAllCheese != null)
+        {
+            onFoundAllCheese();
+        }
+    }
+
+    public event Action onCheeseDestruction;
+    public void CheeseDestruction()
+    {
+        StartCoroutine(CheckIfAllGone());
+    }
+
+    IEnumerator CheckIfAllGone()
+    {
+        yield return new WaitForSeconds(.1f);
+        bool all = true;
+        for (int i = 0; i < cheeses.Length; i++)
+        {
+            if (cheeses[i] != null)
+            {
+                all = false;
+            }
+        }
+        if(all)
+            onFoundAllCheese();
+    }
+
+    private void Awake()
+    {
+        current = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +74,7 @@ public class CheeseManager : MonoBehaviour
             cheeseHuds[i].SetActive(false);
         }
     }
+
     private void Update()
     {
         if (Input.GetKey("f"))
@@ -47,7 +86,6 @@ public class CheeseManager : MonoBehaviour
                 if (cheeses[i] == null)
                 {
                     cheeseFound++;
-                    
                 }
             }
 
