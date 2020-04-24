@@ -7,7 +7,7 @@ public class SFXController : MonoBehaviour
     
     public GameObject SFX;
     
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider Pickable)
     {
         SFX.SetActive(true);
     }

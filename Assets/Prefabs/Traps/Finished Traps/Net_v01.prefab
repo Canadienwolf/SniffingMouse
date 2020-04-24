@@ -314,6 +314,7 @@ GameObject:
   - component: {fileID: 1822886701444211340}
   - component: {fileID: 2499837791858592604}
   - component: {fileID: 413950800}
+  - component: {fileID: 3417876690557008984}
   m_Layer: 0
   m_Name: TrapNet_v01
   m_TagString: Destructible
@@ -476,6 +477,19 @@ MonoBehaviour:
   thisTrigger: 1
   slowMotionSpeed: 0.5
   resetTime: 1
+--- !u!114 &3417876690557008984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4145400328598958106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771b6b2fe7b8e164aad9f704f6634ffd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SFX: {fileID: 7912171187769016670}
 --- !u!1 &4422355282053943377
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,13 +593,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6594593731378647788}
+  - component: {fileID: 5123859390759323596}
   m_Layer: 0
   m_Name: SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6594593731378647788
 Transform:
   m_ObjectHideFlags: 0
@@ -600,6 +615,29 @@ Transform:
   m_Father: {fileID: 1619116065557960511}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5123859390759323596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7912171187769016670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Traps/FallingNet/NetDestruction
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 800
 --- !u!1001 &8628583693325169319
 PrefabInstance:
   m_ObjectHideFlags: 0
