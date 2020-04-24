@@ -9,11 +9,14 @@ public class CheeseManager : MonoBehaviour
     public static CheeseManager current;
 
     [SerializeField] GameObject cheeseHud;
+    [SerializeField] Sprite goldenCheese;
+    [SerializeField] int cheeseNumToFinish = 3;
 
     int cheeseFound;
 
     GameObject[] cheeses;
     GameObject[] cheeseHuds;
+    MouseDoor[] mouseDoors;
 
     public event Action onFoundAllCheese;
     public void FoundAllCheese()
@@ -27,22 +30,13 @@ public class CheeseManager : MonoBehaviour
     public event Action onCheeseDestruction;
     public void CheeseDestruction()
     {
-        StartCoroutine(CheckIfAllGone());
-    }
-
-    IEnumerator CheckIfAllGone()
-    {
-        yield return new WaitForSeconds(.1f);
-        bool all = true;
-        for (int i = 0; i < cheeses.Length; i++)
+        cheeseFound++;
+        if (cheeseFound == cheeseNumToFinish)
         {
-            if (cheeses[i] != null)
-            {
-                all = false;
-            }
-        }
-        if(all)
             onFoundAllCheese();
+            Invoke("ActivateVirtualCam", 0.5f);
+            Invoke("DeactivateVirtualCam", 3);
+        }
     }
 
     private void Awake()
@@ -53,6 +47,7 @@ public class CheeseManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mouseDoors = GameObject.FindObjectsOfType<MouseDoor>();
         Invoke("LateStart", 0.1f);
     }
 
@@ -68,6 +63,10 @@ public class CheeseManager : MonoBehaviour
             child.transform.localScale = new Vector3(1, 1, 1);
             cheeseHuds[i] = child;
             cheeseHuds[i].GetComponent<Image>().color = new Color32(255, 255, 255, 50);
+            if(i >= cheeseNumToFinish)
+            {
+                cheeseHuds[i].GetComponent<Image>().sprite = goldenCheese;
+            }
         }
         for (int i = 0; i < cheeses.Length; i++)
         {
@@ -79,17 +78,17 @@ public class CheeseManager : MonoBehaviour
     {
         if (Input.GetKey("f"))
         {
-            cheeseFound = 0;
+            int found = 0;
             for (int i = 0; i < cheeses.Length; i++)
             {
                 cheeseHuds[i].SetActive(true);
                 if (cheeses[i] == null)
                 {
-                    cheeseFound++;
+                    found++;
                 }
             }
 
-            for (int i = 0; i < cheeseFound; i++)
+            for (int i = 0; i < found; i++)
             {
                 cheeseHuds[i].GetComponent<Image>().color = new Color32(255, 255, 255, 255);
             }
@@ -101,6 +100,40 @@ public class CheeseManager : MonoBehaviour
             {
                 cheeseHuds[i].SetActive(false);
             }
+        }
+    }
+
+    float shortestDist;
+    int shortestCam;
+
+    void ActivateVirtualCam()
+    {
+        for (int i = 0; i < mouseDoors.Length; i++)
+        {
+            if (i == 0)
+            {
+                shortestDist = Vector3.Distance(transform.position, mouseDoors[i].virtualCam.transform.position);
+                shortestCam = i;
+            }
+            else
+            {
+                if (Vector3.Distance(transform.position, mouseDoors[i].virtualCam.transform.position) > shortestDist)
+                {
+                    print("Shorter");
+                    shortestDist = Vector3.Distance(transform.position, mouseDoors[i].virtualCam.transform.position);
+                    shortestCam = i;
+                }
+            }
+        }
+
+        mouseDoors[shortestCam].virtualCam.SetActive(true);
+    }
+
+    void DeactivateVirtualCam()
+    {
+        for (int i = 0; i < mouseDoors.Length; i++)
+        {
+            mouseDoors[i].virtualCam.SetActive(false);
         }
     }
 }

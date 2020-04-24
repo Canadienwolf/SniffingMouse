@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class MouseDoor : MonoBehaviour
 {
-    float openAngle = 150f;
-    float openSpeed = 50f;
+    public GameObject virtualCam;
+    [SerializeField] Transform toRotate;
+    [SerializeField] float openAngle = 150f;
+    [SerializeField] float openSpeed = 50f;
     bool opening;
 
 
@@ -19,7 +22,7 @@ public class MouseDoor : MonoBehaviour
     {
         if (opening)
         {
-            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(0, openAngle, 0), Time.deltaTime * openSpeed);
+            toRotate.localRotation = Quaternion.RotateTowards(toRotate.localRotation, Quaternion.Euler(0, openAngle, 0), Time.deltaTime * openSpeed);
         }
     }
 
