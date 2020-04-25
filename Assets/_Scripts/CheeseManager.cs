@@ -17,6 +17,7 @@ public class CheeseManager : MonoBehaviour
     GameObject[] cheeses;
     GameObject[] cheeseHuds;
     MouseDoor[] mouseDoors;
+    Transform player;
 
     public event Action onFoundAllCheese;
     public void FoundAllCheese()
@@ -49,6 +50,7 @@ public class CheeseManager : MonoBehaviour
     {
         mouseDoors = GameObject.FindObjectsOfType<MouseDoor>();
         Invoke("LateStart", 0.1f);
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void LateStart()
@@ -112,15 +114,15 @@ public class CheeseManager : MonoBehaviour
         {
             if (i == 0)
             {
-                shortestDist = Vector3.Distance(transform.position, mouseDoors[i].virtualCam.transform.position);
+                shortestDist = Vector3.Distance(player.position, mouseDoors[i].virtualCam.transform.position);
                 shortestCam = i;
             }
             else
             {
-                if (Vector3.Distance(transform.position, mouseDoors[i].virtualCam.transform.position) > shortestDist)
+                if (Vector3.Distance(player.position, mouseDoors[i].virtualCam.transform.position) < shortestDist)
                 {
                     print("Shorter");
-                    shortestDist = Vector3.Distance(transform.position, mouseDoors[i].virtualCam.transform.position);
+                    shortestDist = Vector3.Distance(player.position, mouseDoors[i].virtualCam.transform.position);
                     shortestCam = i;
                 }
             }

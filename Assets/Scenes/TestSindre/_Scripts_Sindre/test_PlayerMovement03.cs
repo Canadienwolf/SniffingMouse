@@ -97,9 +97,7 @@ public class test_PlayerMovement03 : MonoBehaviour
     void FixedUpdate()
     {
         if(!_isLocked)
-            MovePlayer();
-
-        
+            MovePlayer();  
     }
 
     void InputCheck()

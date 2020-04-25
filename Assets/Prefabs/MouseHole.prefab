@@ -377,12 +377,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea03d2bd1c43ec64c8f2c8be9ebffc21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endTime: 0.1
+  endTime: 0.7
   endMessage: Next level
   lostScore: 0
   gameStatesA: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
   virtualCam: {fileID: 0}
-  freezePlayer: 0
+  freezePlayer: 1
 --- !u!1001 &151632429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -464,6 +464,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: exitSign_v01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962416422120371868, guid: 2b593e06615eeed499bb2e323b089493,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b593e06615eeed499bb2e323b089493, type: 3}

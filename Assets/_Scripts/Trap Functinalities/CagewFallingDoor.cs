@@ -10,23 +10,28 @@ public class CagewFallingDoor : MonoBehaviour
     public GameObject cheese;
 
     GameObject target;
+    test_GroundCheck gc;
 
     // Start is called before the first frame update
     void Start()
     {
+        gc = GameObject.FindObjectOfType<test_GroundCheck>();
         door.GetComponent<Rigidbody>().isKinematic = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (door.transform.localPosition.y < 0.1f && target != null && cage != null)
+        if (door != null && target != null && cage != null)
         {
-            FindObjectOfType<DeathMusic>().dying = true;
-            Invoke("Transition", 1.4f);
-            Invoke("CatchPlayer", 2);
+            if (door.transform.localPosition.y < 0.1f)
+            {
+                FindObjectOfType<DeathMusic>().dying = true;
+                Invoke("Transition", 1.4f);
+                Invoke("CatchPlayer", 2);
+            }     
         }
-        if (cage == null)
+        if (door == null)
         {
             cheese.transform.parent = null;
             Destroy(gameObject);
@@ -41,7 +46,8 @@ public class CagewFallingDoor : MonoBehaviour
     {
         if (other.tag == "Player" || other.tag == "Pickable")
         {
-            door.GetComponent<Rigidbody>().isKinematic = false;
+            if(door != null)
+                door.GetComponent<Rigidbody>().isKinematic = false;
             if (other.tag == "Player")
             {
                 target = other.gameObject;
@@ -55,5 +61,10 @@ public class CagewFallingDoor : MonoBehaviour
         {
             target = null;
         }
+    }
+
+    private void OnDestroy()
+    {
+        gc.Grounded(false);
     }
 }
