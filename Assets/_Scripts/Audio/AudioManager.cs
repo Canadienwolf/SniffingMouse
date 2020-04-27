@@ -49,5 +49,5 @@ public class AudioManager : MonoBehaviour
         Music.setVolume(MusicVolume);
         SFX.setVolume(SFXVolume);
         Master.setVolume(MasterVolume);
-    }    
+    }
 }

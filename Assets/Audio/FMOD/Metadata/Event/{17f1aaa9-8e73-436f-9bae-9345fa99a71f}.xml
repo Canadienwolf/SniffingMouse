@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="Event" id="{17f1aaa9-8e73-436f-9bae-9345fa99a71f}">
 		<property name="name">
-			<value>New Event</value>
+			<value>ElectricalWire</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -37,6 +37,9 @@
 			<destination>{a54e8149-325e-4eb5-adef-23c1078a63cb}</destination>
 			<destination>{318e68dd-ad45-4d2e-8a3f-cf997e062fc3}</destination>
 		</relationship>
+		<relationship name="banks">
+			<destination>{a05209bc-a24b-48bb-8e76-1fdd80a2b6d2}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixer" id="{572a14d2-0bd4-4c9d-b531-bd8b80454c6d}">
 		<relationship name="masterBus">
@@ -56,7 +59,7 @@
 			<destination>{bc9cfb06-9a9b-44ef-b9e0-fbe445cd2119}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{6231f426-3b84-4fad-b7eb-d0b3179342f4}</destination>
+			<destination>{cb4eec27-ffbd-4045-a924-b29f21714117}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{794b6e8e-d029-4436-b7b0-e714f1ef66f7}" />
@@ -124,7 +127,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{dcdaf64e-6155-4a17-b924-06ced2e0238a}">
 		<property name="name">
-			<value>Audio 1</value>
+			<value>Loop</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{b70a3713-44d7-4d99-8b82-a3a25825b040}</destination>
