@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
 {
     FMOD.Studio.EventInstance SFXVolumeTestEvent;
 
-    //Game Managers
+    //Game Managers (Scriptable Object)
     public AudioSettings GSAudioManager;
     
     //Fmod connections
