@@ -43,9 +43,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        musicSlider.value = GSAudioManager.MusicVolume;
-        SFXSlider.value = GSAudioManager.SFXVolume;
-        MasterSlider.value = GSAudioManager.MasterVolume;
+        
     }
 
     // Update is called once per frame
@@ -54,6 +52,16 @@ public class AudioManager : MonoBehaviour
         Music.setVolume(MusicVolume);
         SFX.setVolume(SFXVolume);
         Master.setVolume(MasterVolume);
+        
+        //Finding the slider in the pause menu in each level
+        musicSlider = GameObject.FindGameObjectWithTag("musicSlider").GetComponent<Slider>();
+        SFXSlider = GameObject.FindGameObjectWithTag("SFXSlider").GetComponent<Slider>();
+        MasterSlider = GameObject.FindGameObjectWithTag("masterSlider").GetComponent<Slider>();
+        
+        
+        musicSlider.value = GSAudioManager.MusicVolume;
+        SFXSlider.value = GSAudioManager.SFXVolume;
+        MasterSlider.value = GSAudioManager.MasterVolume;
     }
     
     public void MasterVolumeLevel (float newMasterVolume)
@@ -84,6 +92,7 @@ public class AudioManager : MonoBehaviour
             SFXVolumeTestEvent.start ();
         }
         */
-
     }
+    
+    
 }
