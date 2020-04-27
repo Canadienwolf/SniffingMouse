@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -373,6 +373,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HolyHandGrenade_v01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4682919921089237812, guid: 45e2819f66322fc4485fb38b01123e48,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e2819f66322fc4485fb38b01123e48, type: 3}
 --- !u!1001 &395454321
@@ -386,6 +391,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: toilet_v01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5497157673422376332, guid: c6809db7809c624439d5632285e8e9d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8796244890929446815, guid: c6809db7809c624439d5632285e8e9d9,
         type: 3}
@@ -565,6 +575,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bathtub_v01
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a0caf482be681248a82e0852a944d0a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a0caf482be681248a82e0852a944d0a, type: 3}
 --- !u!1 &570260553
@@ -665,6 +680,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HolyHandGrenade_v01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682919921089237812, guid: 45e2819f66322fc4485fb38b01123e48,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e2819f66322fc4485fb38b01123e48, type: 3}
@@ -826,6 +846,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HolyHandGrenade_v01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682919921089237812, guid: 45e2819f66322fc4485fb38b01123e48,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e2819f66322fc4485fb38b01123e48, type: 3}
@@ -1079,6 +1104,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HolyHandGrenade_v01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682919921089237812, guid: 45e2819f66322fc4485fb38b01123e48,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e2819f66322fc4485fb38b01123e48, type: 3}
@@ -1454,6 +1484,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HolyHandGrenade_v01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4682919921089237812, guid: 45e2819f66322fc4485fb38b01123e48,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e2819f66322fc4485fb38b01123e48, type: 3}
 --- !u!1 &1338679262
@@ -1615,6 +1650,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HolyHandGrenade_v01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4682919921089237812, guid: 45e2819f66322fc4485fb38b01123e48,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e2819f66322fc4485fb38b01123e48, type: 3}
 --- !u!1001 &1613693744
@@ -1631,12 +1671,12 @@ PrefabInstance:
     - target: {fileID: 6002790066965889122, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000038336424
+      value: -0.000000038336424
       objectReference: {fileID: 0}
     - target: {fileID: 6002790066965889122, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000032582672
+      value: -0.0000000032582672
       objectReference: {fileID: 0}
     - target: {fileID: 6002790066965889122, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
@@ -1652,6 +1692,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002790066965889122, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6002790067369207032, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
@@ -1746,22 +1791,22 @@ PrefabInstance:
     - target: {fileID: 6002790068967541921, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000001680914
+      value: -0.000000016809139
       objectReference: {fileID: 0}
     - target: {fileID: 6002790068967541921, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000036759253
+      value: -0.000000003675926
       objectReference: {fileID: 0}
     - target: {fileID: 6002790068976594526, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000019168214
+      value: -0.000000019168208
       objectReference: {fileID: 0}
     - target: {fileID: 6002790068976594526, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000016291332
+      value: -0.0000000016291336
       objectReference: {fileID: 0}
     - target: {fileID: 6002790068976594526, guid: 5d5d8b76f2d690949bb2ab296b715bb3,
         type: 3}
@@ -1903,6 +1948,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plank_WithBucket_v01
+      objectReference: {fileID: 0}
+    - target: {fileID: 98923051268194702, guid: a276b1c12ee526547b920e168c9b852e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1053341241410300045, guid: a276b1c12ee526547b920e168c9b852e,
         type: 3}
@@ -2194,6 +2244,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: House_tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: b782972b47cf9b44b9247ffc599273af,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1046881446045757305, guid: b782972b47cf9b44b9247ffc599273af,
         type: 3}
