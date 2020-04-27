@@ -1498,7 +1498,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1761450457}
+      - m_Target: {fileID: 1819329499}
         m_MethodName: MusicVolumeLevel
         m_Mode: 0
         m_Arguments:
@@ -1542,7 +1542,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2136,7 +2136,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1329273659}
-  - component: {fileID: 1329273660}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -2167,29 +2166,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1329273660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329273658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/BackgroundMusic/Menu/MainMenu_Background
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!1 &1358482782
 GameObject:
   m_ObjectHideFlags: 0
@@ -2608,11 +2584,10 @@ GameObject:
   - component: {fileID: 1761450453}
   - component: {fileID: 1761450455}
   - component: {fileID: 1761450454}
-  - component: {fileID: 1761450456}
   - component: {fileID: 1761450457}
   m_Layer: 5
   m_Name: OptionsPanel
-  m_TagString: Untagged
+  m_TagString: musicManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2677,18 +2652,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761450452}
   m_CullTransparentMesh: 0
---- !u!114 &1761450456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761450452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ff2248164c286145b13803c07df80d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1761450457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2696,7 +2659,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761450452}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf6f49f265a2fbb41ae0eee56fb054b4, type: 3}
   m_Name: 
@@ -2706,8 +2669,20 @@ MonoBehaviour:
   musicSlider: {fileID: 987590131}
   SFXVolume: 0.5
   SFXSlider: {fileID: 2120073546}
-  MasterVolume: 1
+  MasterVolume: 0.5
   MasterSlider: {fileID: 1937769358}
+--- !u!114 &1819329499 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1819329499, guid: 8ff0ff4d97347744fb591c139467183c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4937041637624959719}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6f49f265a2fbb41ae0eee56fb054b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1884404928
 GameObject:
   m_ObjectHideFlags: 0
@@ -3147,11 +3122,11 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1761450457}
+      - m_Target: {fileID: 1819329499}
         m_MethodName: MasterVolumeLevel
         m_Mode: 0
         m_Arguments:
@@ -3287,8 +3262,8 @@ RectTransform:
   m_Father: {fileID: 288014427}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3620,7 +3595,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1761450457}
+      - m_Target: {fileID: 1819329499}
         m_MethodName: SFXVolumeLevel
         m_Mode: 0
         m_Arguments:
@@ -3638,42 +3613,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 682156156086121626, guid: 8ff0ff4d97347744fb591c139467183c,
-        type: 3}
-      propertyPath: GSAudioManager
-      value: 
-      objectReference: {fileID: 11400000, guid: 773b9c5d64d9bc143b0d4b779a8fc8eb,
-        type: 2}
-    - target: {fileID: 682156156086121626, guid: 8ff0ff4d97347744fb591c139467183c,
-        type: 3}
-      propertyPath: MusicVolume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 682156156086121626, guid: 8ff0ff4d97347744fb591c139467183c,
-        type: 3}
-      propertyPath: SFXVolume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 682156156086121626, guid: 8ff0ff4d97347744fb591c139467183c,
-        type: 3}
-      propertyPath: MasterVolume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 682156156086121626, guid: 8ff0ff4d97347744fb591c139467183c,
-        type: 3}
-      propertyPath: MasterSlider
-      value: 
-      objectReference: {fileID: 1937769358}
-    - target: {fileID: 682156156086121626, guid: 8ff0ff4d97347744fb591c139467183c,
-        type: 3}
-      propertyPath: SFXSlider
-      value: 
-      objectReference: {fileID: 2120073546}
-    - target: {fileID: 682156156086121626, guid: 8ff0ff4d97347744fb591c139467183c,
-        type: 3}
+    - target: {fileID: 1819329499, guid: 8ff0ff4d97347744fb591c139467183c, type: 3}
       propertyPath: musicSlider
       value: 
       objectReference: {fileID: 987590131}
+    - target: {fileID: 1819329499, guid: 8ff0ff4d97347744fb591c139467183c, type: 3}
+      propertyPath: SFXSlider
+      value: 
+      objectReference: {fileID: 2120073546}
+    - target: {fileID: 1819329499, guid: 8ff0ff4d97347744fb591c139467183c, type: 3}
+      propertyPath: MasterSlider
+      value: 
+      objectReference: {fileID: 1937769358}
     - target: {fileID: 4937041638075607620, guid: 8ff0ff4d97347744fb591c139467183c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3734,6 +3685,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicManager
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4937041638075607619, guid: 8ff0ff4d97347744fb591c139467183c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ff0ff4d97347744fb591c139467183c, type: 3}

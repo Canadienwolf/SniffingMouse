@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4937041638075607620}
   - component: {fileID: 441890795}
+  - component: {fileID: 1819329499}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: musicManager
@@ -44,9 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/BackgroundMusic/InGame/Level 01 -
-  PlayEvent: 11
-  StopEvent: 12
+  Event: event:/BackgroundMusic/Menu/MainMenu_Background
+  PlayEvent: 1
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -54,3 +55,22 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!114 &1819329499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4937041638075607623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6f49f265a2fbb41ae0eee56fb054b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GSAudioManager: {fileID: 11400000, guid: 773b9c5d64d9bc143b0d4b779a8fc8eb, type: 2}
+  MusicVolume: 0.5
+  musicSlider: {fileID: 0}
+  SFXVolume: 0.5
+  SFXSlider: {fileID: 0}
+  MasterVolume: 0.5
+  MasterSlider: {fileID: 0}

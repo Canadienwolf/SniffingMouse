@@ -10,9 +10,9 @@ public class AudioSettings : ScriptableObject
 {
     
     //Volume controls
-    public float MusicVolume = 0.5f;
-    public float SFXVolume = 0.5f;
-    public float MasterVolume = 0.5f;
+    public float MusicVolume;
+    public float SFXVolume;
+    public float MasterVolume;
 
 
     private void Awake()
