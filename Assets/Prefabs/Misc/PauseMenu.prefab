@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 2865294906331710445}
   m_Layer: 5
   m_Name: Slider
-  m_TagString: musicSlider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -529,7 +529,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1819329499, guid: 8ff0ff4d97347744fb591c139467183c, type: 3}
+      - m_Target: {fileID: 2125391737}
         m_MethodName: MusicVolumeLevel
         m_Mode: 0
         m_Arguments:
@@ -865,6 +865,7 @@ GameObject:
   - component: {fileID: 2931863503011769971}
   - component: {fileID: 2931863503011769970}
   - component: {fileID: 2931863503011769934}
+  - component: {fileID: 2125391737}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -967,6 +968,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuController: {fileID: 2931863504716762732}
+--- !u!114 &2125391737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931863503011769973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6f49f265a2fbb41ae0eee56fb054b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GSAudioManager: {fileID: 11400000, guid: 773b9c5d64d9bc143b0d4b779a8fc8eb, type: 2}
+  MusicVolume: 0
+  musicSlider: {fileID: 2865294906331710445}
+  SFXVolume: 0
+  SFXSlider: {fileID: 7033772066487331496}
+  MasterVolume: 0
+  MasterSlider: {fileID: 1178050472756738763}
 --- !u!1 &2931863504082338474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,7 +1268,7 @@ GameObject:
   - component: {fileID: 1178050472756738763}
   m_Layer: 5
   m_Name: Slider
-  m_TagString: masterSlider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1325,7 +1345,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1819329499, guid: 8ff0ff4d97347744fb591c139467183c, type: 3}
+      - m_Target: {fileID: 2125391737}
         m_MethodName: MasterVolumeLevel
         m_Mode: 0
         m_Arguments:
@@ -2526,7 +2546,7 @@ GameObject:
   - component: {fileID: 7033772066487331496}
   m_Layer: 5
   m_Name: Slider
-  m_TagString: SFXSlider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2603,7 +2623,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1819329499, guid: 8ff0ff4d97347744fb591c139467183c, type: 3}
+      - m_Target: {fileID: 2125391737}
         m_MethodName: SFXVolumeLevel
         m_Mode: 0
         m_Arguments:
