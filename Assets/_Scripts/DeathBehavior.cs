@@ -18,6 +18,9 @@ public class DeathBehavior : MonoBehaviour
     private GameObject target;
 
     private bool dead;
+    
+    //-----------------------------------SFX Related----------------------------------
+    public GameObject HammerSound;
 
     private void Start()
     {
@@ -46,7 +49,7 @@ public class DeathBehavior : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            DeathMusic();
+            HammerSound.SetActive(true);
             Invoke("Kill", delayTime);
         }
     }
@@ -54,6 +57,7 @@ public class DeathBehavior : MonoBehaviour
     void Kill()
     {
         dead = true;
+        DeathMusic();
     }
 
 
@@ -93,6 +97,12 @@ public class DeathBehavior : MonoBehaviour
         {
             deathmusic = GameObject.FindGameObjectWithTag("Player");
             deathmusic.GetComponent<DeathMusic>().dying = true;
+            Invoke("HammerSFX", delayTime + 2f);
         }
+    }
+
+    void HammerSFX()
+    {
+        HammerSound.SetActive(true);
     }
 }
