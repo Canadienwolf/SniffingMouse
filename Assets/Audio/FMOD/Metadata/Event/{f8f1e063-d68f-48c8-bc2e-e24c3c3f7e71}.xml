@@ -33,6 +33,7 @@
 		</relationship>
 		<relationship name="banks">
 			<destination>{aa66d1b8-92f6-41b0-9c68-9f63214b1d9a}</destination>
+			<destination>{a05209bc-a24b-48bb-8e76-1fdd80a2b6d2}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{cb7d364f-ac6c-4822-8d0c-d2985b8b593e}">
@@ -128,6 +129,16 @@
 	</object>
 	<object class="MixerBusPanner" id="{4482bf6b-980b-417f-8ac0-79e6a935b4bc}" />
 	<object class="MixerBusFader" id="{7c142620-f27c-46df-99fb-10d32893685c}" />
-	<object class="SpatialiserEffect" id="{8be16636-32b0-427c-8d56-6b6b43cf8347}" />
+	<object class="SpatialiserEffect" id="{8be16636-32b0-427c-8d56-6b6b43cf8347}">
+		<property name="distanceRolloffType">
+			<value>4</value>
+		</property>
+		<property name="minimumDistance">
+			<value>0</value>
+		</property>
+		<property name="maximumDistance">
+			<value>10000</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{1a2c7acb-530c-4ee2-8c36-fda462179b59}" />
 </objects>

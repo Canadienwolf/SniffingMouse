@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    FMOD.Studio.EventInstance SFXVolumeTestEvent;
+    //FMOD.Studio.EventInstance SFXVolumeTestEvent;
 
     //Game Managers (Scriptable Object)
     //public AudioSettings GSAudioManager;
@@ -33,8 +33,6 @@ public class AudioManager : MonoBehaviour
         {
             instance = this;
         }
-        
-        
         
         DontDestroyOnLoad(this);
 

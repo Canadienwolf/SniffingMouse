@@ -20,6 +20,10 @@ public class RocketLauncher : MonoBehaviour
     private GameObject target;
     private ParticleSystem spawnedThrust;
     private bool active;
+    
+    //---------------SFX related----------------------------
+    //Link to the GameObject that has the sound for when the rocket starts
+    public GameObject RocketSFX;
 
     private void Start()
     {
@@ -47,6 +51,7 @@ public class RocketLauncher : MonoBehaviour
             target.GetComponent<Rigidbody>().useGravity = false;
             target.GetComponent<Rigidbody>().freezeRotation = true;
             Invoke("Explode", flyTime);
+            RocketSFX.SetActive(true);
             StartCoroutine(SetActive(true, deactiveTime));
 
             if (other.tag == "Player")
