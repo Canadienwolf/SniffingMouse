@@ -30,7 +30,6 @@ public class MenuController : MonoBehaviour
 
     public void QuitGame()
     {
-        PlayerPrefs.Save();
         Application.Quit();
     }
     

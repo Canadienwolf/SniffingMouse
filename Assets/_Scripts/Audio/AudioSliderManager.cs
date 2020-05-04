@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,20 +9,27 @@ public class AudioSliderManager : MonoBehaviour
     public Slider musicSlider;
     public Slider SFXSlider;
     public Slider MasterSlider;
+    
+    
 
     //A variable for whether the game has been run for the first time or not.
     int firstRun = 0;
-    
+
+
+    private void Awake()
+    {
+        MasterSlider.value = PlayerPrefs.GetFloat("Master");
+        SFXSlider.value = PlayerPrefs.GetFloat("SFX");
+        musicSlider.value = PlayerPrefs.GetFloat("Music");
+        PlayerPrefs.GetInt("savedFirstRun");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         musicSlider.value = AudioManager.MusicVolume;
         SFXSlider.value = AudioManager.SFXVolume;
         MasterSlider.value = AudioManager.MasterVolume;
-
-        MasterSlider.value = PlayerPrefs.GetFloat("Master");
-        SFXSlider.value = PlayerPrefs.GetFloat("SFX");
-        musicSlider.value = PlayerPrefs.GetFloat("Music");
         
         firstRun = PlayerPrefs.GetInt("savedFirstRun");
 
@@ -40,6 +48,7 @@ public class AudioSliderManager : MonoBehaviour
     {
         AudioManager.MasterVolume = MasterSlider.value;
         PlayerPrefs.SetFloat("Master", AudioManager.MasterVolume);
+        print(PlayerPrefs.HasKey("Master"));
     }
 
     public void ChangeSFX()
