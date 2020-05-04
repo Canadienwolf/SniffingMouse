@@ -59,7 +59,7 @@ public class PickupSystem : MonoBehaviour
             
         }
 
-        if ((Input.GetMouseButtonDown(0) || Input.GetButtonDown("Throw")) && !_canThrow && _pickedUp)
+        if ((Input.GetMouseButtonDown(0) || Input.GetButtonDown("Throw")) && !_canThrow && _pickedUp && Time.timeScale != 0)
         {
             POVcam.SetActive(true);
             psm.lockController = true;

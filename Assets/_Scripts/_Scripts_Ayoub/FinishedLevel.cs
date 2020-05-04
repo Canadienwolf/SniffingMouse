@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class FinishedLevel : MonoBehaviour
 {
     public static int nextSceneLoad;
+    public float endTime = 0.7f;
+    public GameStates gameStatesA;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +20,7 @@ public class FinishedLevel : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (SceneManager.GetActiveScene().buildIndex == 7) /* < we will Change this int value to whatever we want when we have more 
+            if (SceneManager.GetActiveScene().buildIndex == 8) /* < we will Change this int value to whatever we want when we have more 
                                                                   levels  */
             {
                 Debug.Log("You Completed ALL Levels");//small check
@@ -34,6 +36,25 @@ public class FinishedLevel : MonoBehaviour
                 }
                
             }
+
+            StartCatch(other.gameObject);
         }
+    }
+
+    void StartCatch(GameObject player)
+    {
+        player.GetComponent<test_PlayerMovement03>().psm.lockController = true;
+        Invoke("Transition", endTime - .6f);
+        Invoke("Catch", endTime);
+    }
+
+    void Transition()
+    {
+        GameObject.Find("SceneTransition").GetComponent<Animator>().SetTrigger("EndLevel");
+    }
+
+    void Catch()
+    {
+        gameStatesA.EndGame("You finished the level!", 0);
     }
 }

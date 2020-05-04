@@ -15,7 +15,7 @@ public class test_GroundCheck : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag != "Player" && !other.GetComponent<Collider>().isTrigger)
+        if (other.tag != "Player" && !other.GetComponent<Collider>().isTrigger && other.tag != "Pickable")
         {
             isGrounded = true;
             justHit = true;
@@ -25,8 +25,10 @@ public class test_GroundCheck : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag != "Player" && !other.GetComponent<Collider>().isTrigger)
+        if (other.tag != "Player" && !other.GetComponent<Collider>().isTrigger && other.tag != "Pickable")
+        {
             isGrounded = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -42,7 +44,6 @@ public class test_GroundCheck : MonoBehaviour
 
     public void Grounded(bool idx)
     {
-        print(idx);
         isGrounded = idx;
     }
 }
