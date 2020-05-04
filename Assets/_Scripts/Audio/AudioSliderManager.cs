@@ -9,6 +9,9 @@ public class AudioSliderManager : MonoBehaviour
     public Slider SFXSlider;
     public Slider MasterSlider;
 
+    //A variable for whether the game has been run for the first time or not.
+    int firstRun = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,18 @@ public class AudioSliderManager : MonoBehaviour
         MasterSlider.value = PlayerPrefs.GetFloat("Master");
         SFXSlider.value = PlayerPrefs.GetFloat("SFX");
         musicSlider.value = PlayerPrefs.GetFloat("Music");
+        
+        firstRun = PlayerPrefs.GetInt("savedFirstRun");
+
+        if (firstRun == 0)
+        {
+            musicSlider.value = 0.5f;
+            SFXSlider.value = 0.5f;
+            MasterSlider.value = 0.5f;
+            
+            //firstRun = 1;
+            PlayerPrefs.SetInt("savedFirstRun", 1);
+        }
     }
 
     public void ChangeMaster()
