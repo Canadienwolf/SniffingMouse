@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +15,10 @@ public class TrapDetection : MonoBehaviour
     //checking if the cheese is triggered by the player
     bool istrigger = true;
     private bool activated;
+    
+    //.....................SFX.........................
+    [FMODUnity.EventRef]
+    public string SmackSoundEvent = "";
     
     // Start is called before the first frame update
     void Start()
@@ -42,6 +47,7 @@ public class TrapDetection : MonoBehaviour
                     FindObjectOfType<DeathMusic>().dying = true;
                     Invoke("Transition", 1.4f);
                     Invoke("Die", 2);
+                    Invoke("SFXSmack", 0.3f);
                     //Die();
 
                 }
@@ -100,5 +106,12 @@ public class TrapDetection : MonoBehaviour
     {
         //updating the player state lock controller before quit !
         playerStatesA.lockController = false;
+    }
+
+    private void SFXSmack()
+    {
+        
+        FMODUnity.RuntimeManager.PlayOneShot(SmackSoundEvent);
+
     }
 }
