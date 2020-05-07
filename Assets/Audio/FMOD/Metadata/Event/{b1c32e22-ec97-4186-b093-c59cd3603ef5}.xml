@@ -93,7 +93,7 @@
 			<value>5</value>
 		</property>
 		<property name="volume">
-			<value>10</value>
+			<value>-5</value>
 		</property>
 		<relationship name="sounds">
 			<destination>{ee270228-bebf-4f08-b08c-9fa4b0f014e3}</destination>
@@ -123,6 +123,9 @@
 	<object class="MixerBusPanner" id="{0cf693cd-f563-4899-a213-a281cdfac800}" />
 	<object class="MixerBusFader" id="{326fa8d9-b6dd-47a9-9a21-0f607f65ff96}" />
 	<object class="SingleSound" id="{ee270228-bebf-4f08-b08c-9fa4b0f014e3}">
+		<property name="volume">
+			<value>-10</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{97b4d980-daee-47f1-b926-634050fa5dda}</destination>
 		</relationship>
