@@ -97,11 +97,6 @@ public class TrapDetection : MonoBehaviour
       
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        
-    }
-
     private void OnApplicationQuit()
     {
         //updating the player state lock controller before quit !

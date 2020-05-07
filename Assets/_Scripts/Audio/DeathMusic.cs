@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,7 +12,13 @@ public class DeathMusic : MonoBehaviour
     
     public bool dying = false;
     public bool hasplayed = false;
-    
+
+    private void Awake()
+    {
+        dying = false;
+        hasplayed = false;
+    }
+
     void Start()
     {
         
@@ -22,10 +29,15 @@ public class DeathMusic : MonoBehaviour
     {
         if (dying && hasplayed == false)
         {
-            if(GameObject.FindGameObjectWithTag("musicManager") != null) GameObject.FindGameObjectWithTag("musicManager").SetActive(false);
+            if (GameObject.FindGameObjectWithTag("musicManager") != null)
+            {
+                GameObject.FindGameObjectWithTag("musicManager").SetActive(false); 
+            }
+
             FMODUnity.RuntimeManager.PlayOneShot(DeathEvent);
-            dying = false;
-            hasplayed = true;
+                dying = false;
+                hasplayed = true;
         }
     }
+    
 }
