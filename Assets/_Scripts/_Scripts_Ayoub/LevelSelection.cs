@@ -20,5 +20,13 @@ public class LevelSelection : MonoBehaviour
                 lvlButtons[i].interactable = false;
         }
     }
+    public void UnlockLevels()
+    {
+        //for the lvl selections buttons!
+        for (int i = 0; i < lvlButtons.Length; i++)
+        {
+            lvlButtons[i].interactable = true;
+        }
+    }
 
 }

@@ -21,6 +21,8 @@ public class GameStates : ScriptableObject
 
     public string endMsg;
 
+    public bool won = false;
+
     //Highscore handling function !
     public void newHighScore()
     {
@@ -62,7 +64,16 @@ public class GameStates : ScriptableObject
     {
         endMsg = message;
         score += scorePoints;
-        SceneManager.LoadScene("menu_ScoreDisplay");
+        if (won==true)
+        {
+           // won = false;
+            SceneManager.LoadScene("menu_LevelProgress");
+        }
+        else
+        {
+            SceneManager.LoadScene("menu_ScoreDisplay");
+        }
+        
     }
 
 

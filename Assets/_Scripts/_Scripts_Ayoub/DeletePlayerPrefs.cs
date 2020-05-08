@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeletePlayerPrefs : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class DeletePlayerPrefs : MonoBehaviour
     }*/
     public void ResetLevels()
     {
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("levelAt");
+        SceneManager.LoadScene("menu_levelSelection");
+
     }
 }

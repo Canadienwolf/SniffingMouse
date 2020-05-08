@@ -25,5 +25,6 @@ public class cheatManager : MonoBehaviour
         {
             gs.timer = 0;
         }
+        Debug.Log(gs.won);
     }
 }
