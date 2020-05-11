@@ -19,7 +19,7 @@ public class PickupSystem : MonoBehaviour
     public float powerAcceleration = 100f;
 
     //private
-    public bool _pickedUp = false;
+    [HideInInspector] public bool _pickedUp = false;
     private float power;
     private bool _canThrow;
     private CinemachineVirtualCamera pov;

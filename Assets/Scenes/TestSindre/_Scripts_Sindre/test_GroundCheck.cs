@@ -8,6 +8,9 @@ public class test_GroundCheck : MonoBehaviour
     public bool isGrounded;
     public bool justHit;
 
+    public delegate void Land();
+    public static event Land OnLand;
+
     private void Update()
     {
         psm.isGrounded = isGrounded;
@@ -19,7 +22,8 @@ public class test_GroundCheck : MonoBehaviour
         {
             isGrounded = true;
             justHit = true;
-            Invoke("StopJusthit", 0.25f);
+            OnLand();
+            Invoke("StopJusthit", 0.025f);
         }
     }
 
