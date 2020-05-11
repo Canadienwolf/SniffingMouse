@@ -12,6 +12,10 @@ public class CatchPlayer : MonoBehaviour
     public GameStates gameStatesA;
     public GameObject virtualCam;
     public bool freezePlayer;
+    
+    //-------------------------------------------SFX-------------------
+    public GameObject SFX;
+    //--------------------------------------
 
     private void Start()
     {
@@ -38,6 +42,7 @@ public class CatchPlayer : MonoBehaviour
         if (freezePlayer) player.GetComponent<test_PlayerMovement03>().psm.lockController = true;
         if (virtualCam != null) virtualCam.SetActive(true);
         FindObjectOfType<DeathMusic>().dying = true;
+        SFX.SetActive(true);
         Invoke("Transition", endTime - .6f);
         Invoke("Catch", endTime);
     }
