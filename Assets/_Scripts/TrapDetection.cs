@@ -91,7 +91,7 @@ public class TrapDetection : MonoBehaviour
     //calling the losing event!
     void Die()
     {
-        
+        DeathScreensScript.sprite = 10;
         //loading the loss/win menu !
         gamestatesA.EndGame("You got crushed , and lost score points !", (-15));
       

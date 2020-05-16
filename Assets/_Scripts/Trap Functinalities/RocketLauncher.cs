@@ -87,6 +87,7 @@ public class RocketLauncher : MonoBehaviour
 
     void Kill()
     {
+        DeathScreensScript.sprite = 7;
         SceneManager.LoadScene("menu_ScoreDisplay");
     }
 

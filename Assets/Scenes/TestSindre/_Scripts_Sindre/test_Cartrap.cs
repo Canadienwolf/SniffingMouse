@@ -78,6 +78,7 @@ public class test_Cartrap : MonoBehaviour
 
     void Die()
     {
+        DeathScreensScript.sprite = 1;
         gameStatesA.EndGame("You crashed!", (-15));
     }
 }

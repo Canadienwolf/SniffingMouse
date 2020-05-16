@@ -54,6 +54,19 @@ public class CatchPlayer : MonoBehaviour
 
     void Catch()
     {
+        if (this.gameObject.transform.parent.name == "Bucket")
+        {
+            DeathScreensScript.sprite = 6;
+        }
+        else if(this.gameObject.transform.parent.name == "TrapCage_v01")
+        {
+            DeathScreensScript.sprite = 9;
+        }
+        else
+        {
+            DeathScreensScript.sprite = 5;
+        }
+
         gameStatesA.EndGame(endMessage, lostScore);
     }
 }

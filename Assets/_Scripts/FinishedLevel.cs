@@ -22,7 +22,7 @@ public class FinishedLevel : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             gameStatesA.won = true;
-            if (SceneManager.GetActiveScene().buildIndex == 8) /* < we will Change this int value to whatever we want when we have more 
+            if (SceneManager.GetActiveScene().buildIndex == 10) /* < we will Change this int value to whatever we want when we have more 
                                                                   levels  */
             {
                 Debug.Log("You Completed ALL Levels");//small check

@@ -40,6 +40,7 @@ public class Nails : MonoBehaviour
 
     void Kill()
     {
+        DeathScreensScript.sprite = 4;
         gameStatesA.EndGame("You got impaled", -15);
     }
 }

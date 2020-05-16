@@ -72,6 +72,7 @@ public class RoombaVisuals : MonoBehaviour
 
     void Lose()
     {
+        DeathScreensScript.sprite = 8;
         gameStatesA.EndGame("You got sucked!", (-15));
     }
 

@@ -41,6 +41,7 @@ public class ElectricCableTrap : MonoBehaviour
 
     void Kill()
     {
+        DeathScreensScript.sprite = 2;
         gameStates.EndGame("You got electrocuted", -15);
     }
 }
