@@ -9,13 +9,19 @@ public class ElectricCableTrap : MonoBehaviour
 {
     public ParticleSystem lightning;
     public GameObject cam;
-
     public PlayerStatesMovements playerstatesA;
     public GameStates gameStates;
+    
+    //------------------------------SFX---------------------------------------------
+    private ParticleSystem _spark;
 
     private void Start()
     {
         cam.SetActive(false);
+        _spark= GetComponent<ParticleSystem>();
+
+
+
     }
  
     private void OnCollisionEnter(Collision other)
@@ -31,6 +37,7 @@ public class ElectricCableTrap : MonoBehaviour
             FindObjectOfType<DeathMusic>().dying = true;
             Invoke("Transition", 2.4f);
             Invoke("Kill", 3);
+            StartCoroutine (sparking());
         }
     }
 
@@ -43,5 +50,19 @@ public class ElectricCableTrap : MonoBehaviour
     {
         DeathScreensScript.sprite = 2;
         gameStates.EndGame("You got electrocuted", -15);
+    }
+
+    private void Update()
+    {
+        
+    }
+
+    IEnumerator sparking()
+    {
+        _spark.Play();
+        //TODO Gotta reference the fmod event emitter and play a sound that is also on the gameobject that the script is on.
+        
+        
+        yield return new WaitForSeconds(10);
     }
 }
