@@ -1,0 +1,951 @@
+fileFormatVersion: 2
+guid: ffb1b459c8d8a624e9c2f78a730310a7
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: -8577222980222851221
+    second: Mouse_skeleton_grp|Ankle_LF_CTRL|Take 001|BaseLayer
+  - first:
+      74: -1563041465426771705
+    second: Mouse_skeleton_grp|Ankle_RT_CTRL|Take 001|BaseLayer
+  - first:
+      74: -1336273312773571883
+    second: Mouse_skeleton_grp|Cog_CTRL|Take 001|BaseLayer
+  - first:
+      74: -3885266139997961477
+    second: Mouse_skeleton_grp|Hand_LF_CTRL|Take 001|BaseLayer
+  - first:
+      74: 4311619185291805005
+    second: Mouse_skeleton_grp|Hand_RT_CTRL|Take 001|BaseLayer
+  - first:
+      74: -1289592999507917709
+    second: Mouse_skeleton_grp|Hip_CTRL|Take 001|BaseLayer
+  - first:
+      74: -655407926836045437
+    second: Mouse_skeleton_grp|Mouse_control_grp|Take 001|BaseLayer
+  - first:
+      74: -6547100950659787498
+    second: Mouse_skeleton_grp|Mouse_HeelRaise_LF_grp|Take 001|BaseLayer
+  - first:
+      74: 1788620621637430957
+    second: Mouse_skeleton_grp|Mouse_HeelRaise_RT_grp|Take 001|BaseLayer
+  - first:
+      74: 6447032868842557778
+    second: Mouse_skeleton_grp|Mouse_LiftFromHeel_LF_grp|Take 001|BaseLayer
+  - first:
+      74: -1837638012582445374
+    second: Mouse_skeleton_grp|Mouse_LiftFromHeel_RT_grp|Take 001|BaseLayer
+  - first:
+      74: 3400994477330746998
+    second: Mouse_skeleton_grp|Mouse_LiftFromToe_LF_grp|Take 001|BaseLayer
+  - first:
+      74: -1321025904120132970
+    second: Mouse_skeleton_grp|Mouse_LiftFromToe_RT_grp|Take 001|BaseLayer
+  - first:
+      74: 5407514827987279251
+    second: Mouse_skeleton_grp|Mouse_skeleton_grp|Take 001|BaseLayer
+  - first:
+      74: 7317462197332623622
+    second: Mouse_skeleton_grp|Mouse_ToeTap_LF_grp|Take 001|BaseLayer
+  - first:
+      74: -4623906137987946567
+    second: Mouse_skeleton_grp|Mouse_ToeTap_RT_grp|Take 001|BaseLayer
+  - first:
+      74: 6668985260404172935
+    second: Mouse_skeleton_grp|Shoulder_LF_CTRL|Take 001|BaseLayer
+  - first:
+      74: -3769843949688144919
+    second: Mouse_skeleton_grp|Shoulder_RT_CTRL|Take 001|BaseLayer
+  - first:
+      74: -4524779588573983785
+    second: Mouse_skeleton_grp|Tail_CTRL|Take 001|BaseLayer
+  externalObjects: {}
+  materials:
+    materialImportMode: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 16
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Mouse_Root_JNT
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_LF_Hip_JNT
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_RT_Hip_JNT
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_LF_Knee_JNT
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_RT_Knee_JNT
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_LF_Ankle_JNT
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_RT_Ankle_JNT
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_Spine_0_JNT
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_Spine_1_JNT
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_Head_JNT
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_LF_Clavical_JNT
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_RT_Clavical_JNT
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_LF_Shoulder_JNT
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_RT_Shoulder_JNT
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_LF_Elbow_JNT
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_RT_Elbow_JNT
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_LF_Wrist_JNT
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_RT_Wrist_JNT
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_LF_Toe_JNT
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_RT_Toe_JNT
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_NoseBase_JNT
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_RT_WhiskerRoot_JNT
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_LF_WhiskerRoot_JNT
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouse_Spine_2_JNT
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Anim_Idle_wEyes(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouse_skeleton_grp
+      parentName: Anim_Idle_wEyes(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071067, y: 5.765451e-24, z: 8.6595606e-17, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouse_Root_JNT
+      parentName: Mouse_skeleton_grp
+      position: {x: 1.2572212e-17, y: 0.06989646, z: 0.692715}
+      rotation: {x: 0.0006570816, y: 0.70710653, z: 0.0006571412, w: 0.7071065}
+      scale: {x: 1.0000004, y: 1.0000006, z: 1.0000001}
+    - name: Mouse_Spine_0_JNT
+      parentName: Mouse_Root_JNT
+      position: {x: -0.256, y: 0.000000038184226, z: -0.000000011190061}
+      rotation: {x: -0.000000020983862, y: 0.000000059604645, z: -0.0009292748, w: 0.9999996}
+      scale: {x: 0.99999976, y: 0.9999998, z: 0.99999964}
+    - name: Mouse_Spine_1_JNT
+      parentName: Mouse_Spine_0_JNT
+      position: {x: -0.20800011, y: 0.00000003826956, z: -0.000000009148552}
+      rotation: {x: 0.000000042139515, y: -0.00000005956551, z: -0.00000004214235,
+        w: 1}
+      scale: {x: 0.9999999, y: 1, z: 0.9999999}
+    - name: Mouse_Spine_2_JNT
+      parentName: Mouse_Spine_1_JNT
+      position: {x: -0.20800002, y: 1.8293466e-11, z: -0.000000009176516}
+      rotation: {x: -0.000000021088232, y: 0.0015864975, z: -0.000000021046578, w: 0.99999875}
+      scale: {x: 1, y: 0.9999999, z: 1.0000001}
+    - name: Mouse_C_Spine_JNT
+      parentName: Mouse_Spine_2_JNT
+      position: {x: -0.20319572, y: -2.3111599e-10, z: -0.00018782292}
+      rotation: {x: -0.0047287447, y: -0.9999876, z: -0.0000075024614, w: -0.0015865394}
+      scale: {x: 1.0000005, y: 1.0000013, z: 1.0000007}
+    - name: Mouse_Head_JNT
+      parentName: Mouse_C_Spine_JNT
+      position: {x: 0.13774404, y: 0.004550829, z: -0.0000033416663}
+      rotation: {x: 0.0000894865, y: -0.0000026520572, z: -0.01958202, w: -0.9998083}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: Mouse_Head_Top_JNT
+      parentName: Mouse_Head_JNT
+      position: {x: 0.90413284, y: -0.00000013575033, z: 0.00000002619794}
+      rotation: {x: 7.275956e-12, y: -2.2737362e-13, z: 2.3732327e-10, w: 1}
+      scale: {x: 1.0000004, y: 1.0000002, z: 0.99999994}
+    - name: Mouse_Head_Top_JNT_end
+      parentName: Mouse_Head_Top_JNT
+      position: {x: -0, y: 0.7518063, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouse_Snout_JNT
+      parentName: Mouse_Head_JNT
+      position: {x: 0.22005391, y: -0.6223616, z: -0.0013461396}
+      rotation: {x: -0.4744945, y: -0.8802532, z: 0.0027524012, w: -0.0013153781}
+      scale: {x: 1.0000005, y: 1, z: 1.0000004}
+    - name: Mouse_RT_WhiskerRoot_JNT
+      parentName: Mouse_Snout_JNT
+      position: {x: 0.0081395805, y: 0.006331501, z: 0.027016481}
+      rotation: {x: -0.21877655, y: 0.67406315, z: 0.21041511, w: 0.6734251}
+      scale: {x: 1.0000001, y: 1.0000008, z: 0.9999996}
+    - name: Mouse_Whisker_RT_Bot_Spread_grp
+      parentName: Mouse_RT_WhiskerRoot_JNT
+      position: {x: 0.0000000123679635, y: -0.000000034458935, z: -0.000000037243588}
+      rotation: {x: 0.000000089406946, y: 0.000000029802315, z: 0.000000089406946,
+        w: 1}
+      scale: {x: 1.0000008, y: 1, z: 1.0000007}
+    - name: Mouse_RT_WhiskerBot_0_JNT
+      parentName: Mouse_Whisker_RT_Bot_Spread_grp
+      position: {x: -0.09152426, y: -0.015283016, z: 0.026180541}
+      rotation: {x: -0.00081975467, y: 0.059976187, z: 0.11278177, w: 0.9918077}
+      scale: {x: 1.0000011, y: 1.0000002, z: 1.000001}
+    - name: Mouse_RT_WhiskerBot_1_JNT
+      parentName: Mouse_RT_WhiskerBot_0_JNT
+      position: {x: -0.16269408, y: -0.00000017762184, z: -0.000000016204467}
+      rotation: {x: -0.0021252728, y: -0.009264382, z: 0.009119762, w: 0.9999132}
+      scale: {x: 0.9999997, y: 0.9999998, z: 0.9999997}
+    - name: Mouse_RT_WhiskerBot_2_JNT
+      parentName: Mouse_RT_WhiskerBot_1_JNT
+      position: {x: -0.16133155, y: 0.00000019311905, z: -0.00000006324197}
+      rotation: {x: -0.00025120724, y: -0.0010594259, z: -0.0017836934, w: 0.99999785}
+      scale: {x: 1.000001, y: 1, z: 1.0000004}
+    - name: Mouse_RT_WhiskerBot_3_JNT
+      parentName: Mouse_RT_WhiskerBot_2_JNT
+      position: {x: -0.14148885, y: -0.0000001168251, z: 0.000000033514006}
+      rotation: {x: 0.0019661847, y: 0.008199481, z: 0.0042905756, w: 0.99995524}
+      scale: {x: 1, y: 1.0000001, z: 1.0000006}
+    - name: Mouse_RT_WhiskerBot_4_JNT
+      parentName: Mouse_RT_WhiskerBot_3_JNT
+      position: {x: -0.13946012, y: 0.00000007867813, z: -0.000000026189536}
+      rotation: {x: 0.0000000067520878, y: 0.000000006519257, z: 0.00000015687873,
+        w: 1}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000004}
+    - name: Mouse_RT_WhiskerBot_4_JNT_end
+      parentName: Mouse_RT_WhiskerBot_4_JNT
+      position: {x: -0, y: 0.13946024, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouse_Whisker_RT_Mid_Spread_grp
+      parentName: Mouse_RT_WhiskerRoot_JNT
+      position: {x: 0.000000045672056, y: -0.00000018786639, z: -0.000000111213886}
+      rotation: {x: -0.0015455481, y: 0.04946704, z: 0.120197885, w: 0.9915155}
+      scale: {x: 1.0000006, y: 1, z: 1.0000005}
+    - name: Mouse_RT_WhiskerMid_0_JNT
+      parentName: Mouse_Whisker_RT_Mid_Spread_grp
+      position: {x: -0.09169071, y: 0.0016750476, z: 0.036356613}
+      rotation: {x: 0.00065511087, y: 0.0056588263, z: -0.11552139, w: 0.99328864}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1}
+    - name: Mouse_RT_WhiskerMid_1_JNT
+      parentName: Mouse_RT_WhiskerMid_0_JNT
+      position: {x: -0.15872526, y: 0.00000006418675, z: -0.000000045645173}
+      rotation: {x: 0.000018852697, y: -0.0074862167, z: -0.0019667936, w: 0.99997}
+      scale: {x: 1.0000012, y: 1.0000005, z: 1.0000008}
+    - name: Mouse_RT_WhiskerMid_2_JNT
+      parentName: Mouse_RT_WhiskerMid_1_JNT
+      position: {x: -0.15682745, y: 0.00000019511208, z: -0.00000008359357}
+      rotation: {x: -0.00000008076494, y: 0.006423527, z: 0.0042376146, w: 0.9999704}
+      scale: {x: 1.0000007, y: 0.99999994, z: 1.0000006}
+    - name: Mouse_RT_WhiskerMid_3_JNT
+      parentName: Mouse_RT_WhiskerMid_2_JNT
+      position: {x: -0.13786006, y: -0.000000052955002, z: 6.402843e-11}
+      rotation: {x: 0.00000003202678, y: -0.0045026713, z: -0.0035248955, w: 0.99998367}
+      scale: {x: 1.0000007, y: 0.99999994, z: 1.0000006}
+    - name: Mouse_RT_WhiskerMid_4_JNT
+      parentName: Mouse_RT_WhiskerMid_3_JNT
+      position: {x: -0.18185003, y: 0.000000011799857, z: -0.0000000227883}
+      rotation: {x: 0.000000023704892, y: -0.000000031199303, z: -0.00000017168479,
+        w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000006}
+    - name: Mouse_RT_WhiskerMid_4_JNT_end
+      parentName: Mouse_RT_WhiskerMid_4_JNT
+      position: {x: -0, y: 0.1818502, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouse_Whisker_RT_Top_Spread_grp
+      parentName: Mouse_RT_WhiskerRoot_JNT
+      position: {x: 0.000000007450581, y: -0.00000018887222, z: -0.00000014929101}
+      rotation: {x: -0.0003694295, y: 0.05783768, z: 0.12433677, w: 0.9905529}
+      scale: {x: 1.0000007, y: 1, z: 1.0000006}
+    - name: Mouse_RT_WhiskerTop_0_JNT
+      parentName: Mouse_Whisker_RT_Top_Spread_grp
+      position: {x: -0.083622746, y: 0.014976468, z: 0.044167027}
+      rotation: {x: 0.00026084253, y: 0.030818354, z: -0.22898413, w: 0.9729422}
+      scale: {x: 1.0000007, y: 1.0000001, z: 1.0000005}
+    - name: Mouse_RT_WhiskerTop_1_JNT
+      parentName: Mouse_RT_WhiskerTop_0_JNT
+      position: {x: -0.17284007, y: -0.0000002002716, z: 0.000000030657137}
+      rotation: {x: 0.0016163626, y: -0.006950859, z: -0.005781584, w: 0.99995786}
+      scale: {x: 1.0000005, y: 1, z: 1.0000004}
+    - name: Mouse_RT_WhiskerTop_2_JNT
+      parentName: Mouse_RT_WhiskerTop_1_JNT
+      position: {x: -0.16262542, y: 0.00000022411346, z: 2.3144821e-10}
+      rotation: {x: -0.00095818506, y: 0.0040280977, z: 0.0007260475, w: 0.9999912}
+      scale: {x: 1.0000004, y: 0.9999997, z: 1.0000001}
+    - name: Mouse_RT_WhiskerTop_3_JNT
+      parentName: Mouse_RT_WhiskerTop_2_JNT
+      position: {x: -0.142924, y: 0.00000016570091, z: -0.000000070624374}
+      rotation: {x: -0.00030114088, y: 0.0012879805, z: 0.0031084863, w: 0.9999943}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: Mouse_RT_WhiskerTop_4_JNT
+      parentName: Mouse_RT_WhiskerTop_3_JNT
+      position: {x: -0.1385703, y: 0.000000076293944, z: -0.00000008819235}
+      rotation: {x: 0.000000025378528, y: -0.000000005238687, z: -0.00000007453945,
+        w: 1}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.000001}
+    - name: Mouse_RT_WhiskerTop_4_JNT_end
+      parentName: Mouse_RT_WhiskerTop_4_JNT
+      position: {x: -0, y: 0.13857053, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouse_LF_WhiskerRoot_JNT
+      parentName: Mouse_Snout_JNT
+      position: {x: 0.007863581, y: 0.006132087, z: -0.027143866}
+      rotation: {x: -0.6609431, y: -0.23040886, z: 0.675003, w: -0.23331751}
+      scale: {x: 0.9999998, y: 1.000001, z: 0.9999992}
+    - name: Mouse_Whisker_LF_Top_Spread_grp
+      parentName: Mouse_LF_WhiskerRoot_JNT
+      position: {x: -0, y: -0.00000000144355, z: -0.00000007335096}
+      rotation: {x: -0.000006094574, y: 0.00001625344, z: -0.00000016391276, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 0.9999997}
+    - name: Mouse_LF_WhiskerTop_0_JNT
+      parentName: Mouse_Whisker_LF_Top_Spread_grp
+      position: {x: 0.08566987, y: -0.01511952, z: -0.046028085}
+      rotation: {x: 0.008050139, y: 0.095622525, z: -0.107923634, w: 0.98951703}
+      scale: {x: 1.0000007, y: 1.0000001, z: 1.0000004}
+    - name: Mouse_LF_WhiskerTop_1_JNT
+      parentName: Mouse_LF_WhiskerTop_0_JNT
+      position: {x: 0.17284122, y: -0.00000025510786, z: -0.0000000568412}
+      rotation: {x: 0.0016151341, y: -0.006945975, z: -0.0057593775, w: 0.999958}
+      scale: {x: 0.99999994, y: 1, z: 1.0000004}
+    - name: Mouse_LF_WhiskerTop_2_JNT
+      parentName: Mouse_LF_WhiskerTop_1_JNT
+      position: {x: 0.16262463, y: 0.000000056028366, z: -0.000000013135322}
+      rotation: {x: -0.00095762213, y: 0.0040263464, z: 0.0007049055, w: 0.99999124}
+      scale: {x: 1.0000004, y: 1.0000006, z: 1.0000001}
+    - name: Mouse_LF_WhiskerTop_3_JNT
+      parentName: Mouse_LF_WhiskerTop_2_JNT
+      position: {x: 0.14292556, y: 0.00000002026558, z: 0.00000009340291}
+      rotation: {x: -0.0003014625, y: 0.0012891226, z: 0.0030952378, w: 0.9999944}
+      scale: {x: 1.0000008, y: 1.0000005, z: 1.0000001}
+    - name: Mouse_LF_WhiskerTop_4_JNT
+      parentName: Mouse_LF_WhiskerTop_3_JNT
+      position: {x: 0.13857105, y: -0.00000015854835, z: 0.00000016867335}
+      rotation: {x: 0.00000003085005, y: -0.00000011164225, z: 0.000000023510173,
+        w: 1}
+      scale: {x: 0.99999994, y: 0.9999996, z: 0.99999994}
+    - name: Mouse_LF_WhiskerTop_4_JNT_end
+      parentName: Mouse_LF_WhiskerTop_4_JNT
+      position: {x: -0, y: 0.13857111, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouse_Whisker_LF_Mid_Spread_grp
+      parentName: Mouse_LF_WhiskerRoot_JNT
+      position: {x: -0, y: -0.00000000144355, z: -0.00000007335096}
+      rotation: {x: -0.000006094574, y: 0.000010807066, z: -0.00000023841855, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 0.9999998}
+    - name: Mouse_LF_WhiskerMid_0_JNT
+      parentName: Mouse_Whisker_LF_Mid_Spread_grp
+      position: {x: 0.09395042, y: -0.00057129265, z: -0.037581336}
+      rotation: {x: 0.018688511, y: 0.06050517, z: 0.0017728694, w: 0.9979914}
+      scale: {x: 1.0000008, y: 1.0000005, z: 1.0000002}
+    - name: Mouse_LF_WhiskerMid_1_JNT
+      parentName: Mouse_LF_WhiskerMid_0_JNT
+      position: {x: 0.15872595, y: -0.00000012862729, z: -0.00006183457}
+      rotation: {x: 0.000018857412, y: -0.0072781863, z: -0.001942065, w: 0.9999716}
+      scale: {x: 1, y: 1.0000001, z: 1.0000002}
+    - name: Mouse_LF_WhiskerMid_2_JNT
+      parentName: Mouse_LF_WhiskerMid_1_JNT
+      position: {x: 0.15682755, y: 0.0000000067986545, z: 0.0000046098517}
+      rotation: {x: -0.00000006273693, y: 0.0064134514, z: 0.004275407, w: 0.9999703}
+      scale: {x: 1.0000012, y: 1.0000001, z: 1.0000006}
+    - name: Mouse_LF_WhiskerMid_3_JNT
+      parentName: Mouse_LF_WhiskerMid_2_JNT
+      position: {x: 0.1378601, y: 0.000000005867332, z: 0.0000013425314}
+      rotation: {x: 0.000000024295215, y: 0.0030867588, z: -0.0038120553, w: 0.999988}
+      scale: {x: 1.0000008, y: 1.0000011, z: 1.0000004}
+    - name: Mouse_LF_WhiskerMid_4_JNT
+      parentName: Mouse_LF_WhiskerMid_3_JNT
+      position: {x: 0.15719528, y: -0.00000034106895, z: 0.00000019142665}
+      rotation: {x: 0.00000003747766, y: 0.000007547669, z: -0.00000009367307, w: 1}
+      scale: {x: 1.0000004, y: 1.0000006, z: 0.9999996}
+    - name: Mouse_LF_WhiskerMid_4_JNT_end
+      parentName: Mouse_LF_WhiskerMid_4_JNT
+      position: {x: -0, y: 0.1571952, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouse_Whisker_LF_Bot_Spread_grp
+      parentName: Mouse_LF_WhiskerRoot_JNT
+      position: {x: -0, y: -0.00000000144355, z: -0.00000007335096}
+      rotation: {x: -0.0000058561554, y: 0.000014960764, z: -0.00000017881392, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 0.9999998}
+    - name: Mouse_LF_WhiskerBot_0_JNT
+      parentName: Mouse_Whisker_LF_Bot_Spread_grp
+      position: {x: 0.09406398, y: 0.015825871, z: -0.026546286}
+      rotation: {x: 0.025667107, y: 0.06317212, z: 0.10987888, w: 0.9916033}
+      scale: {x: 1.0000005, y: 0.99999946, z: 1.0000002}
+    - name: Mouse_LF_WhiskerBot_1_JNT
+      parentName: Mouse_LF_WhiskerBot_0_JNT
+      position: {x: 0.16269507, y: 0.000000028610229, z: -0.00000010798048}
+      rotation: {x: -0.0021250576, y: -0.009262901, z: 0.009120777, w: 0.9999132}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
+    - name: Mouse_LF_WhiskerBot_2_JNT
+      parentName: Mouse_LF_WhiskerBot_1_JNT
+      position: {x: 0.1613322, y: -0.000000030994414, z: 0.00000017689351}
+      rotation: {x: -0.00025095668, y: -0.0010584552, z: -0.0017840946, w: 0.9999978}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: Mouse_LF_WhiskerBot_3_JNT
+      parentName: Mouse_LF_WhiskerBot_2_JNT
+      position: {x: 0.14148943, y: -0.00000019073485, z: 0.00000013869699}
+      rotation: {x: 0.0019652394, y: 0.008195511, z: 0.0043082554, w: 0.9999552}
+      scale: {x: 1.0000006, y: 1.0000002, z: 1.0000004}
+    - name: Mouse_LF_WhiskerBot_4_JNT
+      parentName: Mouse_LF_WhiskerBot_3_JNT
+      position: {x: 0.13946065, y: -0.00000000834465, z: 0.00000017441693}
+      rotation: {x: -0.000000015599651, y: -0.0000002533197, z: 0.00000026654013,
+        w: 1}
+      scale: {x: 1.0000001, y: 1.0000007, z: 1.0000005}
+    - name: Mouse_LF_WhiskerBot_4_JNT_end
+      parentName: Mouse_LF_WhiskerBot_4_JNT
+      position: {x: -0, y: 0.13946065, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouse_NoseBase_JNT
+      parentName: Mouse_Snout_JNT
+      position: {x: -0.02707747, y: -0.00000013675249, z: 0.000000001862113}
+      rotation: {x: -0.000000023690513, y: -0.000000050640654, z: 0.0000014007088,
+        w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: Mouse_NoseTip_JNT
+      parentName: Mouse_NoseBase_JNT
+      position: {x: -62914.79, y: -91917.76, z: -222.89323}
+      rotation: {x: -0.000000012631049, y: 0.0000000066356893, z: 0.00000005960463,
+        w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: Mouse_NoseTip_JNT_end
+      parentName: Mouse_NoseTip_JNT
+      position: {x: -0, y: 0.24168427, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouse_RT_Ear_0_JNT
+      parentName: Mouse_Head_JNT
+      position: {x: 0.5622555, y: 0.18251005, z: -0.41363838}
+      rotation: {x: 0.0703657, y: 0.10403568, z: 0.8478107, w: -0.51521105}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000004}
+    - name: Mouse_RT_Ear_1_JNT
+      parentName: Mouse_RT_Ear_0_JNT
+      position: {x: -0.18173558, y: 0.00000009059906, z: -1.9908838e-10}
+      rotation: {x: -0.047701437, y: 0.12254655, z: -0.058304373, w: -0.9895997}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999934}
+    - name: Mouse_RT_Ear_2_JNT
+      parentName: Mouse_RT_Ear_1_JNT
+      position: {x: -0.14902823, y: 0.0000001335144, z: -0.000000028671492}
+      rotation: {x: 0.052604888, y: -0.1817119, z: 0.030006316, w: 0.9814852}
+      scale: {x: 1.0000008, y: 1, z: 0.99999946}
+    - name: Mouse_RT_Ear_3_JNT
+      parentName: Mouse_RT_Ear_2_JNT
+      position: {x: -0.1470324, y: 0.00000015258789, z: -0.00000008485771}
+      rotation: {x: 0.020125395, y: -0.11567265, z: 0.07834207, w: 0.9899886}
+      scale: {x: 1.0000008, y: 1.0000002, z: 0.9999998}
+    - name: Mouse_RT_Ear_4_JNT
+      parentName: Mouse_RT_Ear_3_JNT
+      position: {x: -0.16524997, y: -0.00000010967254, z: -0.000000045230227}
+      rotation: {x: 0.0013279017, y: -0.126342, z: 0.08202222, w: 0.98858905}
+      scale: {x: 1.0000015, y: 0.99999994, z: 0.9999998}
+    - name: Mouse_RT_Ear_4_JNT_end
+      parentName: Mouse_RT_Ear_4_JNT
+      position: {x: -0, y: 0.1652502, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouse_LF_Ear_0_JNT
+      parentName: Mouse_Head_JNT
+      position: {x: 0.56225556, y: 0.1823619, z: 0.41371372}
+      rotation: {x: -0.110551246, y: 0.07477953, z: -0.51471573, w: -0.84690857}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1}
+    - name: Mouse_LF_Ear_1_JNT
+      parentName: Mouse_LF_Ear_0_JNT
+      position: {x: 0.1817313, y: -0.0000002336502, z: -0.00000006918377}
+      rotation: {x: 0.050090827, y: -0.12903182, z: 0.05905536, w: 0.9886123}
+      scale: {x: 1.0000007, y: 1.0000014, z: 0.99999994}
+    - name: Mouse_LF_Ear_2_JNT
+      parentName: Mouse_LF_Ear_1_JNT
+      position: {x: 0.14902763, y: -0.00000018119812, z: -0.0000000063335754}
+      rotation: {x: 0.053782444, y: -0.18827543, z: 0.031752776, w: 0.98012835}
+      scale: {x: 1.0000008, y: 0.99999994, z: 0.9999997}
+    - name: Mouse_LF_Ear_3_JNT
+      parentName: Mouse_LF_Ear_2_JNT
+      position: {x: 0.14703399, y: 0.00000029563904, z: -0.0000000148219526}
+      rotation: {x: 0.015556617, y: -0.093748905, z: 0.08096612, w: 0.9921763}
+      scale: {x: 1.0000013, y: 1.0000005, z: 1}
+    - name: Mouse_LF_Ear_4_JNT
+      parentName: Mouse_LF_Ear_3_JNT
+      position: {x: 0.1495736, y: -0.0017027616, z: -0.029734146}
+      rotation: {x: 0.00012825146, y: -0.031016018, z: 0.07877494, w: 0.99640983}
+      scale: {x: 1.000001, y: 1.0000006, z: 0.99999994}
+    - name: Mouse_LF_Ear_4_JNT_end
+      parentName: Mouse_LF_Ear_4_JNT
+      position: {x: -0, y: 0.15251005, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouse_RT_Clavical_JNT
+      parentName: Mouse_Spine_2_JNT
+      position: {x: -0.11143379, y: -0.05822028, z: 0.11085161}
+      rotation: {x: -0.50667435, y: 0.50416315, z: 0.4938896, w: 0.4951502}
+      scale: {x: 1.0000012, y: 1.0000004, z: 1.0000012}
+    - name: Mouse_RT_Shoulder_JNT
+      parentName: Mouse_RT_Clavical_JNT
+      position: {x: -0.12062385, y: 0.0042596627, z: 0.03744067}
+      rotation: {x: 0.7096649, y: -0.70129, z: 0.06726958, w: -0.0065511074}
+      scale: {x: 1.0000018, y: 1.0000006, z: 1.0000002}
+    - name: Mouse_RT_Elbow_JNT
+      parentName: Mouse_RT_Shoulder_JNT
+      position: {x: -0.00000012516975, y: 0.2698578, z: 0.000000095367426}
+      rotation: {x: -0.0003246515, y: 0.000061872866, z: -0.00045517075, w: 0.9999999}
+      scale: {x: 1.0000001, y: 1.0000005, z: 0.9999997}
+    - name: Mouse_RT_Forearm_JNT
+      parentName: Mouse_RT_Elbow_JNT
+      position: {x: 0.00000010564923, y: 0.28393504, z: 0.000000038146972}
+      rotation: {x: 0.000000026077029, y: 0.000000031745, z: 0.0000001489396, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
+    - name: Mouse_RT_Wrist_JNT
+      parentName: Mouse_RT_Forearm_JNT
+      position: {x: -0.0003710629, y: 0.05675741, z: 0.0005150872}
+      rotation: {x: -0.00074925326, y: -0.0000057661837, z: 0.0012325796, w: 0.999999}
+      scale: {x: 1.0000006, y: 1.0000001, z: 1.0000004}
+    - name: Mouse_RT_Hand_JNT
+      parentName: Mouse_RT_Wrist_JNT
+      position: {x: -0.00000007897615, y: 0.21900943, z: 0.00000007152557}
+      rotation: {x: -0.00000004656613, y: -0.00000001937724, z: 0.00000002989123,
+        w: 1}
+      scale: {x: 1.000001, y: 1.0000008, z: 1.0000002}
+    - name: Mouse_RT_Hand_JNT_end
+      parentName: Mouse_RT_Hand_JNT
+      position: {x: -0, y: 0.21900947, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouse_LF_Clavical_JNT
+      parentName: Mouse_Spine_2_JNT
+      position: {x: -0.11072792, y: -0.058220223, z: -0.11155653}
+      rotation: {x: 0.50000507, y: -0.4977698, z: 0.5002607, w: 0.5019557}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: Mouse_LF_Shoulder_JNT
+      parentName: Mouse_LF_Clavical_JNT
+      position: {x: -0.11604061, y: 0.0010841948, z: -0.03991319}
+      rotation: {x: 0.6996108, y: 0.7093179, z: -0.08118262, w: 0.028676953}
+      scale: {x: 1.0000011, y: 1.0000011, z: 1.0000013}
+    - name: Mouse_LF_Elbow_JNT
+      parentName: Mouse_LF_Shoulder_JNT
+      position: {x: 0.000000019073486, y: -0.2747141, z: -0.000000038146972}
+      rotation: {x: -0.0038995468, y: 0.00010674257, z: 0.00085395545, w: 0.9999921}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000002}
+    - name: Mouse_LF_Forearm_JNT
+      parentName: Mouse_LF_Elbow_JNT
+      position: {x: 0.000000064671035, y: -0.27199984, z: -0.000000023841856}
+      rotation: {x: -0.00000002793967, y: 0.000000009527864, z: -0.0000004172757,
+        w: 1}
+      scale: {x: 1.0000006, y: 1.0000002, z: 1.0000001}
+    - name: Mouse_LF_Wrist_JNT
+      parentName: Mouse_LF_Forearm_JNT
+      position: {x: -0.002153945, y: -0.06961253, z: -0.002062634}
+      rotation: {x: 0.15374316, y: -0.008306804, z: 0.9880087, w: 0.011531881}
+      scale: {x: 1.0000011, y: 1.0000011, z: 1.0000013}
+    - name: Mouse_LF_Wrist_JNT_end
+      parentName: Mouse_LF_Wrist_JNT
+      position: {x: -0, y: 0.06967635, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouse_RT_Pelvis_JNT
+      parentName: Mouse_Root_JNT
+      position: {x: 0.01326065, y: -0.010530775, z: 0.048871163}
+      rotation: {x: 0.8031739, y: 0.11894325, z: -0.086588874, w: 0.57729244}
+      scale: {x: 0.99999994, y: 0.99999976, z: 1}
+    - name: Mouse_RT_Hip_JNT
+      parentName: Mouse_RT_Pelvis_JNT
+      position: {x: -0.000000023841856, y: 0.19495818, z: -0.0000000110429434}
+      rotation: {x: -0.120787255, y: 0.80289865, z: 0.5774898, w: -0.08526285}
+      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000006}
+    - name: Mouse_RT_Knee_JNT
+      parentName: Mouse_RT_Hip_JNT
+      position: {x: -0.3670667, y: -0.00000001116639, z: 0.000000040566036}
+      rotation: {x: -0.97181976, y: -0.23558569, z: 0.007723487, w: -0.002492666}
+      scale: {x: 0.99999994, y: 0.99999946, z: 1.0000005}
+    - name: Mouse_RT_Ankle_JNT
+      parentName: Mouse_RT_Knee_JNT
+      position: {x: -0.1848587, y: -0.000000006745138, z: 0.000000020617344}
+      rotation: {x: 0.6469818, y: 0.7624623, z: -0.0047767065, w: -0.0065611834}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1}
+    - name: Mouse_RT_Foot_JNT
+      parentName: Mouse_RT_Ankle_JNT
+      position: {x: -0.23922761, y: 0.00000007937946, z: 0.000000079882284}
+      rotation: {x: -0.00000025439067, y: -0.000000094154515, z: -0.1540952, w: 0.98805606}
+      scale: {x: 0.9999998, y: 1, z: 1.0000001}
+    - name: Mouse_RT_Toe_JNT
+      parentName: Mouse_RT_Foot_JNT
+      position: {x: -0.12611736, y: -0.000000012853424, z: 0.000000015854404}
+      rotation: {x: -0, y: -0, z: -2.3952027e-14, w: 1}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000005}
+    - name: Mouse_RT_Toe_JNT_end
+      parentName: Mouse_RT_Toe_JNT
+      position: {x: -0, y: 0.12611732, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouse_LF_Pelvis_JNT
+      parentName: Mouse_Root_JNT
+      position: {x: 0.013261345, y: -0.010530758, z: -0.048871193}
+      rotation: {x: -0.08658732, y: -0.5772926, z: 0.80317426, w: -0.11894104}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: Mouse_LF_Hip_JNT
+      parentName: Mouse_LF_Pelvis_JNT
+      position: {x: 0.000000013709068, y: 0.19495769, z: 0.0000000021513256}
+      rotation: {x: 0.57749, y: -0.085261375, z: -0.120785, w: 0.80289906}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000005}
+    - name: Mouse_LF_Knee_JNT
+      parentName: Mouse_LF_Hip_JNT
+      position: {x: -0.36706695, y: -8.5623014e-10, z: -0.00000006702259}
+      rotation: {x: -0.9717923, y: -0.23570248, z: -0.0076227216, w: 0.0024605982}
+      scale: {x: 1.0000007, y: 1.0000001, z: 1.0000001}
+    - name: Mouse_LF_Ankle_JNT
+      parentName: Mouse_LF_Knee_JNT
+      position: {x: -0.18485868, y: -0.000000011436386, z: 0.000000017104831}
+      rotation: {x: 0.64689046, y: 0.7625409, z: 0.0047136215, w: 0.0064757597}
+      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000006}
+    - name: Mouse_LF_Foot_JNT
+      parentName: Mouse_LF_Ankle_JNT
+      position: {x: -0.23922795, y: -0.00000014924996, z: 0.00000006637755}
+      rotation: {x: -0.0000006742483, y: -0.00000012264125, z: -0.15409464, w: 0.9880562}
+      scale: {x: 0.99999946, y: 1.0000002, z: 0.9999997}
+    - name: Mouse_LF_Toe_JNT
+      parentName: Mouse_LF_Foot_JNT
+      position: {x: -0.12611674, y: -0.0000000010883775, z: 0.000000029091103}
+      rotation: {x: -0, y: -0, z: -8.2690656e-14, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: Mouse_LF_Toe_JNT_end
+      parentName: Mouse_LF_Toe_JNT
+      position: {x: -0, y: 0.12611684, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouse_Tail_0_JNT
+      parentName: Mouse_Root_JNT
+      position: {x: 0.010508057, y: 0.35842654, z: 4.5930162e-10}
+      rotation: {x: 0.70644933, y: -0.7077637, z: 0.00000023821482, w: 0.00000017881392}
+      scale: {x: 0.9999998, y: 0.9999994, z: 0.9999999}
+    - name: Mouse_Tail_Bend_1_grp
+      parentName: Mouse_Tail_0_JNT
+      position: {x: 0.000000012895687, y: -0.000000019460314, z: -1.2505552e-14}
+      rotation: {x: -9.488943e-11, y: -0.00000016852559, z: 0.000000029802322, w: 1}
+      scale: {x: 0.99999964, y: 0.99999994, z: 0.9999999}
+    - name: Mouse_Tail_1_JNT
+      parentName: Mouse_Tail_Bend_1_grp
+      position: {x: -0.12820554, y: -0.000000009536746, z: 0.000000024354467}
+      rotation: {x: -0, y: -0, z: -1.5991297e-17, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: Mouse_Tail_Bend_2_grp
+      parentName: Mouse_Tail_1_JNT
+      position: {x: 0.000000028610229, y: 0.000000028610227, z: 1.1368684e-15}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Mouse_Tail_2_JNT
+      parentName: Mouse_Tail_Bend_2_grp
+      position: {x: 0.000000057220458, y: 0.00000003814697, z: -1.1368683e-14}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Mouse_Tail_Bend_3_grp
+      parentName: Mouse_Tail_2_JNT
+      position: {x: 0.000000057220458, y: 0.00000003814697, z: -1.1368683e-14}
+      rotation: {x: -0.000000042167432, y: 1.8602009e-11, z: 7.105429e-15, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: Mouse_Tail_3_JNT
+      parentName: Mouse_Tail_Bend_3_grp
+      position: {x: -0.19170913, y: -0.000000009536744, z: 0.00000003641791}
+      rotation: {x: -0.000006239864, y: -0.000000249713, z: -0.0058412845, w: 0.99998295}
+      scale: {x: 1.0000007, y: 1, z: 1.0000006}
+    - name: Mouse_Tail_Bend_4_grp
+      parentName: Mouse_Tail_3_JNT
+      position: {x: 0.000000038146972, y: 0.000000019073484, z: 1.1368684e-15}
+      rotation: {x: 0.00000004214552, y: 2.477804e-10, z: -0.0000065858476, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1.0000007}
+    - name: Mouse_Tail_4_JNT
+      parentName: Mouse_Tail_Bend_4_grp
+      position: {x: -0.20490335, y: -0.00000017166137, z: 0.000000038927272}
+      rotation: {x: -0.0000048279935, y: 0.00000002130061, z: 0.0025567948, w: 0.9999967}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: Mouse_Tail_Bend_5_grp
+      parentName: Mouse_Tail_4_JNT
+      position: {x: 0.000000019073488, y: -0.000000038146972, z: 9.094947e-15}
+      rotation: {x: -0.000000042168267, y: -1.3630164e-10, z: 0.0000014603139, w: 1}
+      scale: {x: 1.0000002, y: 0.9999998, z: 1.0000004}
+    - name: Mouse_Tail_5_JNT
+      parentName: Mouse_Tail_Bend_5_grp
+      position: {x: -0.18212764, y: -0.00000008106232, z: 0.000000034597146}
+      rotation: {x: 0.0000001055554, y: -0.00000006268975, z: -0.000021726124, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.9999998}
+    - name: Mouse_Tail_Bend_6_grp
+      parentName: Mouse_Tail_5_JNT
+      position: {x: 0.00000011444091, y: -0.00000023782253, z: -0.0000000910406}
+      rotation: {x: -0.0033114254, y: 0.9999945, z: 0.000011006051, w: 0.00000008927887}
+      scale: {x: 0.99999946, y: 1, z: 0.9999997}
+    - name: Mouse_Tail_6_JNT
+      parentName: Mouse_Tail_Bend_6_grp
+      position: {x: -0.18095285, y: 0.00006313324, z: -0.0000003254964}
+      rotation: {x: 0.0033380091, y: -0.99999446, z: -0.000010942794, w: 0.000000068207186}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: Mouse_Tail_Bend_7_grp
+      parentName: Mouse_Tail_6_JNT
+      position: {x: 0.00000013351435, y: 0.000000047683713, z: -1.6279955e-12}
+      rotation: {x: 0.00000006318637, y: 0.000000021441778, z: -0.000017911196, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1.0000001}
+    - name: Mouse_Tail_7_JNT
+      parentName: Mouse_Tail_Bend_7_grp
+      position: {x: -0.17853332, y: 0.0000000047683875, z: 0.00000003391413}
+      rotation: {x: 0.000010878575, y: 0.0000002477881, z: 0.0033558607, w: 0.9999944}
+      scale: {x: 0.9999997, y: 1, z: 0.9999998}
+    - name: Mouse_Tail_Bend_8_grp
+      parentName: Mouse_Tail_7_JNT
+      position: {x: 0.0000000762939, y: 0.00000006675722, z: 1.364242e-14}
+      rotation: {x: -0, y: -0, z: -2.6955816e-12, w: 1}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000005}
+    - name: Mouse_Tail_8_JNT
+      parentName: Mouse_Tail_Bend_8_grp
+      position: {x: -0.14498009, y: -0.00000019073482, z: 0.000000027541036}
+      rotation: {x: -0.0000033296592, y: -0.00000029356033, z: -0.010967852, w: 0.99993986}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000004}
+    - name: Mouse_Tail_Bend_9_grp
+      parentName: Mouse_Tail_8_JNT
+      position: {x: -0.00000007629397, y: 0.0000001907349, z: -9.094947e-15}
+      rotation: {x: -1.7735143e-11, y: -8.907362e-11, z: 0.00002083461, w: 1}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000007}
+    - name: Mouse_Tail_9_JNT
+      parentName: Mouse_Tail_Bend_9_grp
+      position: {x: -0.16419044, y: -0.00000011444087, z: 0.00000003118612}
+      rotation: {x: -2.2737538e-13, y: -2.2737365e-13, z: 0.00000005774563, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 1.0000002}
+    - name: Mouse_Tail_9_JNT_end
+      parentName: Mouse_Tail_9_JNT
+      position: {x: -0, y: 0.16419026, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouse_Geo
+      parentName: Anim_Idle_wEyes(Clone)
+      position: {x: -6.0986367e-24, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: -0.00000004371139, z: 3.6219773e-15, w: 1}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: Mouse_Eyes
+      parentName: Anim_Idle_wEyes(Clone)
+      position: {x: -6.0986367e-24, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: -0.00000004371139, z: 3.6219773e-15, w: 1}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 16
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

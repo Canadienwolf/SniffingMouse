@@ -7,7 +7,7 @@ public class test_AnimControl : MonoBehaviour
 {
     test_InputChecker inputCheck = new test_InputChecker();
     Animator anim;
-    string[] animStates = new string[] {"Idle", "Walking", "Running" };
+    string[] animStates = new string[] {"Idle", "Walking", "Running", "Jump" };
 
     private void Awake()
     {
@@ -17,7 +17,11 @@ public class test_AnimControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inputCheck.Running())
+        if (inputCheck.JumpStart())
+        {
+            SetAnimBool("Jump");
+        }
+        else if (inputCheck.Running())
         {
             SetAnimBool("Running");
         }

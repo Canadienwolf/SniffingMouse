@@ -17,6 +17,7 @@ public class test_AnimationControl : MonoBehaviour
         anim.SetBool("Jumping", psm.isJumping);
         anim.SetBool("Climbing", psm.isClimbing);
         anim.SetBool("CaughtBySmell", psm.caughtBySmell);
+        anim.SetBool("Smelling", psm.isSmelling);
 
         if (psm.isEating)
             psm.caughtBySmell = false;

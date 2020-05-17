@@ -16,11 +16,21 @@ public class test_InputChecker
 
     public bool IsMoving()
     {
-        return (MoveDirection() != Vector3.zero && isGrounded);
+        return (MoveDirection() != Vector3.zero);
     }
 
     public bool Running()
     {
-        return (isGrounded && Input.GetKey(KeyCode.LeftShift) && IsMoving());
+        return (Input.GetKey(KeyCode.LeftShift) && IsMoving());
+    }
+
+    public bool JumpStart()
+    {
+        return (Input.GetKeyDown("space") && isGrounded);
+    }
+
+    public bool MidJump()
+    {
+        return Input.GetKey("space");
     }
 }
