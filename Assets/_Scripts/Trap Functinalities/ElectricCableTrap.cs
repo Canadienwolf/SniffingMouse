@@ -18,12 +18,11 @@ public class ElectricCableTrap : MonoBehaviour
     private void Start()
     {
         cam.SetActive(false);
-        _spark= GetComponent<ParticleSystem>();
-
-
+        _spark= transform.GetChild(0).GetComponent<ParticleSystem>();
+        StartCoroutine(sparking());
 
     }
- 
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Player")
@@ -37,7 +36,6 @@ public class ElectricCableTrap : MonoBehaviour
             FindObjectOfType<DeathMusic>().dying = true;
             Invoke("Transition", 2.4f);
             Invoke("Kill", 3);
-            StartCoroutine (sparking());
         }
     }
 
@@ -59,10 +57,13 @@ public class ElectricCableTrap : MonoBehaviour
 
     IEnumerator sparking()
     {
-        _spark.Play();
-        //TODO Gotta reference the fmod event emitter and play a sound that is also on the gameobject that the script is on.
-        
-        
-        yield return new WaitForSeconds(10);
+        while (true)
+        {
+            _spark.Play();
+
+            //TODO Gotta reference the fmod event emitter and play a sound that is also on the gameobject that the script is on.
+
+            yield return new WaitForSeconds(1);
+        }
     }
 }

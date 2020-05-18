@@ -156,8 +156,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1827226128182048838, guid: 14233fa1cba3dc34388decfa2737ce8f,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 88ef4ac7489ed174ab11fc286c65e5a5, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -433,7 +432,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: temp_anim_climb
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -5615059239977592021}
@@ -449,7 +448,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c3028f34540a1d34da4902de43813c35, type: 2}
+  m_Motion: {fileID: 7400000, guid: a7a71eff6b24f7847997f31de25c45d7, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -625,7 +624,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: temp_anim_run
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -5693216879702515157}
@@ -805,7 +804,7 @@ AnimatorStateMachine:
     m_Position: {x: 360, y: -50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3353191558174281838}
-    m_Position: {x: 320, y: 1380, z: 0}
+    m_Position: {x: 310, y: 1110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7170965307164233743}
     m_Position: {x: 1830, y: 370, z: 0}
