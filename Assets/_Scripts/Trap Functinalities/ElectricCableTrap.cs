@@ -36,6 +36,7 @@ public class ElectricCableTrap : MonoBehaviour
             FindObjectOfType<DeathMusic>().dying = true;
             Invoke("Transition", 2.4f);
             Invoke("Kill", 3);
+            
         }
     }
 
@@ -52,7 +53,10 @@ public class ElectricCableTrap : MonoBehaviour
 
     private void Update()
     {
-        
+        if (playerstatesA.lockController)
+        {
+            GetComponent<FMODUnity.StudioEventEmitter>().Stop();
+        }
     }
 
     IEnumerator sparking()
@@ -60,10 +64,13 @@ public class ElectricCableTrap : MonoBehaviour
         while (true)
         {
             _spark.Play();
+            GetComponent<FMODUnity.StudioEventEmitter>().Play();
 
             //TODO Gotta reference the fmod event emitter and play a sound that is also on the gameobject that the script is on.
 
             yield return new WaitForSeconds(1);
         }
+        
+        
     }
 }
