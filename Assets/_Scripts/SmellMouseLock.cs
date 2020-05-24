@@ -58,6 +58,7 @@ public class SmellMouseLock : MonoBehaviour
             float angle = Mathf.Atan2(desiredDir.x, desiredDir.z) * Mathf.Rad2Deg;
             _player.transform.rotation = Quaternion.Lerp(_player.transform.rotation, Quaternion.AngleAxis(angle, Vector3.up), Time.deltaTime * 10);
             timeCounter += Time.deltaTime;
+            /*
             if (Input.GetKeyDown("q") || Input.GetButtonDown("Cancel"))
             {
                 buttonCount ++;
@@ -69,12 +70,17 @@ public class SmellMouseLock : MonoBehaviour
                 mouseCaught = false;
                 //_player.GetComponent<Rigidbody>().useGravity = true;
             }
-
-            if (_player.GetComponent<test_PlayerMovement03>().psm.isEating)
+            /*
+            if(_player.GetComponent<test_PlayerMovement03>() != null)
             {
-                buttonCount = 0;
-                mouseCaught = false;
+                if (_player.GetComponent<test_PlayerMovement03>().psm.isEating)
+                {
+                    buttonCount = 0;
+                    mouseCaught = false;
+                }
             }
+            */
+            
         }
         else
         {

@@ -22,6 +22,7 @@ public class CheeseScript : MonoBehaviour
         //detecting the collision with the player !
         if (other.CompareTag("Player"))
         {
+            InputManager.isEating = true;
             target = other.gameObject;
             //checking if is the 1 collision with the player or not !
             if (moreThanOnce == false)
@@ -101,5 +102,6 @@ public class CheeseScript : MonoBehaviour
         playerstatesA.isEating = false;
         moreThanOnce = false;
         CheeseManager.current.CheeseDestruction();
+        InputManager.isEating = false;
     }
 }
