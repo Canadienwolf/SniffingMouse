@@ -15,6 +15,7 @@ public class test_Cartrap : MonoBehaviour
     public GameObject deathCam;
     public PlayerStatesMovements psm;
     public GameObject explosion;
+    public GameObject CrashSFX;
 
     private bool hit;
     private Vector3 randRot;
@@ -63,6 +64,7 @@ public class test_Cartrap : MonoBehaviour
         if (col.gameObject.tag != "Player")
         {
             hit = false;
+            CrashSFX.SetActive(true);
             deathCam.SetActive(true);
             FindObjectOfType<DeathMusic>().dying = true;
             Instantiate(explosion, transform.position + new Vector3(0, playerHeightOffest, 0), Quaternion.identity);
