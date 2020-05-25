@@ -165,4 +165,12 @@ public class MoveBehavior : MonoBehaviour
             isJumping = false;
         }
     }
+
+    private void OnDisable()
+    {
+        InputManager.isClimbing = false;
+        InputManager.isEating = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 }

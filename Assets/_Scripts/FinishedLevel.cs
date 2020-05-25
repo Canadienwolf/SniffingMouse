@@ -45,7 +45,7 @@ public class FinishedLevel : MonoBehaviour
 
     void StartCatch(GameObject player)
     {
-        player.GetComponent<test_PlayerMovement03>().psm.lockController = true;
+        //player.GetComponent<test_PlayerMovement03>().psm.lockController = true;
         Invoke("Transition", endTime - .6f);
         Invoke("Catch", endTime);
     }
