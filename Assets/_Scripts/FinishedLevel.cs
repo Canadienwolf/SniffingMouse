@@ -38,7 +38,7 @@ public class FinishedLevel : MonoBehaviour
                 }
                
             }
-
+            other.GetComponent<FinishLevel>().FinishAnim();
             StartCatch(other.gameObject);
         }
     }

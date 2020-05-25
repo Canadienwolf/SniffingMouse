@@ -40,8 +40,10 @@ public class tutorial_manager : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            vidActive = true;
             print("Entered");
             ActivateText(true);
+            ActivateVid(vidActive);
         }
     }
 

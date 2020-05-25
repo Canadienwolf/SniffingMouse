@@ -23,12 +23,15 @@ public class MoveBehavior : MonoBehaviour
     float climbCounter;
     bool startedClimbing, canClimb;
 
+    Rigidbody rb;
+
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -36,6 +39,8 @@ public class MoveBehavior : MonoBehaviour
     {
         if (InputManager.isGrounded)
             canClimb = true;
+        else if(!InputManager.isClimbing)
+            rb.AddForce(Vector3.down * 9.81f);
 
         if (InputManager.IsMoving() && !startedMoving)
         {
@@ -76,7 +81,7 @@ public class MoveBehavior : MonoBehaviour
 
         if (!InputManager.Climbing())
         {
-            GetComponent<Rigidbody>().useGravity = true;
+            rb.useGravity = true;
             startedClimbing = false;
             InputManager.isClimbing = false;
         }
@@ -141,16 +146,16 @@ public class MoveBehavior : MonoBehaviour
         {
             if (!startedClimbing)
             {
-                GetComponent<Rigidbody>().velocity = Vector3.zero;
+                rb.velocity = Vector3.zero;
             }
             startedClimbing = true;
             InputManager.isClimbing = true;
-            GetComponent<Rigidbody>().useGravity = false;
+            rb.useGravity = false;
             transform.Translate(Vector3.up * Time.deltaTime * climbSpeed);
             climbCounter = Mathf.MoveTowards(climbCounter, 0, Time.deltaTime);
             if (climbCounter == 0)
             {
-                GetComponent<Rigidbody>().useGravity = true;
+                rb.useGravity = true;
                 startedClimbing = false;
                 canClimb = false;
                 InputManager.isClimbing = false;

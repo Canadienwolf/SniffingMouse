@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1911409756330481268}
   - component: {fileID: 1772607103923564645}
   - component: {fileID: 4381486135841719798}
+  - component: {fileID: 5498107347923043403}
   m_Layer: 0
   m_Name: Mirror_Rectangle_v01
   m_TagString: Untagged
@@ -80,3 +81,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5498107347923043403
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6482974936683433489}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2798679184701397017, guid: 6cbee9cdf5c789c43bfb19a60e0a357c, type: 3}
