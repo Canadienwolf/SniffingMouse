@@ -10,7 +10,7 @@ public class LastLevelCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (FinishedLevel.nextSceneLoad > 10) /* < we will Change this int value to whatever we want when we have more 
+        if (FinishedLevel.nextSceneLoad > 11) /* < we will Change this int value to whatever we want when we have more 
                                                                   levels  */
         {
             Debug.Log("You Completed ALL Levels");
