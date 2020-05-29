@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveBehavior : MonoBehaviour
 {
-
+    [SerializeField] PlayerStatesMovements psm;
     [SerializeField] float walkSpeed = 5f;
     [SerializeField] float runSpeed = 15f;
     [SerializeField] float moveDelay = 0.1f;
@@ -37,57 +37,61 @@ public class MoveBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (InputManager.isGrounded)
-            canClimb = true;
-        else if(!InputManager.isClimbing)
-            rb.AddForce(Vector3.down * 9.81f);
-
-        if (InputManager.IsMoving() && !startedMoving)
+        if (!psm.lockController)
         {
-            startedMoving = true;
+            if (InputManager.isGrounded)
+                canClimb = true;
+            else if (!InputManager.isClimbing)
+                rb.AddForce(Vector3.down * 9.81f);
+
+            if (InputManager.IsMoving() && !startedMoving)
+            {
+                startedMoving = true;
+                if (InputManager.isGrounded)
+                {
+                    Invoke("StartMoving", moveDelay);
+                }
+                else
+                {
+                    StartMoving();
+                }
+            }
+            if (Input.GetKeyUp("space"))
+                EndMoving();
+
+            if (InputManager.Running())
+            {
+                Move(runSpeed);
+            }
+            else if (InputManager.Climbing())
+                Climb();
+            else if (InputManager.IsMoving())
+                Move(walkSpeed);
+            else
+                EndMoving();
+            if (!InputManager.Climbing())
+                GetComponent<Rigidbody>().useGravity = true;
+
+            if (InputManager.Jump())
+                Invoke("StartJump", jumpDelay);
+
             if (InputManager.isGrounded)
             {
-                Invoke("StartMoving", moveDelay);
+                canClimb = true;
+                climbCounter = climbTime;
             }
-            else
+
+            if (!InputManager.Climbing())
             {
-                StartMoving();
+                rb.useGravity = true;
+                startedClimbing = false;
+                InputManager.isClimbing = false;
             }
+
+            Jump();
+            Rotate();
         }
-        if (Input.GetKeyUp("space"))
-            EndMoving();
-
-        if (InputManager.Running())
-        {
-            Move(runSpeed);
-        }
-        else if (InputManager.Climbing())
-            Climb();
-        else if (InputManager.IsMoving())
-            Move(walkSpeed);
-        else
-            EndMoving();
-        if(!InputManager.Climbing())
-            GetComponent<Rigidbody>().useGravity = true;
-
-        if (InputManager.Jump())
-            Invoke("StartJump", jumpDelay);
-
-        if (InputManager.isGrounded)
-        {
-            canClimb = true;
-            climbCounter = climbTime;
-        }
-
-        if (!InputManager.Climbing())
-        {
-            rb.useGravity = true;
-            startedClimbing = false;
-            InputManager.isClimbing = false;
-        }
-
-        Jump();
-        Rotate();
+        
     }
 
     void Jump()

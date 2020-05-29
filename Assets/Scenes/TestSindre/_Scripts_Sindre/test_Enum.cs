@@ -1,10 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class test_Enum : MonoBehaviour
+public class test_Enum
 {
-    public enum cheeseSizes {Large, Medium, Small}
 
-    public cheeseSizes cS;
 }

@@ -49,12 +49,13 @@ public class CheeseManager : MonoBehaviour
     void Start()
     {
         mouseDoors = GameObject.FindObjectsOfType<MouseDoor>();
-        Invoke("LateStart", 0.1f);
+        StartCoroutine(LateStart());
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    void LateStart()
+    IEnumerator LateStart()
     {
+        yield return new WaitForSeconds(0.1f);
         cheeses = GameObject.FindGameObjectsWithTag("Cheese");
         cheeseHuds = new GameObject[cheeses.Length];
 
@@ -70,6 +71,19 @@ public class CheeseManager : MonoBehaviour
                 cheeseHuds[i].GetComponent<Image>().sprite = goldenCheese;
             }
         }
+        for (int i = 0; i < cheeses.Length; i++)
+        {
+            cheeseHuds[i].SetActive(false);
+        }
+
+        for (int i = 0; i < cheeses.Length; i++)
+        {
+            yield return new WaitForSeconds(0.5f);
+            cheeseHuds[i].SetActive(true);
+        }
+
+        yield return new WaitForSeconds(2);
+
         for (int i = 0; i < cheeses.Length; i++)
         {
             cheeseHuds[i].SetActive(false);

@@ -5332,6 +5332,7 @@ MonoBehaviour:
   driveSpeed: 30
   turnSpeed: 50
   deathDelay: 4
+  driveTime: 5
   playerHeightOffest: 3
   drivingCam: {fileID: 854307202}
   deathCam: {fileID: 2134684971}
@@ -22682,7 +22683,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1017507084
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25383,7 +25384,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2032582074
 MonoBehaviour:
@@ -25788,7 +25789,7 @@ PrefabInstance:
     - target: {fileID: 2827145022400522611, guid: f4cfaaf8fd7b50b40badc7cf57333d17,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2827145022400522611, guid: f4cfaaf8fd7b50b40badc7cf57333d17,
         type: 3}

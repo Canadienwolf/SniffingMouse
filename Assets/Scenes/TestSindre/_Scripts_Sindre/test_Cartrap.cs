@@ -10,6 +10,7 @@ public class test_Cartrap : MonoBehaviour
     public float driveSpeed = 5f;
     public float turnSpeed = 10f;
     public float deathDelay = 3f;
+    public float driveTime = 5f;
     public float playerHeightOffest = 3f;
     public GameObject drivingCam;
     public GameObject deathCam;
@@ -17,14 +18,17 @@ public class test_Cartrap : MonoBehaviour
     public GameObject explosion;
     public GameObject CrashSFX;
 
-    private bool hit;
+    private bool hit, canControl;
     private Vector3 randRot;
+    private GameObject player;
+    private Camera cam;
 
     // Start is called before the first frame update
     void Start()
     {
         drivingCam.SetActive(false);
         deathCam.SetActive(false);
+        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -33,20 +37,22 @@ public class test_Cartrap : MonoBehaviour
         if (hit)
         {
             transform.Translate(Vector3.forward * driveSpeed * Time.deltaTime);
-
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(randRot), Time.deltaTime * turnSpeed);
+            if(canControl)
+                transform.rotation *= Quaternion.Euler(new Vector3(0, Input.GetAxis("Horizontal") * Time.deltaTime * turnSpeed * 5, 0));
         }
     }
 
     void Hit()
     {
         hit = true;
+        canControl = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
+            player = other.gameObject;
             psm.lockController = true;
             randRot = new Vector3(0, Random.Range(-360, 360), 0);
             drivingCam.SetActive(true);
@@ -56,6 +62,7 @@ public class test_Cartrap : MonoBehaviour
             other.transform.rotation = transform.rotation;
             other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             Invoke("Hit", startDelay);
+            Invoke("ReleasePlayer", driveTime);
         }
     }
 
@@ -63,14 +70,35 @@ public class test_Cartrap : MonoBehaviour
     {
         if (col.gameObject.tag != "Player")
         {
+            if (canControl)
+            {
+                CrashSFX.SetActive(true);
+                deathCam.SetActive(true);
+                psm.lockController = true;
+                FindObjectOfType<DeathMusic>().dying = true;
+                CancelInvoke();
+                Invoke("Transition", deathDelay - 0.6f);
+                Invoke("Die", deathDelay);
+            }
             hit = false;
-            CrashSFX.SetActive(true);
-            deathCam.SetActive(true);
-            FindObjectOfType<DeathMusic>().dying = true;
             Instantiate(explosion, transform.position + new Vector3(0, playerHeightOffest, 0), Quaternion.identity);
-            Invoke("Transition", deathDelay - 0.6f);
-            Invoke("Die", deathDelay);
+            GetComponent<test_Cartrap>().enabled = false;
+            GetComponent<BoxCollider>().isTrigger = false;
         }
+    }
+
+    void ReleasePlayer()
+    {
+        player.transform.parent = null;
+        psm.lockController = false;
+        drivingCam.SetActive(false);
+        canControl = false;
+        Invoke("UnsetKin", 1f);
+    }
+
+    void UnsetKin()
+    {
+        player.GetComponent<Rigidbody>().isKinematic = false;
     }
 
     void Transition()
