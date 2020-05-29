@@ -103,7 +103,6 @@
 		</property>
 		<relationship name="sounds">
 			<destination>{d0a32970-82a6-4255-ba1e-ba399073f9ba}</destination>
-			<destination>{89bc86ca-e1e8-467a-82fc-e421f2fc4f48}</destination>
 		</relationship>
 		<relationship name="playPercentages">
 			<destination>{9f1a03a7-d812-4aba-b575-c086668bb9fa}</destination>
@@ -150,14 +149,6 @@
 		</property>
 		<relationship name="audioFile">
 			<destination>{cec8927a-4b6d-43b1-b22f-f9661953ec5e}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{89bc86ca-e1e8-467a-82fc-e421f2fc4f48}">
-		<property name="looping">
-			<value>true</value>
-		</property>
-		<relationship name="audioFile">
-			<destination>{c900edd1-0d23-4435-b88d-b74f9b8299c2}</destination>
 		</relationship>
 	</object>
 	<object class="PlayPercentage" id="{9f1a03a7-d812-4aba-b575-c086668bb9fa}">
