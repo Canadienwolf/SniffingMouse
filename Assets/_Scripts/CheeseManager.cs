@@ -34,7 +34,7 @@ public class CheeseManager : MonoBehaviour
         cheeseFound++;
         if (cheeseFound == cheeseNumToFinish)
         {
-            onFoundAllCheese();
+            FoundAllCheese();
             Invoke("ActivateVirtualCam", 0.5f);
             Invoke("DeactivateVirtualCam", 3);
         }

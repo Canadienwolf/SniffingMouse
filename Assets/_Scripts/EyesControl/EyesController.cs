@@ -11,7 +11,6 @@ public class EyesController : MonoBehaviour
 
     public Vector2 offset;
 
-
     private void Start()
     {
         ChangeEyes();

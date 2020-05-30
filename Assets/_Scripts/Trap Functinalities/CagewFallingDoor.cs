@@ -62,9 +62,4 @@ public class CagewFallingDoor : MonoBehaviour
             target = null;
         }
     }
-
-    private void OnDestroy()
-    {
-        gc.Grounded(false);
-    }
 }

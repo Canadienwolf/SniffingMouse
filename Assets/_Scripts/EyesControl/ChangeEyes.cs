@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class ChangeEyes : MonoBehaviour
+[Serializable]
+public class ChangeEyes
 {
-    public delegate void ChangeEye();
-    public static event ChangeEye OnChangeEyes;
+    public EyesController.emotions emotions;
 
-    public static void Change()
+    public void Change()
     {
-
+        GameObject.FindObjectOfType<EyesController>().EyeState = emotions;
+        GameObject.FindObjectOfType<EyesController>().ChangeEyes();
     }
 }

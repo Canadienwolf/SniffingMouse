@@ -42,7 +42,8 @@ public class CatchPlayer : MonoBehaviour
         if (freezePlayer) player.GetComponent<test_PlayerMovement03>().psm.lockController = true;
         if (virtualCam != null) virtualCam.SetActive(true);
         FindObjectOfType<DeathMusic>().dying = true;
-        SFX.SetActive(true);
+        if(SFX != null)
+            SFX.SetActive(true);
         Invoke("Transition", endTime - .6f);
         Invoke("Catch", endTime);
     }
@@ -57,7 +58,7 @@ public class CatchPlayer : MonoBehaviour
         if (this.gameObject.transform.parent.name == "Bucket")
         {
             DeathScreensScript.sprite = 6;
-            endMessage = "you got catched";
+            endMessage = "You drowned";
         }
         else if(this.gameObject.transform.parent.name == "TrapCage_v01")
         {
@@ -72,5 +73,7 @@ public class CatchPlayer : MonoBehaviour
         }
 
         gameStatesA.EndGame(endMessage, lostScore);
+        SceneManager.LoadScene("menu_ScoreDisplay", LoadSceneMode.Single);
+
     }
 }

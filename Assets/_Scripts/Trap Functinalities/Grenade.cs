@@ -80,7 +80,7 @@ public class Grenade : MonoBehaviour
     void Kill()
     {
         DeathScreensScript.sprite = 3;
-         SceneManager.LoadScene("menu_ScoreDisplay", LoadSceneMode.Single);
+        SceneManager.LoadScene("menu_ScoreDisplay", LoadSceneMode.Single);
         
     }
 }

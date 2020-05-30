@@ -101,7 +101,8 @@ public class CheeseScript : MonoBehaviour
         playerstatesA.lockController = false;
         playerstatesA.isEating = false;
         moreThanOnce = false;
-        CheeseManager.current.CheeseDestruction();
+        if(CheeseManager.current != null)
+            CheeseManager.current.CheeseDestruction();
         InputManager.isEating = false;
     }
 }
