@@ -17,12 +17,13 @@ public class Nails : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && !died)
         {
+            print("Hello");
             died = true;
-            collision.gameObject.GetComponent<test_PlayerMovement03>().psm.lockController = true;
+            psm.lockController = true;
             ParticleSystem ps = Instantiate(hit, collision.transform.position + new Vector3(0, 1, 0), Quaternion.identity);
             ps.Play();
             GameObject go = Instantiate(head, collision.transform.position, collision.transform.localRotation);
-            go.transform.GetChild(0).gameObject.GetComponent<Rigidbody>().AddForce(collision.gameObject.transform.forward + Vector3.up * collision.gameObject.GetComponent<test_PlayerMovement03>().currentMoveSpeed, ForceMode.Impulse);
+            go.transform.GetChild(0).gameObject.GetComponent<Rigidbody>().AddForce(collision.gameObject.transform.forward + Vector3.up, ForceMode.Impulse);
             go.transform.GetChild(1).gameObject.SetActive(true);
             go.transform.GetChild(1).transform.position = collision.transform.parent.transform.GetChild(2).transform.position;
             collision.gameObject.transform.GetChild(0).gameObject.SetActive(false);

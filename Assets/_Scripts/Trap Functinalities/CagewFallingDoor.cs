@@ -31,7 +31,7 @@ public class CagewFallingDoor : MonoBehaviour
                 Invoke("CatchPlayer", 2);
             }     
         }
-        if (door == null)
+        if (door == null && cheese.transform.parent == null)
         {
             cheese.transform.parent = null;
             Destroy(gameObject);
