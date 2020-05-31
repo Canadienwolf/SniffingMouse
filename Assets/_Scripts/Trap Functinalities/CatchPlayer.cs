@@ -34,6 +34,18 @@ public class CatchPlayer : MonoBehaviour
             {
                 StartCatch(other.gameObject);
             }
+            else 
+            {
+                if ((other.GetComponent<PickupSystem>().pickableObject.GetComponent<SharpOrHeavy>().type == SharpOrHeavy.Type.Heavy && GetComponent<DestructibleObject>().heavy) || 
+                    (other.GetComponent<PickupSystem>().pickableObject.GetComponent<SharpOrHeavy>().type == SharpOrHeavy.Type.Sharp && GetComponent<DestructibleObject>().sharp))
+                {
+                    return;
+                }
+                else
+                {
+                    StartCatch(other.gameObject);
+                }
+            }
         }
     }
 
@@ -58,22 +70,22 @@ public class CatchPlayer : MonoBehaviour
         if (this.gameObject.transform.parent.name == "Bucket")
         {
             DeathScreensScript.sprite = 6;
-            endMessage = "You drowned";
+            endMessage = "You drowned!";
         }
         else if(this.gameObject.transform.parent.name == "TrapCage_v01")
         {
             DeathScreensScript.sprite = 9;
-            endMessage = "You got caged";
+            endMessage = "Put behind bars!";
         }
         else
         {
             DeathScreensScript.sprite = 5;
-            endMessage = "You got catched";
+            endMessage = "You got caught!";
 
         }
 
         gameStatesA.EndGame(endMessage, lostScore);
-        SceneManager.LoadScene("menu_ScoreDisplay", LoadSceneMode.Single);
+        //SceneManager.LoadScene("menu_ScoreDisplay", LoadSceneMode.Single);
 
     }
 }

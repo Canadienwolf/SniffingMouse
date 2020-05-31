@@ -313,8 +313,6 @@ GameObject:
   - component: {fileID: 1323095940}
   - component: {fileID: 1822886701444211340}
   - component: {fileID: 2499837791858592604}
-  - component: {fileID: 413950800}
-  - component: {fileID: 3417876690557008984}
   m_Layer: 0
   m_Name: TrapNet_v01
   m_TagString: Destructible
@@ -461,34 +459,6 @@ MonoBehaviour:
   gameStatesA: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
   virtualCam: {fileID: 845221765}
   freezePlayer: 0
---- !u!114 &413950800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4145400328598958106}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91b18566f01db4542a8146c43509f852, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  virtualCam: {fileID: 845221765}
-  thisTrigger: 1
-  slowMotionSpeed: 0.5
-  resetTime: 1
---- !u!114 &3417876690557008984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4145400328598958106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 771b6b2fe7b8e164aad9f704f6634ffd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   SFX: {fileID: 7912171187769016670}
 --- !u!1 &4422355282053943377
 GameObject:

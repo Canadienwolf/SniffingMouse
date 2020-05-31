@@ -5143,6 +5143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   psm: {fileID: 11400000, guid: b7d465a55c6536d42a06e7c8347f9a4c, type: 2}
+  gs: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
   activeDisplayer: {fileID: 4682919921099968524}
   areaDisplayer: {fileID: 151956902}
   explotion:
@@ -5191,14 +5192,14 @@ MonoBehaviour:
   CollisionTag: Player
   Event: event:/SFX/Traps/HolyHandGrenade/MUSIC_EFFECT_Bell_Voice_Negative_11_stereo
   PlayEvent: 3
-  StopEvent: 2
+  StopEvent: 12
   AllowFadeout: 1
   TriggerOnce: 1
   Preload: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  OverrideMinDistance: 8
+  OverrideMaxDistance: 350
 --- !u!1 &4682919921099968513
 GameObject:
   m_ObjectHideFlags: 0

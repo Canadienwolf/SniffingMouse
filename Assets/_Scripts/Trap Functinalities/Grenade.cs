@@ -6,6 +6,7 @@ using UnityEngine;
 public class Grenade : MonoBehaviour
 {
     public PlayerStatesMovements psm;
+    public GameStates gs;
     public ParticleSystem activeDisplayer;
     public ParticleSystem areaDisplayer;
     public ParticleSystem[] explotion;
@@ -54,7 +55,10 @@ public class Grenade : MonoBehaviour
             gameObject.SetActive(false);
             Destroy(this.gameObject);
         }
+
         transform.GetChild(0).gameObject.SetActive(false);
+        transform.GetChild(1).gameObject.SetActive(false);
+        GetComponent<FMODUnity.StudioEventEmitter>().enabled = false;
     }
 
     private void OnCollisionEnter(Collision other)
@@ -80,7 +84,7 @@ public class Grenade : MonoBehaviour
     void Kill()
     {
         DeathScreensScript.sprite = 3;
-        SceneManager.LoadScene("menu_ScoreDisplay", LoadSceneMode.Single);
-        
+        //SceneManager.LoadScene("menu_ScoreDisplay", LoadSceneMode.Single);
+        gs.EndGame("Boom, you're gone!", 0);
     }
 }

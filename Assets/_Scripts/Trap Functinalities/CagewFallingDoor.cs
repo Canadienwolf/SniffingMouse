@@ -26,9 +26,8 @@ public class CagewFallingDoor : MonoBehaviour
         {
             if (door.transform.localPosition.y < 0.1f)
             {
-                FindObjectOfType<DeathMusic>().dying = true;
-                Invoke("Transition", 1.4f);
-                Invoke("CatchPlayer", 2);
+                //FindObjectOfType<DeathMusic>().dying = true;
+
             }     
         }
         if (door == null && cheese.transform.parent == null)
@@ -36,10 +35,6 @@ public class CagewFallingDoor : MonoBehaviour
             cheese.transform.parent = null;
             Destroy(gameObject);
         }
-    }
-    void Transition()
-    {
-        GameObject.Find("SceneTransition").GetComponent<Animator>().SetTrigger("EndLevel");
     }
 
     private void OnTriggerEnter(Collider other)

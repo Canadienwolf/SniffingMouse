@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3964337712938791837}
   m_Layer: 0
-  m_Name: TrapPlank_WithBucket_v01
+  m_Name: Plank_WithBucket_v01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -367,6 +367,8 @@ MonoBehaviour:
   lostScore: -15
   gameStatesA: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
   virtualCam: {fileID: 5161450477861037223}
+  freezePlayer: 0
+  SFX: {fileID: 0}
 --- !u!114 &5609267896782023695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +388,8 @@ MonoBehaviour:
   offsetHeight: -0.5
   height: 0.2
   speed: 1000
+  eyes:
+    emotions: 5
 --- !u!1 &5161450477861037223
 GameObject:
   m_ObjectHideFlags: 0
