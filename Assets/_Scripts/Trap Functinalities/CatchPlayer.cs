@@ -11,7 +11,7 @@ public class CatchPlayer : MonoBehaviour
     //always declare a gamestates in order to use score functions/endgame method !
     public GameStates gameStatesA;
     public GameObject virtualCam;
-    public bool freezePlayer;
+    public PlayerStatesMovements psm;
     
     //-------------------------------------------SFX-------------------
     public GameObject SFX;
@@ -51,7 +51,7 @@ public class CatchPlayer : MonoBehaviour
 
     void StartCatch(GameObject player)
     {
-        if (freezePlayer) player.GetComponent<test_PlayerMovement03>().psm.lockController = true;
+        player.GetComponent<MoveBehavior>().enabled = false;
         if (virtualCam != null) virtualCam.SetActive(true);
         FindObjectOfType<DeathMusic>().dying = true;
         if(SFX != null)

@@ -67,14 +67,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133030171}
-  m_LocalRotation: {x: -0.0013777901, y: -0.99543214, z: 0.094348826, w: -0.014535217}
-  m_LocalPosition: {x: -0.010996938, y: 3.6374447, z: 7.7336063}
+  m_LocalRotation: {x: -0, y: 0.9279178, z: -0, w: -0.3727849}
+  m_LocalPosition: {x: 4.53, y: 2.43, z: 1.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1125142633}
   m_Father: {fileID: 7790358692303779211}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 223.775, z: 0}
 --- !u!114 &1133030173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,7 +351,7 @@ MonoBehaviour:
   lostScore: -10
   gameStatesA: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
   virtualCam: {fileID: 1133030171}
-  freezePlayer: 0
+  psm: {fileID: 11400000, guid: b7d465a55c6536d42a06e7c8347f9a4c, type: 2}
   SFX: {fileID: 472058146373915504}
 --- !u!1 &1223581588664955273
 GameObject:
