@@ -255,6 +255,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   playerstatesA: {fileID: 11400000, guid: b7d465a55c6536d42a06e7c8347f9a4c, type: 2}
   gameStates: {fileID: 0}
+  shockMat: {fileID: 0}
 --- !u!114 &3318236510335621609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5202,6 +5203,7 @@ MonoBehaviour:
   cam: {fileID: 2128902500}
   playerstatesA: {fileID: 11400000, guid: b7d465a55c6536d42a06e7c8347f9a4c, type: 2}
   gameStates: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
+  shockMat: {fileID: 2100000, guid: 965f3056b022a1c4dafec2ef4d88f9ab, type: 2}
 --- !u!114 &6677672074595549402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5356,11 +5358,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7705802482307740362}
     m_Modifications:
-    - target: {fileID: 183405320724131404, guid: 6391f4bf85e9ab74dbe4c94489cbe7db,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1672258884664421604, guid: 6391f4bf85e9ab74dbe4c94489cbe7db,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -11,6 +11,7 @@ public class ElectricCableTrap : MonoBehaviour
     public GameObject cam;
     public PlayerStatesMovements playerstatesA;
     public GameStates gameStates;
+    public Material shockMat;
     
     //------------------------------SFX---------------------------------------------
     private ParticleSystem _spark;
@@ -27,6 +28,7 @@ public class ElectricCableTrap : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            other.transform.GetChild(0).transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().material = shockMat;
             playerstatesA.lockController = true;
             if (playerstatesA.isGrounded) other.transform.position += new Vector3(0, 0.5f, 0);
             Instantiate(lightning, other.transform.position, Quaternion.identity);
