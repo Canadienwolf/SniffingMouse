@@ -9941,12 +9941,12 @@ PrefabInstance:
     - target: {fileID: 2827145021638580312, guid: f4cfaaf8fd7b50b40badc7cf57333d17,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000022367976
+      value: 0.000000015968446
       objectReference: {fileID: 0}
     - target: {fileID: 2827145021638580312, guid: f4cfaaf8fd7b50b40badc7cf57333d17,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000039277207
+      value: -0.00000003601894
       objectReference: {fileID: 0}
     - target: {fileID: 2827145021647633063, guid: f4cfaaf8fd7b50b40badc7cf57333d17,
         type: 3}
@@ -10021,12 +10021,12 @@ PrefabInstance:
     - target: {fileID: 2827145023116637796, guid: f4cfaaf8fd7b50b40badc7cf57333d17,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000038336424
+      value: 0.000000038336424
       objectReference: {fileID: 0}
     - target: {fileID: 2827145023116637796, guid: f4cfaaf8fd7b50b40badc7cf57333d17,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000032582672
+      value: 0.0000000032582672
       objectReference: {fileID: 0}
     - target: {fileID: 2827145023245996798, guid: f4cfaaf8fd7b50b40badc7cf57333d17,
         type: 3}
@@ -10050,6 +10050,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4cfaaf8fd7b50b40badc7cf57333d17, type: 3}
+--- !u!1 &1975303974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2827145022207055130, guid: f4cfaaf8fd7b50b40badc7cf57333d17,
+    type: 3}
+  m_PrefabInstance: {fileID: 1975303973}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1975303975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975303974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf9cfb236009b645a8e866801e42f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputSound: event:/SFX/Player/Footsteps
+  walkingSpeed: 0
 --- !u!4 &1975557637 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 834909183474634321, guid: 24a37a1cd69e9d94ca63751f62f10960,
