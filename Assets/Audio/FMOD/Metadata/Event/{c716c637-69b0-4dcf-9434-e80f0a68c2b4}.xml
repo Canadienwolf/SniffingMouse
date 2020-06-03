@@ -106,6 +106,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{e9a08845-7b1d-401a-a581-b62d6d368218}" />
 	<object class="SingleSound" id="{307c2d06-827d-41b7-89a7-b58f11e6c474}">
+		<property name="length">
+			<value>5</value>
+		</property>
 		<property name="name">
 			<value>Dirivng</value>
 		</property>
@@ -115,7 +118,10 @@
 	</object>
 	<object class="SingleSound" id="{8ce973a9-acd3-41e9-9715-e4eb5d36e5d4}">
 		<property name="start">
-			<value>1</value>
+			<value>5</value>
+		</property>
+		<property name="length">
+			<value>5</value>
 		</property>
 		<property name="name">
 			<value>Crash</value>

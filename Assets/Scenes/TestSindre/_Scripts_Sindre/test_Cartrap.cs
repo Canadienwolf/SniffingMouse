@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class test_Cartrap : MonoBehaviour
 {
@@ -25,17 +23,11 @@ public class test_Cartrap : MonoBehaviour
     private GameObject player;
     private Camera cam;
 
-    private void Awake()
-    {
-        CrashSFX.SetActive(false);
-    }
-
     // Start is called before the first frame update
     void Start()
     {
         drivingCam.SetActive(false);
         deathCam.SetActive(false);
-        
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
@@ -87,14 +79,12 @@ public class test_Cartrap : MonoBehaviour
                 CancelInvoke();
                 Invoke("Transition", deathDelay - 0.6f);
                 Invoke("Die", deathDelay);
-                CrashSFX.SetActive(true);
             }
             hit = false;
             Instantiate(explosion, transform.position + new Vector3(0, playerHeightOffest, 0), Quaternion.identity);
             GetComponent<test_Cartrap>().enabled = false;
             GetComponent<BoxCollider>().isTrigger = false;
         }
-        
     }
 
     void ReleasePlayer()
