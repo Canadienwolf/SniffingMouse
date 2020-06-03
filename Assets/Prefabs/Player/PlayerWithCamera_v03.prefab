@@ -1092,7 +1092,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2827145022400522611}
   - component: {fileID: 8390831351038851971}
-  - component: {fileID: 1727310651664833774}
   m_Layer: 0
   m_Name: PlayerWithCamera_v03
   m_TagString: Untagged
@@ -1137,19 +1136,6 @@ MonoBehaviour:
   timerText: {fileID: 0}
   scoreText: {fileID: 0}
   highScoreText: {fileID: 0}
---- !u!114 &1727310651664833774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2827145022400522610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b13a683df504dfd4a85076302fc627d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gs: {fileID: 11400000, guid: 8c53a4895d3842248911650cb0b3d4cc, type: 2}
 --- !u!1 &2827145022758969819
 GameObject:
   m_ObjectHideFlags: 0
@@ -8258,15 +8244,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d72eab2252ca7b4e9892670db2b3eb8, type: 3}
---- !u!4 &763380013118153817 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9145168979939560063, guid: 8d72eab2252ca7b4e9892670db2b3eb8,
-    type: 3}
-  m_PrefabInstance: {fileID: 8390831350532435494}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &528000594640451375 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 8d72eab2252ca7b4e9892670db2b3eb8,
+    type: 3}
+  m_PrefabInstance: {fileID: 8390831350532435494}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &763380013118153817 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9145168979939560063, guid: 8d72eab2252ca7b4e9892670db2b3eb8,
     type: 3}
   m_PrefabInstance: {fileID: 8390831350532435494}
   m_PrefabAsset: {fileID: 0}
