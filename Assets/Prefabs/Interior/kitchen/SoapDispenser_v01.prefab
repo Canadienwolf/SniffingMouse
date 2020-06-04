@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8091376524967357597}
   - component: {fileID: 941637886910011051}
   - component: {fileID: 6786317433160985170}
-  - component: {fileID: 8808256450825886810}
   - component: {fileID: 5228412695215108672}
+  - component: {fileID: 6842340970510716743}
   m_Layer: 0
   m_Name: SoapDispenser_v01
   m_TagString: Untagged
@@ -81,20 +81,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8808256450825886810
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5048818635981446798}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6445843573247450007, guid: e01ef8d170fb3ec439df01344ad83f08, type: 3}
 --- !u!54 &5228412695215108672
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -111,3 +97,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6842340970510716743
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5048818635981446798}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0736617, y: 2.1177976, z: 0.619727}
+  m_Center: {x: 0, y: 0, z: 0}

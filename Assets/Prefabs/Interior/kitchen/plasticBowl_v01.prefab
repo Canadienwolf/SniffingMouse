@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7170755822164628435}
   - component: {fileID: 2222705441515825637}
   - component: {fileID: 5612659112755795228}
-  - component: {fileID: -5530142595145363986}
   - component: {fileID: 1896332494109853818}
+  - component: {fileID: -3045003257822468337}
   m_Layer: 0
   m_Name: plasticBowl_v01
   m_TagString: Untagged
@@ -81,20 +81,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &-5530142595145363986
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6185973043647029696}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2542112853833809232, guid: ea5078b9d535d6a4da556ea356ddfa18, type: 3}
 --- !u!54 &1896332494109853818
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -111,3 +97,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &-3045003257822468337
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6185973043647029696}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.768899, y: 3.776752, z: 7.574201}
+  m_Center: {x: -0.000030994415, y: 1.888376, z: 0.00000023841858}
