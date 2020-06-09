@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 480155864160994106}
   - component: {fileID: 4492950223929069289}
   - component: {fileID: 3359354655829998798}
+  - component: {fileID: 5644931364721163768}
   m_Layer: 0
   m_Name: wineglass_v01
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2203682136998885350}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -110,3 +111,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1694459, y: 1.3616719, z: 1.1886121}
   m_Center: {x: -0.0047913194, y: 0.66540885, z: -0.03353995}
+--- !u!65 &5644931364721163768
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2203682136998885350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7863426, y: 0.25365305, z: 0.7026634}
+  m_Center: {x: 0.010644913, y: -1.3646863, z: 0.023015976}
